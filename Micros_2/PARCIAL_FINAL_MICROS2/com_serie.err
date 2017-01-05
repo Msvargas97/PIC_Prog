@@ -1,0 +1,7 @@
+>>> Warning 204 "com_serie.c" Line 117(1,1): Condition always FALSE
+>>> Warning 204 "com_serie.c" Line 122(1,1): Condition always FALSE
+>>> Warning 204 "com_serie.c" Line 126(1,1): Condition always FALSE
+>>> Warning 204 "com_serie.c" Line 133(1,1): Condition always FALSE
+>>> Warning 202 "com_serie.c" Line 59(27,32): Variable never used:   duty3
+      Memory usage:   ROM=2%      RAM=4% - 5%
+      0 Errors,  5 Warnings.

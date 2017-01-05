@@ -1,0 +1,10 @@
+>>> Warning 202 "i2c_ds1307.c" Line 34(5,8): Variable never used:   rs232_errors
+>>> Warning 202 "i2c_ds1307.c" Line 65(10,11): Variable never used:   n
+>>> Warning 202 "i2c_ds1307.c" Line 66(15,25): Variable never used:   dato_rs232
+>>> Warning 202 "i2c_ds1307.c" Line 66(26,31): Variable never used:   tecla
+>>> Warning 202 "i2c_ds1307.c" Line 67(15,23): Variable never used:   bcd_cent
+>>> Warning 202 "i2c_ds1307.c" Line 67(26,33): Variable never used:   bcd_dec
+>>> Warning 202 "i2c_ds1307.c" Line 67(36,44): Variable never used:   bcd_unid
+>>> Warning 202 "i2c_ds1307.c" Line 67(47,54): Variable never used:   bcd_mil
+      Memory usage:   ROM=1%      RAM=2% - 2%
+      0 Errors,  8 Warnings.

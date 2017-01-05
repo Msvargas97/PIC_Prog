@@ -1,0 +1,198 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     @INTERRUPT_AREA
+005     @INTERRUPT_AREA
+006     @INTERRUPT_AREA
+007     @INTERRUPT_AREA
+008     @INTERRUPT_AREA
+009     @INTERRUPT_AREA
+00A     @INTERRUPT_AREA
+00B     @INTERRUPT_AREA
+00C     @INTERRUPT_AREA
+00D     @INTERRUPT_AREA
+00E     @INTERRUPT_AREA
+00F     @INTERRUPT_AREA
+010     @INTERRUPT_AREA
+011     @INTERRUPT_AREA
+012     @INTERRUPT_AREA
+013     @INTERRUPT_AREA
+014     @INTERRUPT_AREA
+015     @INTERRUPT_AREA
+016     @INTERRUPT_AREA
+017     @INTERRUPT_AREA
+018     @INTERRUPT_AREA
+019     @INTERRUPT_AREA
+01A     @INTERRUPT_AREA
+01B     rs232_errors
+01C-01D strtok.save
+01E.0   bits_8_4
+01E.1   Flag
+01E.2   rd_isr.start
+01F-020 i
+021-022 size
+023-062 size_data
+063-064 contador
+065-066 sensor1
+067-068 sensor2
+069-06A sensor3
+06B-06C temp
+06D-06E hum
+06F-070 luz
+071     dato_rs232
+072-0B1 buffer
+0B2-0B5 _Randseed
+0B6     rd_isr.cont_data
+0B7-0B8 @PRINTF_LU_115200_31766_31767.P1
+0B7-0B8 @PRINTF_LU_210.P2
+0B7     @PSTRINGC_210.@SCRATCH1
+0B8     @PSTRINGC_210.@SCRATCH2
+0B9     @PSTRINGC_210.@SCRATCH3
+0B9     @PRINTF_LU_210.@SCRATCH1
+0B9     @PRINTF_LU_115200_31766_31767.@SCRATCH1
+0BA     @PRINTF_LU_210.@SCRATCH2
+0BA     @PRINTF_LU_115200_31766_31767.@SCRATCH2
+0BB     @PRINTF_LU_210.@SCRATCH3
+0BB     @PRINTF_LU_115200_31766_31767.@SCRATCH3
+0BC     @PRINTF_LU_210.@SCRATCH4
+0BC     @PRINTF_LU_115200_31766_31767.@SCRATCH4
+0BD     @PRINTF_LU_210.@SCRATCH5
+0BD     @PRINTF_LU_115200_31766_31767.@SCRATCH5
+0BE     @PRINTF_LU_210.@SCRATCH6
+0BE     @PRINTF_LU_115200_31766_31767.@SCRATCH6
+0BF     @PRINTF_LU_210.@SCRATCH7
+0BF     @PRINTF_LU_115200_31766_31767.@SCRATCH7
+0C0     lcd_putc_4bits.letra
+0C1     lcd_ubicaxy_4bits.columna
+0C2     lcd_ubicaxy_4bits.fila
+0C3     lcd_ubicaxy_4bits.posicion
+0C4     lcd_envia_byte_4bits.operacion
+0C5     lcd_envia_byte_4bits.dato
+0C6     @delay_ms1.P1
+0C6     lcd_envia_byte_4bits.@SCRATCH1
+0C7-0D0 string
+0D1     j
+0D2-0D3 atol.s
+0D2     @GETCH_BIU_1.@SCRATCH1
+0D2     rd_isr.@SCRATCH1
+0D3     @GETCH_BIU_1.@SCRATCH2
+0D3     rd_isr.@SCRATCH2
+0D4-0D5 atol.result
+0D4     rd_isr.@SCRATCH3
+0D6     atol.sign
+0D7     atol.base
+0D8     atol.index
+0D9     atol.c
+0DA-0DB @MULS1616.P1
+0DA     atol.@SCRATCH1
+0DB     atol.@SCRATCH2
+0DC-0DD @MULS1616.P1
+0DC     atol.@SCRATCH3
+0DE     @MULS1616.@SCRATCH1
+0DF     @MULS1616.@SCRATCH2
+F01     CCP_10_LOW
+F01     CCP_10
+F02     CCP_10_HIGH
+F04     CCP_9
+F04     CCP_9_LOW
+F05     CCP_9_HIGH
+F07     CCP_8_LOW
+F07     CCP_8
+F08     CCP_8_HIGH
+F0A     CCP_7
+F0A     CCP_7_LOW
+F0B     CCP_7_HIGH
+F0D     CCP_6_LOW
+F0D     CCP_6
+F0E     CCP_6_HIGH
+F10     CCP_5
+F10     CCP_5_LOW
+F11     CCP_5_HIGH
+F13     CCP_4_LOW
+F13     CCP_4
+F14     CCP_4_HIGH
+F16     CCP_3
+F16     CCP_3_LOW
+F17     CCP_3_HIGH
+F70.0   C1OUT
+F70.1   C2OUT
+F70.2   C3OUT
+F9B.6   PLLEN
+FB5     CCP_2
+FB5     CCP_2_LOW
+FB6     CCP_2_HIGH
+FBB     CCP_1
+FBB     CCP_1_LOW
+FBC     CCP_1_HIGH
+FE1-FE2 @WRITE_PACKED_MEMORY.P1
+FE1-FE2 @READ_PACKED_MEMORY.P2
+FE9-FEA @READ_PROGRAM_MEMORY.P1
+FE9-FEA @READ_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P3
+FE9-FEA @WRITE_PROGRAM_MEMORY.P4
+FF6-FF8 @READ_PROGRAM_MEMORY.P1
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+0014C0  @delay_ms1
+0010BE  @GETCH_BIU_1
+0014E8  lcd_envia_byte_4bits
+0015AA  lcd_ubicaxy_4bits
+0015E2  @goto10452
+00160A  lcd_init_4bits
+001644  lcd_putc_4bits
+0010F6  @MULS1616
+001148  atol
+001330  rd_isr
+0017F8  MAIN
+0014A2  @const422
+00167A  @PSTRINGC_210
+0014B0  @const424
+0016A2  @PRINTF_LU_210
+001754  @PRINTF_LU_115200_31766_31767
+0017F8  @cinit
+0136  StrtoulGO
+0136  StrtolGO
+
+
+User Memory space: 
+
+User Memory space: 
+
+Project Directory:
+    C:\Users\Michael Vargas\Desktop\TRABAJO_HARVEY\
+
+Project Files:
+    com_serie.c                                             [27-May.-16 19:45  CRC=1B09D763]
+    ..\..\..\..\Program Files (x86)\PICC\devices\18F47J53.h [13-Abr.-11 15:02  CRC=1DEA3C7C]
+    ..\..\..\..\Program Files (x86)\PICC\drivers\string.h   [18-Jun.-08 10:48  CRC=9BE6227E]
+    ..\..\..\..\Program Files (x86)\PICC\drivers\stddef.h   [16-Jul.-10 09:27  CRC=897CEC6C]
+    ..\..\..\..\Program Files (x86)\PICC\drivers\ctype.h    [03-Ene.-08 13:55  CRC=2D1F019F]
+    Configura_LCD_4-8_bits.c                                [01-Mar.-16 17:02  CRC=E52633D5]
+    ..\..\..\..\Program Files (x86)\PICC\drivers\stdlib.h   [22-Abr.-10 10:12  CRC=97EC02E8]
+
+Source signature=A0745E0D
+
+Units:
+    C:\Users\Michael Vargas\Desktop\TRABAJO_HARVEY\com_serie (main)
+
+Compiler Settings:
+    Processor:      PIC18F47J53
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    Errors:      com_serie.err
+    Ext Symbols: com_serie.esym
+    INHX32:      com_serie.hex
+    Symbols:     com_serie.sym
+    List:        com_serie.lst
+    Debug/COFF:  com_serie.cof
+    Project:     com_serie.PJT
+    Call Tree:   com_serie.tre
+    Statistics:  com_serie.STA

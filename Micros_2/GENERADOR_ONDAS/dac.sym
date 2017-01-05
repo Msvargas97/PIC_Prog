@@ -1,0 +1,210 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004.0   bits_8_4
+005-008 Fs
+009-02A wave
+02B-02E seno.x
+02F     seno.j
+030-031 sawTooth.saw
+032     sawTooth.j
+033-034 triangular.trian
+035     triangular.j
+036     square.j
+037-038 square.sq
+039-03A i
+03B-03C j
+03D-040 frequency
+041-042 @PRINTF_LU_249.P1
+041-044 seno.freq
+041-044 atan2.y
+041     MAIN.@SCRATCH1
+041     @PSTRINGC_249.@SCRATCH1
+042     @delay_us1.P1
+042     MAIN.@SCRATCH2
+042     @PSTRINGC_249.@SCRATCH2
+043-044 write_dac.data
+043     @PSTRINGC_249.@SCRATCH3
+043     @PRINTF_LU_249.@SCRATCH1
+044     @PRINTF_LU_249.@SCRATCH2
+045-048 atan2.x
+045-047 write_dac.cmd
+045     seno.@SCRATCH1
+045     @PRINTF_LU_249.@SCRATCH3
+046     seno.@SCRATCH2
+046     @PRINTF_LU_249.@SCRATCH4
+047-04A sin.x
+047     seno.@SCRATCH3
+047     @PRINTF_LU_249.@SCRATCH5
+048     write_dac.i
+048     seno.@SCRATCH4
+048     @PRINTF_LU_249.@SCRATCH6
+049-04C @DIVFF.P1
+049-04C atan2.z
+049     seno.@SCRATCH5
+049     @PRINTF_LU_249.@SCRATCH7
+04A     lcd_putc_4bits.letra
+04A     seno.@SCRATCH6
+04B     lcd_ubicaxy_4bits.columna
+04B     sin.@SCRATCH1
+04B     seno.@SCRATCH7
+04C     lcd_ubicaxy_4bits.fila
+04C     sin.@SCRATCH2
+04C     seno.@SCRATCH8
+04D     lcd_ubicaxy_4bits.posicion
+04D-050 @DIVFF.P1
+04D.0   atan2.sign
+04D     sin.@SCRATCH3
+04E     lcd_envia_byte_4bits.operacion
+04E     atan2.quad
+04E     sin.@SCRATCH4
+04F     lcd_envia_byte_4bits.dato
+04F-052 cos.x
+050     @delay_ms1.P1
+050     lcd_envia_byte_4bits.@SCRATCH1
+051     @DIVFF.@SCRATCH1
+052     @DIVFF.@SCRATCH2
+053-056 cos.y
+053     @DIVFF.@SCRATCH3
+054     @DIVFF.@SCRATCH4
+055     @DIVFF.@SCRATCH5
+056     @DIVFF.@SCRATCH6
+057-05A cos.t
+05B-05E cos.t2
+05F     cos.quad
+060     cos.i
+061-064 cos.frac
+065-078 cos.p
+079-07C @SFTOI.P1
+079-07C @FLT.P2
+079     cos.@SCRATCH1
+07A     cos.@SCRATCH2
+07B     cos.@SCRATCH3
+07C     cos.@SCRATCH4
+07D-07E @ITOF.P1
+07D-080 @ADDFF.P2
+07D-080 @FLT.P3
+07D-080 @MULFF.P4
+081-084 @ADDFF.P1
+081-084 @MULFF.P2
+081     @FLT.@SCRATCH1
+082     @FLT.@SCRATCH2
+085     @MULFF.@SCRATCH1
+085     @ADDFF.@SCRATCH1
+086     @MULFF.@SCRATCH2
+086     @ADDFF.@SCRATCH2
+087     @MULFF.@SCRATCH3
+087     @ADDFF.@SCRATCH3
+088     @ADDFF.@SCRATCH4
+089     @ADDFF.@SCRATCH5
+08A     @ADDFF.@SCRATCH6
+08B     @ADDFF.@SCRATCH7
+08C     @ADDFF.@SCRATCH8
+F01     CCP_10_LOW
+F01     CCP_10
+F02     CCP_10_HIGH
+F04     CCP_9_LOW
+F04     CCP_9
+F05     CCP_9_HIGH
+F07     CCP_8_LOW
+F07     CCP_8
+F08     CCP_8_HIGH
+F0A     CCP_7_LOW
+F0A     CCP_7
+F0B     CCP_7_HIGH
+F0D     CCP_6_LOW
+F0D     CCP_6
+F0E     CCP_6_HIGH
+F10     CCP_5
+F10     CCP_5_LOW
+F11     CCP_5_HIGH
+F13     CCP_4_LOW
+F13     CCP_4
+F14     CCP_4_HIGH
+F16     CCP_3_LOW
+F16     CCP_3
+F17     CCP_3_HIGH
+F70.0   C1OUT
+F70.1   C2OUT
+F70.2   C3OUT
+F9B.6   PLLEN
+FB5     CCP_2_LOW
+FB5     CCP_2
+FB6     CCP_2_HIGH
+FBB     CCP_1_LOW
+FBB     CCP_1
+FBC     CCP_1_HIGH
+FE1-FE2 @READ_PACKED_MEMORY.P1
+FE1-FE2 @WRITE_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P1
+FE9-FEA @READ_PROGRAM_MEMORY.P2
+FE9-FEA @READ_PACKED_MEMORY.P3
+FE9-FEA @WRITE_PROGRAM_MEMORY.P4
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P1
+FF6-FF8 @READ_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+001732  @FLT
+0016C4  @SFTOI
+0016FC  @ITOF
+0015D2  @MULFF
+001368  @ADDFF
+00120E  @DIVFF
+0017AA  cos
+001AF6  sin
+00102A  @delay_ms1
+001F0E  @delay_us1
+001052  lcd_envia_byte_4bits
+001110  lcd_ubicaxy_4bits
+001148  @goto10580
+001170  lcd_init_4bits
+0011AE  lcd_putc_4bits
+001B40  seno
+001016  init_dac
+001EA4  write_dac
+001F2E  MAIN
+001008  @const306
+0011E4  @PSTRINGC_249
+001DEE  @PRINTF_LU_249
+001F2E  @cinit
+
+
+User Memory space: 
+
+User Memory space: 
+
+Project Directory:
+    C:\Users\Michael Vargas\Documents\Micros_2\GENERADOR_ONDAS\
+
+Project Files:
+    dac.c                                                   [21-Oct.-16 16:41  CRC=C6E52D5B]
+    ..\..\..\..\..\Program Files (x86)\PICC\devices\18F47J53.h [02-Oct.-16 01:28  CRC=CB83A54D]
+    ..\..\..\..\..\Program Files (x86)\PICC\drivers\math.h  [11-Abr.-11 09:02  CRC=A2852B04]
+    Configura_LCD_4-8_bits.c                                [21-Oct.-16 16:19  CRC=2DEE0177]
+    waveGenerator.c                                         [01-May.-16 07:06  CRC=94BB913A]
+
+Source signature=8C532197
+
+Units:
+    C:\Users\Michael Vargas\Documents\Micros_2\GENERADOR_ONDAS\dac (main)
+
+Compiler Settings:
+    Processor:      PIC18F47J53
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    Errors:      dac.err
+    Ext Symbols: dac.esym
+    INHX32:      dac.hex
+    Symbols:     dac.sym
+    List:        dac.lst
+    Debug/COFF:  dac.cof
+    Project:     dac.PJT
+    Call Tree:   dac.tre
+    Statistics:  dac.STA

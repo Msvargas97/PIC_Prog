@@ -1,0 +1,261 @@
+#include <18F47J53.h>
+#device ADC=8
+#FUSES NOWDT         //WDT disabled (enabled by SWDTEN bit)                    
+#FUSES PLL3          //Divide by 3 (12 MHz oscillator input)            
+#FUSES NOPLLEN       //PLL Disabled
+#FUSES NOSTVREN      //stack overflow/underflow reset enabled                
+#FUSES NOXINST       //Extended instruction set disabled            
+#FUSES NOCPUDIV      //No CPU system clock divide         
+#FUSES NOPROTECT     //Program memory is not code-protected          
+#FUSES HSPLL         //HS oscillator, PLL enabled, HSPLL used by USB           
+#FUSES SOSC_HIGH     //High Power T1OSC/SOSC circuit selected
+#FUSES CLOCKOUT      //CLKO output enabled on the RA6 pin 
+#FUSES NOFCMEN       //Fail-Safe Clock Monitor disabled
+#FUSES NOIESO        //Two-Speed Start-up disabled
+#FUSES WDT32768      //Watchdog Postscaler 1:32768
+#FUSES DSWDTOSC_int  //DSWDT uses INTOSC/INTRC as clock
+#FUSES RTCOSC_int    //RTCC uses INTRC as clock
+#FUSES NODSBOR       //Zero-Power BOR disabled in Deep Sleep
+#FUSES NODSWDT       //Deep Sleep Watchdog Timer Disabled
+#FUSES DSWDT8192     //Deep Sleep Watchdog Postscaler: 1:8,192 (8.5 seconds)   
+#FUSES NOIOL1WAY     //IOLOCK bit can be set and cleared
+#FUSES ADC12         //ADC 10 or 12 Bit Select:12 - Bit ADC Enabed 
+#FUSES MSSPMSK7      //MSSP 7 Bit address masking
+#FUSES NOWPFP        //Write Protect Program Flash Page 0
+#FUSES NOWPCFG       //Write/Erase last page protect Disabled
+#FUSES WPDIS         //WPFP[5:0], WPEND, and WPCFG bits ignored 
+#FUSES WPEND         //Start protection at page 0
+#FUSES LS48MHZ       //Low Speed USB mode with 48 MHz System clock at 48 MHz USB CLKEN divide-by is set to 8 
+#use delay(clock=48000000)
+#pin_select U2TX=PIN_D2 //Selecciona hardware UART2
+#pin_select U2RX=PIN_D3 //Selecciona hardware UART2
+#define LOADER_END   0xFFF                        
+#build(reset=LOADER_END+1, interrupt=LOADER_END+9)   //Protege posiciones de memoria desde la 0x0000 hasta la 0x1000   
+#org 0, LOADER_END {}
+#bit PLLEN = 0xf9b.6
+#use  rs232(baud=9600,parity=N,UART1,bits=8,timeout=30)
+
+/********************************************************/
+/*------- Espacio para declaracion de constantes  ------*/
+/********************************************************/
+#define d_unidad  PIN_E1   // Pin seleccionado para el control del 7segmento Unidad
+#define d_decena  PIN_E2   // Pin seleccionado para el control del 7segmento Decena
+#define d_centena PIN_E0      // Pin seleccionado para el control del 7segmento Centena
+#define d_umil    PIN_A5   // Pin seleccionado para el control del 7segmento Unidad de Mil
+/********************************************************/
+/*--- Espacio para declaracion de variables globales  --*/
+/********************************************************/
+unsigned int16 i=0;
+//Declaracion de caracteristicas del circuito de displays 7 segmentos
+#define NUM_DISPLAYS 4
+#define CATODO_COMUN 0x01
+#define ANODO_COMUN 0x00
+#define NPN 0x01
+#define PNP 0x00
+#define output_Displays(x) output_d(x)
+#define TIME_MUX 1000 // tiempo de multiplexacion en microsegundos
+
+     //Tipos de displays   //tipo de transistores
+int1 D7Seg= ANODO_COMUN , Q = PNP;
+ const unsigned int16 transistorPins[NUM_DISPLAYS]={d_unidad,d_decena,d_centena,d_umil};
+const unsigned char Tabla7seg[10]=
+{ // HGFEDCBA <-- Segmento
+   0b00111111, // 0
+   0b00000110, // 1
+   0b01011011, // 2
+   0b01001111, // 3
+   0b01100110, // 4
+   0b01101101, // 5
+   0b01111101, // 6
+   0b00000111, // 7
+   0b01111111, // 8
+   0b01100111  // 9
+};
+  
+/********************************************************/
+/********************************************************/
+/*-------------- Espacio para funciones  ---------------*/
+/********************************************************/
+#INCLUDE <math.h>
+#INCLUDE <stdlib.h>
+float num,x,y;
+void displayMux(float numero,unsigned int16 time,char precision=0);   
+unsigned int16 umil,cent,dec,unid;
+int8 prec= 0;
+#INT_RB
+void interrupcion_RB (void){
+ if( !input_state(PIN_B7)){
+    ++unid;
+    if(unid==10)unid=0;
+    }
+    else if(!input_state(PIN_B6) ){ 
+    ++dec;
+     if(dec==10)dec=0;
+    }
+    else if(!input_state(PIN_B5) ){ 
+    ++cent;
+    if(cent==10)cent=0;
+    }
+    else if(!input_state(PIN_B4) ){
+    ++umil;
+    if(umil==10)umil=0;
+    }
+   num = (float) (umil*1000 + cent*100 + dec*10 + unid);
+   displayMux(num,40,prec); 
+}
+unsigned int8 h;
+#INT_EXT
+ void interrupcion_INT0 (void){
+     if(!input(PIN_B0)){
+     h++;
+      switch(h){
+      case 1:
+               x = num;
+               umil = cent = dec = unid = num = 0;
+               break;
+      case 2:
+               y = num;
+               num = 10e+3;
+               break;
+      case 3: 
+               num = x +y ;
+               break;
+      case 4: 
+               num = x  -y ;
+               break;
+      case 5: 
+               num = x /y ;
+               if(y == 0) num = 10e+3;
+               int16 aux =ceil(num);
+               if(fabs(num - aux) >= num * 1e-6){
+               prec = 1;
+               if(num < 0.1) prec = 3;
+               }
+               break;
+     case 6: 
+               prec = 0;
+               num = x *y ;
+               break;
+     case 7:        
+               umil = cent = dec = unid = num = h = 0;
+               break;
+      }
+  
+     }
+   displayMux(num,40,prec); 
+}
+  
+/******************************************************************************/
+/******************************************************************************/
+/*--------------------- Espacio de codigo principal --------------------------*/
+/******************************************************************************/ 
+#zero_ram
+
+void main()
+{
+   PLLEN = 1;          //Habilita PLL para generar 48MHz de oscilador*/\
+   set_tris_d (0) ;
+   enable_interrupts(GLOBAL);
+   enable_interrupts(INT_RB);
+   ext_int_edge( 0, H_TO_L);
+   enable_interrupts(INT_EXT);
+   for(;;)
+   {
+     displayMux (num,4,prec) ;
+   }
+}//end main
+void displayMux(float numero,unsigned int16 time,char precision=0)
+{
+  disable_interrupts(INT_RB);
+  //Crea variables estaticas dentro de la función para evitar conflictos con el código del menu principal
+   static unsigned char digito[NUM_DISPLAYS];
+   static unsigned int size, max = 0,size2;
+   static signed int32 temp;
+   static int16 i = 0, j = 0, decimal, dec = 0;
+   static int1 signo = 0, limit = 0;
+   static const unsigned int32 powersOf10[]  =
+   {
+      1, // 10 ^ 0
+      10,
+      100,
+      1000,
+      10000,
+      100000,
+      1000000,
+      10000000,
+      100000000,
+      1000000000
+   }; // 10 ^ 9
+   memset(digito, 0, NUM_DISPLAYS);//Borra los digitos anteriores
+  temp = numero; //Separa la parte entera
+   if (numero < 0)
+   {
+      temp = abs (numero); 
+      signo = 1; //Verifica si el numero es negativo
+      }else{
+      signo = 0;
+   }
+   max = NUM_DISPLAYS - precision - signo; //Calcula el numero de displays maximos para terminar los rangos permitidos
+   limit = (signo) ? numero > (powersOf10[max] * - 1): numero < powersOf10[max]; // determina si el limite del numero segun los digitos ingresados
+   if (precision > 0)       //Separa la parte decimal siempre y se escogen la cantidad de decimales
+   {
+      decimal = abs (numero * powersOf10[precision]) ;
+      decimal %= powersOf10[precision];
+      dec=decimal;
+   }
+
+   if (limit)// condicion para calcular los digitos si el numero ingresado es menor que el posible a mostrar
+   {
+      size = 0;
+       //Obtiene los digitos y cuenta cuantos digitos son
+      do{
+         if (precision > 0 && size < precision) 
+         {
+           digito[size] = abs(decimal % 10);
+            decimal /= 10;
+            }else{
+            digito[size] = temp % 10;
+            temp /= 10;
+         }
+         size++;
+      }while (temp > 0 || decimal > 0);
+   temp=abs(numero);
+   size+=(signo && temp==0 && precision > 1) ? (precision - ceil(precision*0.5)) : (temp>=1) ? 0 : ceil(precision*0.5);
+   }
+   for (i = 0; i < NUM_DISPLAYS; i++){output_Displays (~D7Seg); output_bit (transistorPins[i], ~Q); } //Apaga todos los displays
+   time = time / ( (TIME_MUX / 1000) * size); //Calcula el numero de ciclos segun el tiempo de multiplexacion que se introdujo
+   if (time == 0) time = 1; //Evita que el valor sea 0 y nunca entre al bucle
+   for (j = 0; j < time; j++)
+   {
+      if (limit)
+      {
+      if(numero < 0 ) size2 = (size+((signo) ? 1 : 0));
+      else size2 = NUM_DISPLAYS;
+      
+         for (i = 0; i < size2; i++)
+         {
+           
+            if (i == (size) && signo){temp = 0b01000000; } //Asigna el signo
+            else{ temp = tabla7Seg[digito[i]] | ( (i == precision && precision > 0) ? 0b10000000 : 0); } // escoge el numero y añade el punto si es necesario
+            output_Displays ( ( (D7Seg) ? temp : ~ (temp))); //Activa la salida dependiendo si es de anodo o catodo comun los displays
+            output_bit (transistorPins[i], Q); //Satura el transistor dependiendo si son PNP o NPN
+            delay_us (TIME_MUX);
+            output_bit (transistorPins[i], ~Q) ;//Apaga el transistor
+         }
+
+         }else{
+         time=1;
+         for (i = 0; i < NUM_DISPLAYS; i++) //Indicador que el numero ingresado es mayor de lo permitido
+         {
+            output_Displays ( ( (D7Seg) ? 0b01000000 : ~0b01000000));
+            output_bit (transistorPins[i], Q) ;
+            delay_us (TIME_MUX) ;
+            output_bit (transistorPins[i], ~Q) ;
+         }
+      }
+   }
+    enable_interrupts(INT_RB);
+}
+
+     
+  

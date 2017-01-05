@@ -1,0 +1,239 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004.0   bits_8_4
+005-006 strtok.save
+007-00A _Randseed
+00B-00C i
+00D-00E n
+00F-010 duty
+011     tecla
+012-051 DS1307
+052-05A OnTime
+05B-063 OffTime
+064-066 dutyUser
+067     col
+068     row
+069     col
+06A     row
+06B-06E atan2.y
+06B     MAIN.menu
+06C     MAIN.cont
+06D     MAIN.decena
+06E     MAIN.centena
+06F-072 atan2.x
+06F     MAIN.unidad
+070     MAIN.lastSeconds
+071     MAIN.Flag1
+072     MAIN.Flag2
+073     write_ds1307.ds1307_register
+073     printHora.fecha
+073     @WRITEBITA.P1
+073     read_ds1307.ds1307_register
+073-074 @MUL1616.P1
+073     @READBITA.P2
+073-076 atan2.z
+073     MAIN.@SCRATCH1
+073     @PSTRINGC_116.@SCRATCH1
+074     @PRINTF_X_116.P1
+074     @PRINTF_U_116.P2
+074-075 @READBITA.P3
+074     @WRITEBITA.P4
+074     write_ds1307.@SCRATCH1
+074     read_ds1307.@SCRATCH1
+074     MAIN.@SCRATCH2
+074     @PSTRINGC_116.@SCRATCH2
+075     @PRINTF_U_116.P1
+075-076 @MUL1616.P2
+075-076 @PRINTF_LU_116.P3
+075     @I2C_WRITE_1.P4
+075-076 convertDecToHex.data
+075     @PSTRINGCN_116.P1
+075-076 @DIV1616.P2
+075-076 @WRITEBITA.P3
+075     @PRINTF_X_116.P4
+075     read_ds1307.@SCRATCH2
+075     @PSTRINGC_116.@SCRATCH3
+076     @DIV88.P1
+076     @I2C_READ_1.P2
+076     @PSTRINGCN_116.@SCRATCH1
+077-080 convertDecToHex.string
+077     @DIV88.P1
+077-078 @DIV1616.P2
+077.0   atan2.sign
+077     @I2C_READ_1.@SCRATCH1
+077     @MUL1616.@SCRATCH1
+077     @PSTRINGCN_116.@SCRATCH2
+077     @PRINTF_LU_116.@SCRATCH1
+078     atan2.quad
+078     @I2C_READ_1.@SCRATCH2
+078     @PSTRINGCN_116.@SCRATCH3
+078     @PRINTF_LU_116.@SCRATCH2
+078     @DIV88.@SCRATCH1
+079     @DIV1616.@SCRATCH1
+079     @PRINTF_LU_116.@SCRATCH3
+07A     @PRINTF_LU_116.@SCRATCH4
+07B     @PRINTF_LU_116.@SCRATCH5
+07C     @PRINTF_LU_116.@SCRATCH6
+07D     @PRINTF_LU_116.@SCRATCH7
+081     esperar_teclado.tecla
+081     convertDecToHex.@SCRATCH1
+082     lcd_putc_4bits.letra
+082     barrer_teclado.tecla
+082     convertDecToHex.@SCRATCH2
+083     lcd_ubicaxy_4bits.columna
+083-084 atoi.s
+083     barrer_teclado.@SCRATCH1
+084     lcd_ubicaxy_4bits.fila
+085     atoi.result
+085     lcd_ubicaxy_4bits.posicion
+086     lcd_envia_byte_4bits.operacion
+086     atoi.sign
+087     lcd_envia_byte_4bits.dato
+087     atoi.base
+088     atoi.index
+088     @delay_ms1.P1
+088     lcd_envia_byte_4bits.@SCRATCH1
+089     atoi.c
+08A     @MUL88.P1
+08A     atoi.@SCRATCH1
+08B     @MUL88.P1
+08B     atoi.@SCRATCH2
+F01     CCP_10
+F01     CCP_10_LOW
+F02     CCP_10_HIGH
+F04     CCP_9
+F04     CCP_9_LOW
+F05     CCP_9_HIGH
+F07     CCP_8_LOW
+F07     CCP_8
+F08     CCP_8_HIGH
+F0A     CCP_7
+F0A     CCP_7_LOW
+F0B     CCP_7_HIGH
+F0D     CCP_6_LOW
+F0D     CCP_6
+F0E     CCP_6_HIGH
+F10     CCP_5_LOW
+F10     CCP_5
+F11     CCP_5_HIGH
+F13     CCP_4_LOW
+F13     CCP_4
+F14     CCP_4_HIGH
+F16     CCP_3
+F16     CCP_3_LOW
+F17     CCP_3_HIGH
+F70.0   C1OUT
+F70.1   C2OUT
+F70.2   C3OUT
+F9B.6   PLLEN
+FB5     CCP_2_LOW
+FB5     CCP_2
+FB6     CCP_2_HIGH
+FBB     CCP_1
+FBB     CCP_1_LOW
+FBC     CCP_1_HIGH
+FE1-FE2 @WRITE_PACKED_MEMORY.P1
+FE1-FE2 @READ_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P1
+FE9-FEA @WRITE_PROGRAM_MEMORY.P2
+FE9-FEA @READ_PACKED_MEMORY.P3
+FE9-FEA @READ_PROGRAM_MEMORY.P4
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P1
+FF6-FF8 @READ_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+00120E  @delay_ms1
+00145C  @I2C_READ_1
+0013F0  @I2C_WRITE_1
+001236  lcd_envia_byte_4bits
+0012F8  lcd_ubicaxy_4bits
+001330  @goto10122
+001358  lcd_init_4bits
+001392  lcd_putc_4bits
+0016F2  @MUL88
+00173E  atoi
+001AFC  @DIV1616
+001ADC  @MUL1616
+001588  barrer_teclado
+0016DA  esperar_teclado
+00198E  write_ds1307
+0014C2  read_ds1307
+001C18  printHora
+001008  @const546
+001A04  @PSTRINGCN_116
+001BD6  @PRINTF_X_116
+00101C  @const552
+0018DA  convertDecToHex
+001D3E  MAIN
+001032  @const561
+0013C8  @PSTRINGC_116
+00104A  @const563
+001066  @const564
+001086  @const565
+00109A  @const567
+0010AC  @const569
+0010CE  @const570
+001A2A  @PRINTF_LU_116
+0010E6  @const574
+0010F8  @const576
+001110  @const578
+001124  @const580
+001140  @const588
+001B40  @DIV88
+001B68  @PRINTF_U_116
+001152  @const595
+001176  @const596
+001192  @const597
+0011AE  @const598
+001CD2  @READBITA
+001D00  @WRITEBITA
+0011CA  @const609
+0011EE  @const610
+001D3E  @cinit
+0136  StrtoulGO
+0136  StrtolGO
+
+
+User Memory space: 
+
+User Memory space: 
+
+Project Directory:
+    C:\Users\Michael Vargas\Desktop\LauraPrimerCorte\
+
+Project Files:
+    i2c_ds1307.c                                            [15-Sept.-16 21:34  CRC=7C81FE4D]
+    ..\..\..\..\Program Files (x86)\PICC\devices\18F47J53.h [13-Abr.-11 15:02  CRC=1DEA3C7C]
+    Configura_LCD_4-8_bits.c                                [09-Sept.-16 18:18  CRC=ADA99B7E]
+    ..\..\..\..\Program Files (x86)\PICC\drivers\stdlib.h   [22-Abr.-10 10:12  CRC=97EC02E8]
+    ..\..\..\..\Program Files (x86)\PICC\drivers\stddef.h   [16-Jul.-10 09:27  CRC=897CEC6C]
+    ..\..\..\..\Program Files (x86)\PICC\drivers\string.h   [18-Jun.-08 10:48  CRC=9BE6227E]
+    ..\..\..\..\Program Files (x86)\PICC\drivers\ctype.h    [03-Ene.-08 13:55  CRC=2D1F019F]
+    ..\..\..\..\Program Files (x86)\PICC\drivers\math.h     [11-Abr.-11 09:02  CRC=A2852B04]
+
+Source signature=778E3FC0
+
+Units:
+    C:\Users\Michael Vargas\Desktop\LauraPrimerCorte\i2c_ds1307 (main)
+
+Compiler Settings:
+    Processor:      PIC18F47J53
+    Pointer Size:   16
+    ADC Range:      0-4095
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    Errors:      i2c_ds1307.err
+    Ext Symbols: i2c_ds1307.esym
+    INHX32:      i2c_ds1307.hex
+    Symbols:     i2c_ds1307.sym
+    List:        i2c_ds1307.lst
+    Debug/COFF:  i2c_ds1307.cof
+    Project:     i2c_ds1307.PJT
+    Call Tree:   i2c_ds1307.tre
+    Statistics:  i2c_ds1307.STA

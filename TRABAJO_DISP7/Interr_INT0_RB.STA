@@ -1,0 +1,52 @@
+
+ROM used: 974 (1%)
+          978 (1%) including unused fragments
+
+          0 Average locations per line
+          2 Average locations per statement
+
+RAM used: 44 (1%) at main() level
+          49 (1%) worst case
+
+Stack used: 2 worst case (out of 31 total available)
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+  203    79  14  Interr_INT0_RB.c
+  704     0   0  ..\..\..\..\..\Program Files (x86)\PICC\devices\18F47J53.h
+ 1273   359  64  ..\..\..\..\..\Program Files (x86)\PICC\drivers\stdlib.h
+   32     0   0  ..\..\..\..\..\Program Files (x86)\PICC\drivers\stddef.h
+  409   121  22  ..\..\..\..\..\Program Files (x86)\PICC\drivers\string.h
+   28     0   0  ..\..\..\..\..\Program Files (x86)\PICC\drivers\ctype.h
+----- -----
+ 2649   559 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     40   2   1             @delay_ms1
+0     30   2   5             @MUL1616
+0    146   7   4   391  4.2  conver_bcd
+0    154   8   4   558  4.3  barrer_display
+0    600  31   2  1422  6.5  MAIN
+
+Program metrics:
+    Functions               3
+    Statements              559
+    Comments                1075
+    Volume (V)              2925
+    Difficilty (D)          14.9
+    Effort to implement (E) 43716
+    Time to implement (T)   40 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   14
+    Maintainability (MI)    6
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00FFE     0  4096  
+01000-01006     4  4  
+01008-0FFFE   970  60462  
+10000-1FFF6     0  65528  
+
+
+

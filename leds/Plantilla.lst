@@ -1,0 +1,230 @@
+CCS PCH C Compiler, Version 4.120, 26417               21-Feb.-16 10:22
+
+               Filename: C:\Users\Michael Vargas\Documents\PIC\leds\Plantilla.lst
+
+               ROM used: 202 bytes (0%)
+                         Largest free fragment is 65528
+               RAM used: 9 (0%) at main() level
+                         9 (0%) worst case
+               Stack:    1 locations
+
+*
+01000:  GOTO   1032
+.................... #include "EMm47J53_StackConfig.h" 
+.................... /* 
+.................... ** ########################################################################## 
+.................... **     Filename  : EMm47J53_StackConfig.h 
+.................... **     Processor : PIC18F47J53 
+.................... **     FileFormat: V1.00 
+.................... **     DataSheet : PIC18F47J53 
+.................... **     Compiler  : CCS Compiler V4.114 
+.................... **     Date/Time : 14.12.2011, 11:00 
+.................... ** 
+.................... ** 
+.................... ** 
+.................... ** 
+.................... **     (c) Copyright OCTOPLUS.2008-2011 
+.................... **     OCTOPLUS.  
+.................... **     Ernesto Andres Rincon Cruz 
+.................... **     Republica de Colombia 
+.................... **     http      : www.octoplusaz.com 
+.................... **     mail      : soporte@octoplusaz.com 
+.................... **  
+.................... ** 
+.................... **     Nota:  Todas las funciones estan debidamente probadas usando el  
+.................... **            modulo EMm47J53 corriendo a una frecuencia de bus interno  
+.................... **            de 12MHz. Para mas informacion www.octoplusaz.com/foros 
+.................... ** ########################################################################### 
+.................... */ 
+.................... #ifndef _INC_OCTOPLUS_STACK_CONFIG_H 
+.................... #define _INC_OCTOPLUS_STACK_CONFIG_H 
+.................... #include <18F47J53.h> 
+.................... //////// Standard Header file for the PIC18F47J53 device //////////////// 
+.................... #device PIC18F47J53 
+.................... #list 
+....................  
+....................  
+.................... #device ADC=8 
+....................  
+.................... #FUSES NOWDT         //WDT disabled (enabled by SWDTEN bit)                     
+.................... #FUSES PLL3          //Divide by 3 (12 MHz oscillator input)             
+.................... #FUSES NOPLLEN       //PLL Disabled 
+.................... #FUSES NOSTVREN      //stack overflow/underflow reset enabled                 
+.................... #FUSES NOXINST       //Extended instruction set disabled             
+.................... #FUSES NOCPUDIV      //No CPU system clock divide          
+.................... #FUSES NOPROTECT     //Program memory is not code-protected           
+.................... #FUSES HSPLL         //HS oscillator, PLL enabled, HSPLL used by USB            
+.................... #FUSES SOSC_HIGH     //High Power T1OSC/SOSC circuit selected 
+.................... #FUSES CLOCKOUT      //CLKO output enabled on the RA6 pin  
+.................... #FUSES NOFCMEN       //Fail-Safe Clock Monitor disabled 
+.................... #FUSES NOIESO        //Two-Speed Start-up disabled 
+.................... #FUSES WDT32768      //Watchdog Postscaler 1:32768 
+.................... #FUSES DSWDTOSC_INT  //DSWDT uses INTOSC/INTRC as clock 
+.................... #FUSES RTCOSC_INT    //RTCC uses INTRC as clock 
+.................... #FUSES NODSBOR       //Zero-Power BOR disabled in Deep Sleep 
+.................... #FUSES NODSWDT       //Deep Sleep Watchdog Timer Disabled 
+.................... #FUSES DSWDT8192     //Deep Sleep Watchdog Postscaler: 1:8,192 (8.5 seconds)    
+.................... #FUSES NOIOL1WAY     //IOLOCK bit can be set and cleared 
+.................... #FUSES ADC12         //ADC 10 or 12 Bit Select:12 - Bit ADC Enabed  
+.................... #FUSES MSSPMSK7      //MSSP 7 Bit address masking 
+.................... #FUSES NOWPFP        //Write Protect Program Flash Page 0 
+.................... #FUSES NOWPCFG       //Write/Erase last page protect Disabled 
+.................... #FUSES WPDIS         //WPFP[5:0], WPEND, and WPCFG bits ignored  
+.................... #FUSES WPEND         //Start protection at page 0 
+.................... #FUSES LS48MHZ       //Low Speed USB mode with 48 MHz System clock at 48 MHz USB CLKEN divide-by is set to 8  
+.................... #use delay(clock=48000000) 
+*
+01008:  CLRF   FEA
+0100A:  MOVLW  08
+0100C:  MOVWF  FE9
+0100E:  MOVF   FEF,W
+01010:  BZ    102E
+01012:  MOVLW  0F
+01014:  MOVWF  01
+01016:  CLRF   00
+01018:  DECFSZ 00,F
+0101A:  BRA    1018
+0101C:  DECFSZ 01,F
+0101E:  BRA    1016
+01020:  MOVLW  8F
+01022:  MOVWF  00
+01024:  DECFSZ 00,F
+01026:  BRA    1024
+01028:  NOP   
+0102A:  DECFSZ FEF,F
+0102C:  BRA    1012
+0102E:  GOTO   10B6 (RETURN)
+....................  
+.................... #pin_select U2TX=PIN_D2 //Selecciona hardware UART2 
+.................... #pin_select U2RX=PIN_D3 //Selecciona hardware UART2 
+....................  
+....................  
+.................... #define LOADER_END   0xFFF                         
+.................... #build(reset=LOADER_END+1, interrupt=LOADER_END+9)   //Protege posiciones de memoria desde la 0x0000 hasta la 0x1000    
+.................... #org 0, LOADER_END {} 
+....................  
+.................... #bit PLLEN = 0xf9b.6 
+....................  
+.................... #define mcu_init()\ 
+.................... do{\ 
+....................  PLLEN = 1;          /*Habilita PLL para generar 48MHz de oscilador*/\ 
+.................... }while(0) 
+....................  
+.................... #endif /* _INC_OCTOPLUS_STACK_CONFIG_H */ 
+....................  
+.................... /********************************************************/ 
+.................... /*------- Espacio para declaracion de constantes  ------*/ 
+.................... /********************************************************/ 
+.................... #define NUM_LEDS 8 
+.................... /********************************************************/ 
+.................... /*--- Espacio para declaracion de variables globales  --*/ 
+.................... /********************************************************/ 
+.................... unsigned int16 i; 
+.................... unsigned int8 aux; 
+.................... /********************************************************/ 
+.................... /********************************************************/ 
+.................... /*-------------- Espacio para funciones  ---------------*/ 
+.................... /********************************************************/ 
+....................  
+....................  
+.................... /******************************************************************************/ 
+.................... /******************************************************************************/ 
+.................... /*--------------------- Espacio de codigo principal --------------------------*/ 
+.................... /******************************************************************************/  
+.................... #zero_ram 
+.................... void main(){ 
+01032:  CLRF   FF8
+01034:  BCF    FD0.7
+01036:  MOVLB  E
+01038:  MOVLW  55
+0103A:  MOVWF  FA7
+0103C:  MOVLW  AA
+0103E:  MOVWF  FA7
+01040:  BCF    xBF.0
+01042:  MOVLW  14
+01044:  MOVWF  xF7
+01046:  MOVLW  06
+01048:  MOVWF  xD3
+0104A:  MOVLW  55
+0104C:  MOVWF  FA7
+0104E:  MOVLW  AA
+01050:  MOVWF  FA7
+01052:  BSF    xBF.0
+01054:  MOVLW  AE
+01056:  MOVWF  00
+01058:  MOVLW  0F
+0105A:  MOVWF  01
+0105C:  MOVLW  02
+0105E:  MOVWF  FE9
+01060:  MOVLW  00
+01062:  MOVWF  FEA
+01064:  CLRF   FEE
+01066:  DECFSZ 00,F
+01068:  BRA    1064
+0106A:  DECFSZ 01,F
+0106C:  BRA    1064
+0106E:  CLRF   FEA
+01070:  CLRF   FE9
+01072:  MOVLB  1
+01074:  CLRF   x88
+01076:  MOVLW  FF
+01078:  MOVLB  F
+0107A:  MOVWF  x48
+0107C:  BCF    FC2.6
+0107E:  BCF    FC2.7
+01080:  MOVF   x49,W
+01082:  ANDLW  E0
+01084:  IORLW  1F
+01086:  MOVWF  x49
+01088:  CLRF   x25
+0108A:  CLRF   FD1
+0108C:  CLRF   FD2
+.................... mcu_init();                                // Inicializa microcontrolador 
+0108E:  BSF    F9B.6
+....................  
+....................  
+....................  
+....................    for(;;){  
+....................    for(i=0;i<NUM_LEDS;i++){ 
+01090:  CLRF   05
+01092:  CLRF   04
+01094:  MOVF   05,F
+01096:  BNZ   10CA
+01098:  MOVF   04,W
+0109A:  SUBLW  07
+0109C:  BNC   10CA
+....................    aux=i; 
+0109E:  MOVFF  04,06
+....................    output_d(i | aux ); 
+010A2:  MOVF   04,W
+010A4:  IORWF  06,W
+010A6:  CLRF   F95
+010A8:  MOVWF  F8C
+....................    delay_ms(500); 
+010AA:  MOVLW  02
+010AC:  MOVWF  07
+010AE:  MOVLW  FA
+010B0:  MOVWF  08
+010B2:  MOVLB  0
+010B4:  BRA    1008
+010B6:  DECFSZ 07,F
+010B8:  BRA    10BC
+010BA:  BRA    10C0
+010BC:  MOVLB  F
+010BE:  BRA    10AE
+....................    } 
+010C0:  INCF   04,F
+010C2:  BTFSC  FD8.2
+010C4:  INCF   05,F
+010C6:  MOVLB  F
+010C8:  BRA    1094
+....................    }   
+010CA:  BRA    1090
+.................... } 
+010CC:  SLEEP 
+
+Configuration Fuses:
+   Word  1: F79A   NOWDT PLL3 NOPLLEN NOSTVREN NOXINST NODEBUG NOCPUDIV NOPROTECT
+   Word  2: FF3D   HSPLL SOSC_HIGH CLOCKOUT NOFCMEN NOIESO WDT32768
+   Word  3: F861   DSWDTOSC_INT RTCOSC_INT NODSBOR NODSWDT DSWDT8192 NOIOL1WAY ADC12 MSSPMSK7
+   Word  4: F980   NOWPFP NOWPCFG WPDIS WPEND LS48MHZ

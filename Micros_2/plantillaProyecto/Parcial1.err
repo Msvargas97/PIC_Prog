@@ -1,0 +1,4 @@
+>>> Warning 203 "Parcial1.c" Line 39(1,1): Condition always TRUE
+>>> Warning 203 "Parcial1.c" Line 68(1,1): Condition always TRUE
+*** Error 12 "Parcial1.c" Line 153(23,24): Undefined identifier  -- barrer_teclado
+      1 Errors,  2 Warnings.

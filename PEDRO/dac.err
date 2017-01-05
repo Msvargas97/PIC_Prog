@@ -1,0 +1,4 @@
+>>> Warning 203 "dac.c" Line 170(1,1): Condition always TRUE
+>>> Warning 202 "dac.c" Line 50(5,8): Variable never used:   rs232_errors
+      Memory usage:   ROM=3%      RAM=6% - 7%
+      0 Errors,  2 Warnings.

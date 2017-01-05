@@ -1,0 +1,5 @@
+>>> Warning 204 "btletras.c" Line 120(1,1): Condition always FALSE
+>>> Warning 216 "btletras.c" Line 152(2,3): Interrupts disabled during call to prevent re-entrancy:  (@DIV3232)
+      Memory usage:   ROM=2%      RAM=2% - 3%
+      0 Errors,  2 Warnings.
+Build Successful.

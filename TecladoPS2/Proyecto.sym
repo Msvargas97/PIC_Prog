@@ -1,0 +1,184 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     @INTERRUPT_AREA
+005     @INTERRUPT_AREA
+006     @INTERRUPT_AREA
+007     @INTERRUPT_AREA
+008     @INTERRUPT_AREA
+009     @INTERRUPT_AREA
+00A     @INTERRUPT_AREA
+00B     @INTERRUPT_AREA
+00C     @INTERRUPT_AREA
+00D     @INTERRUPT_AREA
+00E     @INTERRUPT_AREA
+00F     @INTERRUPT_AREA
+010     @INTERRUPT_AREA
+011     @INTERRUPT_AREA
+012     @INTERRUPT_AREA
+013     @INTERRUPT_AREA
+014     @INTERRUPT_AREA
+015     @INTERRUPT_AREA
+016     @INTERRUPT_AREA
+017     @INTERRUPT_AREA
+018     @INTERRUPT_AREA
+019     @INTERRUPT_AREA
+01A     @INTERRUPT_AREA
+01B     @INTERRUPT_AREA
+01C-01D strtok.save
+01E-021 _Randseed
+022     edge
+023     bitcount
+024     i
+025     y
+026     x
+027     z
+028     d
+029     c
+02A-03A mensaje
+03B-04C mensaje2
+04D     dato_rs232
+04E     got_interrupt
+04F     interrupt_count
+050     status_b3
+051.0   bits_8_4
+052     decode.is_up
+053     decode.shift
+054     decode.mode
+055-058 atan2.y
+055     @GETCH_1_.@SCRATCH1
+055     MAIN.@SCRATCH1
+055     @PSTRINGC_529.@SCRATCH1
+056     MAIN.@SCRATCH2
+056     @PSTRINGC_529.@SCRATCH2
+057     @PSTRINGC_529.@SCRATCH3
+059-05C atan2.x
+05D-060 atan2.z
+05F     int_ext_isr.data
+060     decode.sc
+061     decode.i
+061.0   atan2.sign
+062     atan2.quad
+062     decode.@SCRATCH1
+063     lcd_putc_4bits.letra
+063     @PUTCHAR_1_.P1
+063     decode.@SCRATCH2
+064     lcd_ubicaxy_4bits.columna
+064     decode.@SCRATCH3
+065     lcd_ubicaxy_4bits.fila
+065     decode.@SCRATCH4
+066     lcd_ubicaxy_4bits.posicion
+067     lcd_envia_byte_4bits.operacion
+068     lcd_envia_byte_4bits.dato
+069     @delay_ms1.P1
+069     lcd_envia_byte_4bits.@SCRATCH1
+F01     CCP_10_LOW
+F01     CCP_10
+F02     CCP_10_HIGH
+F04     CCP_9
+F04     CCP_9_LOW
+F05     CCP_9_HIGH
+F07     CCP_8
+F07     CCP_8_LOW
+F08     CCP_8_HIGH
+F0A     CCP_7_LOW
+F0A     CCP_7
+F0B     CCP_7_HIGH
+F0D     CCP_6_LOW
+F0D     CCP_6
+F0E     CCP_6_HIGH
+F10     CCP_5
+F10     CCP_5_LOW
+F11     CCP_5_HIGH
+F13     CCP_4
+F13     CCP_4_LOW
+F14     CCP_4_HIGH
+F16     CCP_3
+F16     CCP_3_LOW
+F17     CCP_3_HIGH
+F70.0   C1OUT
+F70.1   C2OUT
+F70.2   C3OUT
+F9B.6   PLLEN
+FB5     CCP_2_LOW
+FB5     CCP_2
+FB6     CCP_2_HIGH
+FBB     CCP_1
+FBB     CCP_1_LOW
+FBC     CCP_1_HIGH
+FE1-FE2 @READ_PACKED_MEMORY.P1
+FE1-FE2 @WRITE_PACKED_MEMORY.P2
+FE9-FEA @READ_PROGRAM_MEMORY.P1
+FE9-FEA @WRITE_PACKED_MEMORY.P2
+FE9-FEA @READ_PACKED_MEMORY.P3
+FE9-FEA @WRITE_PROGRAM_MEMORY.P4
+FF1.7   INTCON2
+FF2.1   INTF_BIT
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P1
+FF6-FF8 @READ_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+001236  @delay_ms1
+0011F6  @PUTCHAR_1_
+00176C  @GETCH_1_
+00125E  lcd_envia_byte_4bits
+00131C  lcd_ubicaxy_4bits
+001354  @goto11728
+0016D4  lcd_init_4bits
+00137C  lcd_putc_4bits
+0010BE  unshifted
+00115A  shifted
+001680  int_ext_isr
+0017E8  MAIN
+0016C0  @const557
+0017B2  @PSTRINGC_529
+001762  init_kb
+0013B2  decode
+0017E8  @cinit
+0136  StrtoulGO
+0136  StrtolGO
+
+
+User Memory space: 
+
+User Memory space: 
+
+Project Directory:
+    C:\Users\Michael Vargas\Documents\PIC\TecladoPS2\
+
+Project Files:
+    Proyecto.c                                              [07-Abr.-16 13:59  CRC=68BC1677]
+    PLANTILLA_18F47J53.h                                    [07-Abr.-16 13:29  CRC=AB5BFBD2]
+    ..\..\..\..\..\Program Files (x86)\PICC\devices\18F47J53.h [13-Abr.-11 15:02  CRC=1DEA3C7C]
+    ..\..\..\..\..\Program Files (x86)\PICC\drivers\math.h  [11-Abr.-11 09:02  CRC=A2852B04]
+    ..\..\..\..\..\Program Files (x86)\PICC\drivers\stdlib.h [22-Abr.-10 10:12  CRC=97EC02E8]
+    ..\..\..\..\..\Program Files (x86)\PICC\drivers\stddef.h [16-Jul.-10 09:27  CRC=897CEC6C]
+    ..\..\..\..\..\Program Files (x86)\PICC\drivers\string.h [18-Jun.-08 10:48  CRC=9BE6227E]
+    ..\..\..\..\..\Program Files (x86)\PICC\drivers\ctype.h [03-Ene.-08 13:55  CRC=2D1F019F]
+    Configura_LCD_4-8_bits.c                                [16-Mar.-16 16:26  CRC=8E1B7D28]
+
+Source signature=DB2C878A
+
+Units:
+    C:\Users\Michael Vargas\Documents\PIC\TecladoPS2\Proyecto (main)
+
+Compiler Settings:
+    Processor:      PIC18F47J53
+    Pointer Size:   16
+    ADC Range:      0-4095
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    Errors:      Proyecto.err
+    Ext Symbols: Proyecto.esym
+    INHX32:      Proyecto.hex
+    Symbols:     Proyecto.sym
+    List:        Proyecto.lst
+    Debug/COFF:  Proyecto.cof
+    Project:     Proyecto.PJT
+    Call Tree:   Proyecto.tre
+    Statistics:  Proyecto.STA

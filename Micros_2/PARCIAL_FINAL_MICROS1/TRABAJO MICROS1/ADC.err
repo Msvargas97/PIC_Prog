@@ -1,0 +1,9 @@
+>>> Warning 205 "ADC.c" Line 157(1,1): Unsigned variable is never less than zero
+>>> Warning 204 "ADC.c" Line 157(1,1): Condition always FALSE
+>>> Warning 202 "ADC.c" Line 36(5,8): Variable never used:   rs232_errors
+>>> Warning 202 "ADC.c" Line 62(6,12): Variable never used:   unidad
+>>> Warning 202 "ADC.c" Line 62(15,21): Variable never used:   decena
+>>> Warning 202 "ADC.c" Line 62(24,31): Variable never used:   centena
+>>> Warning 202 "ADC.c" Line 62(34,38): Variable never used:   umil
+      Memory usage:   ROM=1%      RAM=1% - 2%
+      0 Errors,  7 Warnings.

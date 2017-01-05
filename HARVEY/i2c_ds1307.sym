@@ -1,0 +1,126 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004.0   bits_8_4
+005     PS2_Key
+006-045 DS1307
+046     @PRINTF_X_118.P1
+046     write_ds1307.ds1307_register
+046     read_ds1307.ds1307_register
+046     MAIN.@SCRATCH1
+046     @PSTRINGC_118.@SCRATCH1
+047     @PRINTF_X_118.P1
+047     write_ds1307.@SCRATCH1
+047     read_ds1307.@SCRATCH1
+047     @PSTRINGC_118.@SCRATCH2
+048     @I2C_WRITEU_1.P1
+048     read_ds1307.@SCRATCH2
+048     @PSTRINGC_118.@SCRATCH3
+049     lcd_putc_4bits.letra
+049     @I2C_READU_1.P1
+04A     lcd_ubicaxy_4bits.columna
+04B     lcd_ubicaxy_4bits.fila
+04C     lcd_ubicaxy_4bits.posicion
+04D     lcd_envia_byte_4bits.operacion
+04E     lcd_envia_byte_4bits.dato
+04F     @delay_ms1.P1
+04F     lcd_envia_byte_4bits.@SCRATCH1
+F01     CCP_10
+F01     CCP_10_LOW
+F02     CCP_10_HIGH
+F04     CCP_9
+F04     CCP_9_LOW
+F05     CCP_9_HIGH
+F07     CCP_8_LOW
+F07     CCP_8
+F08     CCP_8_HIGH
+F0A     CCP_7
+F0A     CCP_7_LOW
+F0B     CCP_7_HIGH
+F0D     CCP_6_LOW
+F0D     CCP_6
+F0E     CCP_6_HIGH
+F10     CCP_5_LOW
+F10     CCP_5
+F11     CCP_5_HIGH
+F13     CCP_4
+F13     CCP_4_LOW
+F14     CCP_4_HIGH
+F16     CCP_3_LOW
+F16     CCP_3
+F17     CCP_3_HIGH
+F70.0   C1OUT
+F70.1   C2OUT
+F70.2   C3OUT
+F9B.6   PLLEN
+FB5     CCP_2
+FB5     CCP_2_LOW
+FB6     CCP_2_HIGH
+FBB     CCP_1_LOW
+FBB     CCP_1
+FBC     CCP_1_HIGH
+FE1-FE2 @READ_PACKED_MEMORY.P1
+FE1-FE2 @WRITE_PACKED_MEMORY.P2
+FE9-FEA @READ_PACKED_MEMORY.P1
+FE9-FEA @READ_PROGRAM_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P3
+FE9-FEA @WRITE_PROGRAM_MEMORY.P4
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P1
+FF6-FF8 @READ_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+00101C  @delay_ms1
+0011FE  @I2C_WRITEU_1
+001258  @I2C_READU_1
+001044  lcd_envia_byte_4bits
+001102  lcd_ubicaxy_4bits
+00113A  @goto10108
+001162  lcd_init_4bits
+0011A0  lcd_putc_4bits
+00121A  write_ds1307
+001274  read_ds1307
+0012F4  MAIN
+001008  @const140
+0011D6  @PSTRINGC_118
+001016  @const142
+0012B6  @PRINTF_X_118
+0012F4  @cinit
+
+
+User Memory space: 
+
+User Memory space: 
+
+Project Directory:
+    C:\Users\Michael Vargas\Desktop\HARVEY\
+
+Project Files:
+    i2c_ds1307.c                                            [02-May.-16 21:10  CRC=D4070378]
+    ..\..\..\..\Program Files (x86)\PICC\devices\18F47J53.h [13-Abr.-11 15:02  CRC=1DEA3C7C]
+    Configura_LCD_4-8_bits.c                                [17-Mar.-16 14:21  CRC=AB39023B]
+
+Source signature=4863446A
+
+Units:
+    C:\Users\Michael Vargas\Desktop\HARVEY\i2c_ds1307 (main)
+
+Compiler Settings:
+    Processor:      PIC18F47J53
+    Pointer Size:   16
+    ADC Range:      0-4095
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    Errors:      i2c_ds1307.err
+    Ext Symbols: i2c_ds1307.esym
+    INHX32:      i2c_ds1307.hex
+    Symbols:     i2c_ds1307.sym
+    List:        i2c_ds1307.lst
+    Debug/COFF:  i2c_ds1307.cof
+    Project:     i2c_ds1307.PJT
+    Call Tree:   i2c_ds1307.tre
+    Statistics:  i2c_ds1307.STA

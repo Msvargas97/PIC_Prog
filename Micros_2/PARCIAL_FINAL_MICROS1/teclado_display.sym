@@ -1,0 +1,155 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004-005 strtok.save
+006-009 _Randseed
+00A     n
+00B     tecla
+00C     bcd_cent
+00D     bcd_dec
+00E     bcd_unid
+00F     bcd_mil
+010-011 i
+012-013 j
+014-015 dato_analogo
+016-019 luz
+01A     temp
+01B     vel_viento
+01C     select
+01D     unidad
+01E     decena
+01F     centena
+020     umil
+021.0   asignarDatos
+022-023 rangoTemp
+024-025 rangoLuz
+026-027 rangoViento
+028-038 display
+039-03C @DTOF.P1
+039-03C @SFTOI.P2
+039     esperar_teclado.tecla
+039     @delay_us1.P1
+039-03A conver_bcd.x
+039-03C @FTOSD.P1
+039     MAIN.@SCRATCH1
+03A-03D @MULFF.P1
+03A     barrer_teclado.tecla
+03A-03B @ITOF.P1
+03A     MAIN.@SCRATCH2
+03B-03C barrido_display.repet
+03B     barrer_teclado.@SCRATCH1
+03B     MAIN.@SCRATCH3
+03C     MAIN.@SCRATCH4
+03D-03E @MUL1616.P1
+03D     barrido_display.k
+03D     @FTOSD.@SCRATCH1
+03E-041 @MULFF.P1
+03E     @delay_ms1.P2
+03E     barrido_display.@SCRATCH1
+03F-040 @MUL1616.P1
+041     @MUL1616.@SCRATCH1
+042     @MULFF.@SCRATCH1
+043     @MULFF.@SCRATCH2
+044     @MULFF.@SCRATCH3
+F01     CCP_10
+F01     CCP_10_LOW
+F02     CCP_10_HIGH
+F04     CCP_9
+F04     CCP_9_LOW
+F05     CCP_9_HIGH
+F07     CCP_8_LOW
+F07     CCP_8
+F08     CCP_8_HIGH
+F0A     CCP_7
+F0A     CCP_7_LOW
+F0B     CCP_7_HIGH
+F0D     CCP_6_LOW
+F0D     CCP_6
+F0E     CCP_6_HIGH
+F10     CCP_5
+F10     CCP_5_LOW
+F11     CCP_5_HIGH
+F13     CCP_4
+F13     CCP_4_LOW
+F14     CCP_4_HIGH
+F16     CCP_3_LOW
+F16     CCP_3
+F17     CCP_3_HIGH
+F70.0   C1OUT
+F70.1   C2OUT
+F70.2   C3OUT
+F9B.6   PLLEN
+FB5     CCP_2_LOW
+FB5     CCP_2
+FB6     CCP_2_HIGH
+FBB     CCP_1
+FBB     CCP_1_LOW
+FBC     CCP_1_HIGH
+FE1-FE2 @READ_PACKED_MEMORY.P1
+FE1-FE2 @WRITE_PACKED_MEMORY.P2
+FE9-FEA @READ_PACKED_MEMORY.P1
+FE9-FEA @WRITE_PACKED_MEMORY.P2
+FE9-FEA @READ_PROGRAM_MEMORY.P3
+FE9-FEA @WRITE_PROGRAM_MEMORY.P4
+FF6-FF8 @READ_PROGRAM_MEMORY.P1
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+001008  @delay_ms1
+0012D0  @delay_us1
+001328  @MULFF
+0012F0  @ITOF
+00124E  @MUL1616
+00126C  conver_bcd
+001030  barrido_display
+0010DC  barrer_teclado
+001236  esperar_teclado
+0014CA  MAIN
+00141A  @SFTOI
+001454  @DTOF
+00148A  @FTOSD
+0014CA  @cinit
+0136  StrtoulGO
+0136  StrtolGO
+
+
+User Memory space: 
+
+User Memory space: 
+
+Project Directory:
+    C:\Users\Michael Vargas\Desktop\PARCIAL_FINAL_MICROS1\
+
+Project Files:
+    teclado_display.c                                       [02-Jun.-16 23:51  CRC=276CAFF8]
+    ..\..\..\..\Program Files (x86)\PICC\devices\18F47J53.h [13-Abr.-11 15:02  CRC=1DEA3C7C]
+    ..\..\..\..\Program Files (x86)\PICC\drivers\stdlib.h   [22-Abr.-10 10:12  CRC=97EC02E8]
+    ..\..\..\..\Program Files (x86)\PICC\drivers\stddef.h   [16-Jul.-10 09:27  CRC=897CEC6C]
+    ..\..\..\..\Program Files (x86)\PICC\drivers\string.h   [18-Jun.-08 10:48  CRC=9BE6227E]
+    ..\..\..\..\Program Files (x86)\PICC\drivers\ctype.h    [03-Ene.-08 13:55  CRC=2D1F019F]
+
+Source signature=5CE40184
+
+Units:
+    C:\Users\Michael Vargas\Desktop\PARCIAL_FINAL_MICROS1\teclado_display (main)
+
+Compiler Settings:
+    Processor:      PIC18F47J53
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    Errors:      teclado_display.err
+    Ext Symbols: teclado_display.esym
+    INHX32:      teclado_display.hex
+    Symbols:     teclado_display.sym
+    List:        teclado_display.lst
+    Debug/COFF:  teclado_display.cof
+    Project:     teclado_display.PJT
+    Call Tree:   teclado_display.tre
+    Statistics:  teclado_display.STA

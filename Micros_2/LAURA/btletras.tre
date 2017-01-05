@@ -1,0 +1,31 @@
+ÀÄbtletras
+   ÃÄMAIN  0/610  Ram=4
+   ³  ÃÄ@cinit1  (Inline)  Ram=0
+   ³  ÃÄPWM_ini  0/90  Ram=0
+   ³  ÃÄ@delay_ms1  0/40  Ram=1
+   ³  ÃÄ@ITOF  0/54  Ram=2
+   ³  ÃÄ@DIVFF  0/348  Ram=14
+   ³  ÃÄ@MULFF  0/242  Ram=11
+   ³  ÃÄ@ITOF  0/54  Ram=2
+   ³  ÃÄ@MULFF  0/242  Ram=11
+   ³  ÃÄ@delay_ms1  0/40  Ram=1
+   ³  ÃÄ@ITOF  0/54  Ram=2
+   ³  ÃÄ@PSTRINGCN_38400_31766_31767  0/40  Ram=4
+   ³  ÃÄ@PRINTF_L32D_38400_31766_31767FPFPF  0/408  Ram=13
+   ³  ³  ÃÄ@MULFF  0/242  Ram=11
+   ³  ³  ÃÄ@FTOSD  0/64  Ram=5
+   ³  ³  ÃÄ@DIV3232  0/142  Ram=13
+   ³  ³  ÀÄ@DIV3232  0/142  Ram=13
+   ³  ÃÄ@PSTRINGCN_38400_31766_31767  0/40  Ram=4
+   ³  ÃÄ@PRINTF_L32D_38400_31766_31767FPFPF  0/408  Ram=13
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PSTRINGCN_38400_31766_31767  0/40  Ram=4
+   ³  ÀÄ@delay_ms1  0/40  Ram=1
+   ÀÄrd_isr  0/264  Ram=1
+      ÃÄmapeo  0/224  Ram=28
+      ³  ÃÄ@MUL3232  0/86  Ram=14
+      ³  ÀÄ@DIV3232  0/142  Ram=13
+      ÃÄmapeo  0/224  Ram=28
+      ³  ÀÄ*
+      ÀÄmapeo  0/224  Ram=28
+         ÀÄ*

@@ -1,0 +1,73 @@
+
+ROM used: 3506 (3%)
+          3510 (3%) including unused fragments
+
+          1 Average locations per line
+          5 Average locations per statement
+
+RAM used: 46 (1%) at main() level
+          67 (2%) worst case
+
+Stack used: 5 worst case (out of 31 total available)
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+  225   161  22  PARCIAL3CORTE.c
+  704     0   0  ..\..\..\..\Program Files (x86)\PICC\devices\18F47J53.h
+  197    98  13  Configura_LCD_4-8_bits.c
+ 1273   359  49  ..\..\..\..\Program Files (x86)\PICC\drivers\stdlib.h
+   32     0   0  ..\..\..\..\Program Files (x86)\PICC\drivers\stddef.h
+  409   121  16  ..\..\..\..\Program Files (x86)\PICC\drivers\string.h
+   28     0   0  ..\..\..\..\Program Files (x86)\PICC\drivers\ctype.h
+----- -----
+ 2868   739 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     40   1   1             @delay_ms1
+0    194   3   3  1374  3.4  lcd_envia_byte_4bits
+0     56   1   3   352  5.0  lcd_ubicaxy_4bits
+0     40   1   0             @goto10101
+0     58   1   0   197  1.8  lcd_init_4bits
+0     54   1   1   248  2.3  lcd_putc_4bits
+0    242   3  11             @MULFF
+0     56   1   2             @ITOF
+0     30   0   5             @MUL1616
+0    308   4   2  1739  4.4  barrer_teclado
+0   1502  21   4  4544 12.6  MAIN
+0     22   0   0             @const417
+0     40   1   3             @PSTRINGC_114
+0     40   1   3             @DIV88
+0    104   1   2             @PRINTF_U_114
+0     14   0   0             @const426
+0     28   0   0             @const427
+0     58   1   4             @SFTOI
+0      6   0   0             @const430
+0    178   3   9             @PRINTF_LU_114
+0     54   1   4             @DTOF
+0     64   1   5             @FTOSD
+0      6   0   0             @const440
+0    142   2  13             @DIV3232
+0    166   2  12             @PRINTF_L32U_114
+
+Program metrics:
+    Functions               6
+    Statements              739
+    Comments                963
+    Volume (V)              10918
+    Difficilty (D)          29.8
+    Effort to implement (E) 325251
+    Time to implement (T)   5 hours, 1 minutes
+    Est Delivered Bugs (B)  2
+    Cyclomatic Complexity   52
+    Maintainability (MI)    87
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00FFE     0  4096  
+01000-01006     4  4  
+01008-0FFFE  3502  57930  
+10000-1FFF6     0  65528  
+
+
+

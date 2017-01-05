@@ -1,0 +1,60 @@
+
+ROM used: 2816 (2%)
+          2820 (2%) including unused fragments
+
+          1 Average locations per line
+          4 Average locations per statement
+
+RAM used: 61 (2%) at main() level
+          69 (2%) worst case
+
+Stack used: 4 worst case (out of 31 total available)
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+  387   241  33  teclado_display.c
+  704     0   0  ..\..\..\..\Program Files (x86)\PICC\devices\18F47J53.h
+ 1273   359  50  ..\..\..\..\Program Files (x86)\PICC\drivers\stdlib.h
+   32     0   0  ..\..\..\..\Program Files (x86)\PICC\drivers\stddef.h
+  409   121  17  ..\..\..\..\Program Files (x86)\PICC\drivers\string.h
+   28     0   0  ..\..\..\..\Program Files (x86)\PICC\drivers\ctype.h
+----- -----
+ 2833   721 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     40   1   1             @delay_ms1
+0     32   1   1             @delay_us1
+0    242   4  11             @MULFF
+0     56   1   2             @ITOF
+0     30   1   5             @MUL1616
+0    100   2   2   444  4.3  conver_bcd
+0    172   3   4   546  3.8  barrido_display
+0    346   6   2  1910  4.4  barrer_teclado
+0     24   0   1    98  2.9  esperar_teclado
+0   1594  28   4  5571 12.6  MAIN
+0     58   1   4             @SFTOI
+0     54   1   4             @DTOF
+0     64   1   5             @FTOSD
+
+Program metrics:
+    Functions               5
+    Statements              721
+    Comments                1160
+    Volume (V)              10475
+    Difficilty (D)          28.3
+    Effort to implement (E) 296713
+    Time to implement (T)   4 hours, 35 minutes
+    Est Delivered Bugs (B)  1
+    Cyclomatic Complexity   52
+    Maintainability (MI)    -2
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00FFE     0  4096  
+01000-01006     4  4  
+01008-0FFFE  2812  58620  
+10000-1FFF6     0  65528  
+
+
+

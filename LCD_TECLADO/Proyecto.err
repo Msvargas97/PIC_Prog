@@ -1,0 +1,4 @@
+>>> Warning 204 "Proyecto.c" Line 45(1,1): Condition always FALSE
+>>> Warning 203 "Proyecto.c" Line 52(1,1): Condition always TRUE
+*** Error 79 "Proyecto.c" Line 76(50,51): Expect }
+*** Error 79 "Proyecto.c" Line 76(50,51): Expect }

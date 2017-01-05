@@ -1,0 +1,79 @@
+
+ROM used: 4062 (3%)
+          4066 (3%) including unused fragments
+
+          1 Average locations per line
+          5 Average locations per statement
+
+RAM used: 114 (3%) at main() level
+          127 (3%) worst case
+
+Stack used: 5 worst case (out of 31 total available)
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+  326   220  28  primerCorte.c
+  704     0   0  ..\..\..\..\..\Program Files (x86)\PICC\devices\18F47J53.h
+  190    96  12  Configura_LCD_4-8_bits.c
+ 1273   359  45  ..\..\..\..\..\Program Files (x86)\PICC\drivers\stdlib.h
+   32     0   0  ..\..\..\..\..\Program Files (x86)\PICC\drivers\stddef.h
+  409   121  15  ..\..\..\..\..\Program Files (x86)\PICC\drivers\string.h
+   28     0   0  ..\..\..\..\..\Program Files (x86)\PICC\drivers\ctype.h
+----- -----
+ 2962   796 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     40   0   1             @delay_ms1
+0    102   1   3             @I2C_READ_1
+0    108   1   1             @I2C_WRITE_1
+0    194   2   3  1374  3.4  lcd_envia_byte_4bits
+0     56   1   3   352  5.0  lcd_ubicaxy_4bits
+0     40   0   0             @goto10122
+0     58   1   0   197  1.8  lcd_init_4bits
+0     54   1   1   248  2.3  lcd_putc_4bits
+0     66   1   5             @DIV1616
+0     30   0   5             @MUL1616
+0    118   1   2   185  3.6  write_ds1307
+0    336   4   2  1910  4.4  barrer_teclado
+0     24   0   1    98  2.9  esperar_teclado
+0     22   0   2    68  2.7  HEX_DEC
+0     42   1   3             @DIV88
+0    198   2   3   297  3.7  read_ds1307
+0   2004  25   5  7286 13.0  MAIN
+0     36   0   0             @const424
+0     42   1   3             @PSTRINGC_116
+0     34   0   0             @const426
+0     38   0   4             @PSTRINGCN_116
+0     20   0   0             @const429
+0     10   0   0             @const430
+0     36   0   0             @const431
+0     62   1   2             @PRINTF_X_116
+0     24   0   0             @const435
+0    178   2   9             @PRINTF_LU_116
+0     22   0   0             @const439
+0     22   0   0             @const441
+0     22   0   0             @const443
+0     20   0   0             @const444
+
+Program metrics:
+    Functions               10
+    Statements              796
+    Comments                982
+    Volume (V)              15734
+    Difficilty (D)          44.2
+    Effort to implement (E) 695143
+    Time to implement (T)   10 hours, 44 minutes
+    Est Delivered Bugs (B)  3
+    Cyclomatic Complexity   63
+    Maintainability (MI)    78
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00FFE     0  4096  
+01000-01006     4  4  
+01008-0FFFE  4058  57374  
+10000-1FFF6     0  65528  
+
+
+

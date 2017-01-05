@@ -1,0 +1,30 @@
+ÀÄcom_serie
+   ÃÄMAIN  0/672  Ram=2
+   ³  ÃÄ??0??
+   ³  ÃÄ@PSTRINGC_9600_31766_31767  0/44  Ram=3
+   ³  ÃÄ@delay_ms1  0/40  Ram=1
+   ³  ÃÄ@delay_ms1  0/40  Ram=1
+   ³  ÃÄ@delay_us1  0/34  Ram=1
+   ³  ÃÄ@const419  0/28  Ram=0
+   ³  ÃÄ@const420  0/26  Ram=0
+   ³  ÃÄ@ITOF  0/54  Ram=2
+   ³  ÃÄ@MULFF  0/242  Ram=11
+   ³  ÃÄ@SFTOI  0/56  Ram=4
+   ³  ÃÄ@ITOF  0/54  Ram=2
+   ³  ÃÄ@MULFF  0/242  Ram=11
+   ³  ÃÄ@SFTOI  0/56  Ram=4
+   ³  ÃÄ@PRINTF_U_9600_31766_31767  0/110  Ram=2
+   ³  ³  ÃÄ@DIV88  0/40  Ram=3
+   ³  ³  ÀÄ@DIV88  0/40  Ram=3
+   ³  ÃÄ@PRINTF_LU_9600_31766_31767  0/164  Ram=9
+   ³  ÃÄ@PRINTF_LU_9600_31766_31767  0/164  Ram=9
+   ³  ÀÄ@delay_ms1  0/40  Ram=1
+   ÀÄintTimer0  0/22  Ram=0
+      ÃÄrecvWithStartEndMarkers  0/344  Ram=4
+      ³  ÃÄatol  0/488  Ram=11
+      ³  ³  ÀÄ@MULS1616  0/82  Ram=6
+      ³  ÀÄatol  0/488  Ram=11
+      ³     ÀÄ@MULS1616  0/82  Ram=6
+      ÀÄprocessCommand  0/210  Ram=1
+         ÃÄstrcmp  0/116  Ram=5
+         ÀÄstrcmp  0/116  Ram=5

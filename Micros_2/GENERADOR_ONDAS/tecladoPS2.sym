@@ -1,0 +1,166 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     @INTERRUPT_AREA
+005     @INTERRUPT_AREA
+006     @INTERRUPT_AREA
+007     @INTERRUPT_AREA
+008     @INTERRUPT_AREA
+009     @INTERRUPT_AREA
+00A     @INTERRUPT_AREA
+00B     @INTERRUPT_AREA
+00B.1   INTF_BIT
+00C     @INTERRUPT_AREA
+00D     @INTERRUPT_AREA
+00E     @INTERRUPT_AREA
+00F     @INTERRUPT_AREA
+010     @INTERRUPT_AREA
+011     @INTERRUPT_AREA
+012     @INTERRUPT_AREA
+013     @INTERRUPT_AREA
+014     @INTERRUPT_AREA
+015     @INTERRUPT_AREA
+016     @INTERRUPT_AREA
+017     @INTERRUPT_AREA
+018     @INTERRUPT_AREA
+019     @INTERRUPT_AREA
+01A     @INTERRUPT_AREA
+01B     @INTERRUPT_AREA
+01C     rs232_errors
+01D     edge
+01E     bitcount
+01F     got_interrupt
+020     interrupt_count
+021     status_b3
+022     x
+023     y
+024     bandera
+025     dato
+026     tecla
+027.0   bits_8_4
+028     decode.is_up
+029     decode.shift
+02A     decode.mode
+02B     @PSTRINGC_115200_31766_31767.@SCRATCH1
+02C     @PSTRINGC_115200_31766_31767.@SCRATCH2
+02D     @PSTRINGC_115200_31766_31767.@SCRATCH3
+032     int_ext_isr.data
+033     decode.sc
+034     decode.i
+035     decode.@SCRATCH1
+035     @PSTRINGC_142.@SCRATCH1
+036     decode.@SCRATCH2
+036     @PSTRINGC_142.@SCRATCH2
+037     decode.@SCRATCH3
+037     @PSTRINGC_142.@SCRATCH3
+038     lcd_putc_4bits.letra
+038     decode.@SCRATCH4
+039     lcd_ubicaxy_4bits.columna
+03A     lcd_ubicaxy_4bits.fila
+03B     lcd_ubicaxy_4bits.posicion
+03C     lcd_envia_byte_4bits.operacion
+03D     lcd_envia_byte_4bits.dato
+03E     @delay_ms1.P1
+03E     lcd_envia_byte_4bits.@SCRATCH1
+F01     CCP_10_LOW
+F01     CCP_10
+F02     CCP_10_HIGH
+F04     CCP_9_LOW
+F04     CCP_9
+F05     CCP_9_HIGH
+F07     CCP_8_LOW
+F07     CCP_8
+F08     CCP_8_HIGH
+F0A     CCP_7_LOW
+F0A     CCP_7
+F0B     CCP_7_HIGH
+F0D     CCP_6_LOW
+F0D     CCP_6
+F0E     CCP_6_HIGH
+F10     CCP_5
+F10     CCP_5_LOW
+F11     CCP_5_HIGH
+F13     CCP_4
+F13     CCP_4_LOW
+F14     CCP_4_HIGH
+F16     CCP_3
+F16     CCP_3_LOW
+F17     CCP_3_HIGH
+F70.0   C1OUT
+F70.1   C2OUT
+F70.2   C3OUT
+F9B.6   PLLEN
+FB5     CCP_2
+FB5     CCP_2_LOW
+FB6     CCP_2_HIGH
+FBB     CCP_1_LOW
+FBB     CCP_1
+FBC     CCP_1_HIGH
+FE1-FE2 @WRITE_PACKED_MEMORY.P1
+FE1-FE2 @READ_PACKED_MEMORY.P2
+FE9-FEA @READ_PROGRAM_MEMORY.P1
+FE9-FEA @WRITE_PACKED_MEMORY.P2
+FE9-FEA @READ_PACKED_MEMORY.P3
+FE9-FEA @WRITE_PROGRAM_MEMORY.P4
+FF6-FF8 @READ_PROGRAM_MEMORY.P1
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+0011F6  @delay_ms1
+0010BE  unshifted
+00115A  shifted
+0015AA  int_ext_isr
+00121E  lcd_envia_byte_4bits
+0012DC  lcd_ubicaxy_4bits
+001314  @goto10140
+001618  lcd_init_4bits
+00133C  lcd_putc_4bits
+0016F4  esperar_teclado
+0016FE  MAIN
+0016D6  init_kb
+0015DE  @const159
+0016AA  @PSTRINGC_115200_31766_31767
+00139A  decode
+0015F4  @const166
+001372  @PSTRINGC_142
+001606  @const168
+0016FE  @cinit
+
+
+User Memory space: 
+
+User Memory space: 
+
+Project Directory:
+    C:\Users\Michael Vargas\Documents\Micros_2\GENERADOR_ONDAS\
+
+Project Files:
+    tecladoPS2.c                                            [21-Oct.-16 16:28  CRC=39B1F398]
+    ..\..\..\..\..\Program Files (x86)\PICC\devices\18F47J53.h [02-Oct.-16 01:28  CRC=CB83A54D]
+    Configura_LCD_4-8_bits.c                                [21-Oct.-16 16:19  CRC=2DEE0177]
+
+Source signature=61119BD3
+
+Units:
+    C:\Users\Michael Vargas\Documents\Micros_2\GENERADOR_ONDAS\tecladoPS2 (main)
+
+Compiler Settings:
+    Processor:      PIC18F47J53
+    Pointer Size:   16
+    ADC Range:      0-4095
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    Errors:      tecladoPS2.err
+    Ext Symbols: tecladoPS2.esym
+    INHX32:      tecladoPS2.hex
+    Symbols:     tecladoPS2.sym
+    List:        tecladoPS2.lst
+    Debug/COFF:  tecladoPS2.cof
+    Project:     tecladoPS2.PJT
+    Call Tree:   tecladoPS2.tre
+    Statistics:  tecladoPS2.STA

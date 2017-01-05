@@ -1,0 +1,42 @@
+[PROJECT]
+Target=Plantilla.HEX
+Development_Mode=2
+Processor=0xE750
+Processor_Text=PIC18F47J53
+ToolSuite=CCS
+
+[Directories]
+Include=
+Library=
+LinkerScript=
+
+[Target Data]
+FileList=E:\Electronica\Proyectos\Microchip\Proyectos GUIA\CCS\Plantilla_5.0\Plantilla.c
+BuildTool=C-COMPILER
+OptionString=+FH
+AdditionalOptionString=
+BuildRequired=1
+
+[Plantilla.c]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+
+[mru-list]
+1=Plantilla.c
+
+[Windows]
+0=0000 Plantilla.c 0 0 796 451 3 0
+
+[Opened Files]
+1=Plantilla.c
+2=
+3=C:\Archivos de programa\PICC\devices\18F47J53.h
+4=
+5=
+[Units]
+Count=1
+1=Plantilla (main)

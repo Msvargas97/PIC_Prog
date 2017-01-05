@@ -1,0 +1,17 @@
+읕ADC+Display7Seg
+   읕MAIN  0/946  Ram=1
+      쳐??0??
+      쳐@delay_us1  0/32  Ram=1
+      쳐@ITOF  0/56  Ram=2
+      쳐@MULFF  0/242  Ram=11
+      쳐@SFTOI  0/58  Ram=4
+      쳐@delay_us1  0/32  Ram=1
+      쳐@DTOF  0/54  Ram=4
+      쳐@MULFF  0/242  Ram=11
+      쳐@FTOSD  0/64  Ram=5
+      쳐@delay_us1  0/32  Ram=1
+      쳐conver_bcd  0/88  Ram=2
+      쳐@delay_us1  0/32  Ram=1
+      쳐@delay_us1  0/32  Ram=1
+      쳐@delay_us1  0/32  Ram=1
+      읕@delay_us1  0/32  Ram=1

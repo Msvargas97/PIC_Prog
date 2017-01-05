@@ -1,0 +1,10 @@
+*** Error 18 "Proyecto.c" Line 1(9,31): File can not be opened
+    Not in project "C:\Users\Michael Vargas\Documents\Micros_2\PARCIAL_FINAL_MICROS2\PLANTILLA_18F47J53.h"
+    Not in "C:\Program Files (x86)\PICC\devices\PLANTILLA_18F47J53.h"
+    Not in "C:\Program Files (x86)\PICC\drivers\PLANTILLA_18F47J53.h"
+*** Error 18 "Proyecto.c" Line 2(10,36): File can not be opened
+    Not in project "C:\Users\Michael Vargas\Documents\Micros_2\PARCIAL_FINAL_MICROS2\Configura_LCD_4-8_bits.c"
+    Not in "C:\Program Files (x86)\PICC\devices\Configura_LCD_4-8_bits.c"
+    Not in "C:\Program Files (x86)\PICC\drivers\Configura_LCD_4-8_bits.c"
+*** Error 128 "C:\Program Files (x86)\PICC\drivers\stdlib.h" Line 30(1,2): A #DEVICE required before this line
+      3 Errors,  0 Warnings.

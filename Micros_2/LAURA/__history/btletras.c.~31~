@@ -1,0 +1,106 @@
+//incluye librerias
+#include "EMm47J53_StackConfig.h" //libreria con configuracion de pic
+
+// configura comunicacion serial, para ver los datos si se desea
+
+///////////////******************************************************************************/////////////
+#use rs232(uart1, baud=38400)//// bluetooth-----**********
+//!xmit=PIN_C6,rcv=PIN_C7
+//la comunicación serie 9600 bps, en RC7 y RC6 y activar las interrupciones en recepción del puerto serie.
+///////////////******************************************************************************/////////////
+#INCLUDE <stdlib.h> // for atoi32
+
+/********************************************************/
+/*------- Espacio para declaracion de constantes  ------*/
+/********************************************************/
+
+/********************************************************/
+/*--- Espacio para declaracion de variables globales  --*/
+/********************************************************/
+
+char dato; // valor ascci enviado app
+int16 dato1=0,dato2=0; // valor datos leidos sensores
+float conversor =255.0,mv=0, grados=0,lum=0; //varibles usadas en las conversiones de los sensores
+int dato11 = 0,dato22 = 0,dato33 = 0; // pasar a numero
+
+/// DATOS MAPEO (de ser necesario usar la funcion de mapeo)//////
+int x=0,
+   in_mi=0,
+   in_ma=9,
+   out_mi=0,
+   out_ma=255;
+
+/********************************************************/
+/********************************************************/
+/*-------------- Espacio para funciones  ---------------*/
+/********************************************************/
+
+//funcion de mapeo
+ int32 mapeo (int32 x, int32 in_min, int32 in_max, int32 out_min, int32 out_max)
+{
+    return (x - in_min) * (out_max - out_min) / (in_max-in_min)  + out_min;
+}
+
+void PWM_ini(void)
+{
+//Ajusta Periodo de señal PWM
+//Formula para calcular Periodo de señal PWM (1/clock)*4*mode*(period+1)
+//          >opciones mode<
+//            T2_DIV_BY_1
+//            T2_DIV_BY_4
+//            T2_DIV_BY_16
+
+//         >opciones period<
+//              0...255
+// setup_timer_2(mode,        period,  postscale)
+   setup_timer_2(T2_DIV_BY_16,74,      1);   // (1/48000000)*4*16*75 =  100us o 10 khz
+
+setup_ccp1(CCP_PWM);       // c1 Configure CCP1 as a PWM B6
+setup_ccp2(CCP_PWM);       //c6  Configura CCP2 as a PWM B5
+setup_ccp3(CCP_PWM);       //c7 Configura CCP3 as a PWM B4
+}
+
+//******************************************************************//
+//////////////////// interrupcion del bluetooth//////////////////////
+#int_rda
+void rd_isr(void){//función de interrupción por recepción de datos USART
+dato = getc();
+switch(dato){
+case 'A': set_pwm1_duty(0); break;
+}
+}
+
+/******************************************************************************/
+/******************************************************************************/
+
+
+/******************************************************************************/
+/******************************************************************************/
+/*--------------------- Espacio de codigo principal --------------------------*/
+/******************************************************************************/ 
+#zero_ram
+void main(){
+   mcu_init();    // Inicializa microcontrolador
+
+   enable_interrupts(GLOBAL); // habilita interrupciones globales
+   enable_interrupts(INT_RDA);//      habilita interrupcion bt
+   set_pwm1_duty(0);  // Ajusta un Duty PWM1 en OFF
+   set_pwm2_duty(0);  // Ajusta un Duty PWM2 en OFF
+   set_pwm3_duty(0);  // Ajusta un Duty PWM3 en OFF
+   
+   setup_adc(  ADC_CLOCK_INTERNAL  ); //configura reloj interno para ADC
+   setup_adc_ports(sAN0); //Setea el puerto A0 como ADC
+   setup_adc_ports(sAN2); //Setea el puerto A1 como ADC
+   
+   PWM_ini();// funcion activa y configura pwms
+    set_pwm1_duty(255); 
+     set_pwm2_duty(255);
+         set_pwm3_duty(255);
+         delay_ms(100);
+printf("Hello World\r\n");
+   while(true)       //Ciclo infinito
+   {
+
+   }//fin wh infinito
+ }//fin main
+

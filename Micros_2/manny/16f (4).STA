@@ -1,0 +1,53 @@
+
+ROM used: 1188 (1%)
+          1192 (1%) including unused fragments
+
+          1 Average locations per line
+          35 Average locations per statement
+
+RAM used: 33 (1%) at main() level
+          47 (1%) worst case
+
+Stack used: 4 worst case (out of 31 total available)
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+  118    34 100  16f (4).c
+  704     0   0  ..\..\..\..\Program Files (x86)\PICC\devices\18F47J53.h
+----- -----
+  822    34 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     34   1   1             @delay_us1
+0     52   2   2             @GETCH_BIU_1
+0    108   5   0   488  6.0  serial_isr
+0     40   2   0   219  2.6  @goto10074
+0    244  10   1   335  3.1  MAIN
+0     56   2   2             @ITOF
+0    244  10  11             @MULFF
+0     58   2   4             @SFTOI
+0    166   7   9             @PRINTF_LU_38400_31766_31767
+
+Program metrics:
+    Functions               3
+    Statements              34
+    Comments                163
+    Volume (V)              1356
+    Difficilty (D)          10.9
+    Effort to implement (E) 14751
+    Time to implement (T)   14 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   5
+    Maintainability (MI)    54
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00FFE     0  4096  
+01000-01006     4  4  
+01008-010BC   182  0  
+010BE-0FFFE  1002  60248  
+10000-1FFF6     0  65528  
+
+
+

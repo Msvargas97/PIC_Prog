@@ -1,0 +1,276 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     @INTERRUPT_AREA
+005     @INTERRUPT_AREA
+006     @INTERRUPT_AREA
+007     @INTERRUPT_AREA
+008     @INTERRUPT_AREA
+009     @INTERRUPT_AREA
+00A     @INTERRUPT_AREA
+00B     @INTERRUPT_AREA
+00C     @INTERRUPT_AREA
+00D     @INTERRUPT_AREA
+00E     @INTERRUPT_AREA
+00F     @INTERRUPT_AREA
+010     @INTERRUPT_AREA
+011     @INTERRUPT_AREA
+012     @INTERRUPT_AREA
+013     @INTERRUPT_AREA
+014     @INTERRUPT_AREA
+015     @INTERRUPT_AREA
+016     @INTERRUPT_AREA
+017     @INTERRUPT_AREA
+018     @INTERRUPT_AREA
+019     @INTERRUPT_AREA
+01A     @INTERRUPT_AREA
+01B     @INTERRUPT_AREA
+01C     rs232_errors
+01D-01E i
+01F.0   D7Seg
+01F.1   Q
+01F.2   displayMux.signo
+01F.3   displayMux.limit
+020-021 strtok.save
+022-025 _Randseed
+026-029 num
+02A-02D x
+02E-031 y
+032-033 umil
+034-035 cent
+036-037 dec
+038-039 unid
+03A     prec
+03B     h
+03C-03F displayMux.digito
+040     displayMux.size
+041     displayMux.max
+042     displayMux.size2
+043-046 displayMux.temp
+047-048 displayMux.i
+049-04A displayMux.j
+04B-04C displayMux.decimal
+04D-04E displayMux.dec
+04F-052 atan2.y
+053-056 atan2.x
+057-05A atan2.z
+05B.0   atan2.sign
+05C     atan2.quad
+088-089 aux
+088     interrupcion_RB.@SCRATCH1
+089     interrupcion_RB.@SCRATCH2
+08A-08B @MUL1616.P1
+08A-08D @DIVFF.P2
+08A-08D displayMux.numero
+08A     interrupcion_INT0.@SCRATCH1
+08B     interrupcion_INT0.@SCRATCH2
+08C-08D @MUL1616.P1
+08C     interrupcion_INT0.@SCRATCH3
+08D     interrupcion_INT0.@SCRATCH4
+08E-091 @DIVFF.P1
+08E-08F displayMux.time
+08E     @MUL1616.@SCRATCH1
+090     displayMux.precision
+091-094 @SDTOF.P1
+091-094 @DTOF.P2
+091     @MEMSET.P3
+091-094 @FTOSD.P4
+091     @delay_ms1.P5
+091     displayMux.@SCRATCH1
+092-093 @MEMSET.P1
+092     @DIVFF.@SCRATCH1
+092     displayMux.@SCRATCH2
+093-094 @DIV1616.P1
+093     @WRITEBITA.P2
+093     @DIVFF.@SCRATCH2
+093     displayMux.@SCRATCH3
+094     @WRITEBITA.P1
+094     @DIVFF.@SCRATCH3
+094     displayMux.@SCRATCH4
+095-096 @WRITEBITA.P1
+095-098 @MUL3232.P2
+095-096 @DIV1616.P3
+095     @DIVFF.@SCRATCH4
+095     displayMux.@SCRATCH5
+095     @FTOSD.@SCRATCH1
+095     @SDTOF.@SCRATCH1
+096     @DIVFF.@SCRATCH5
+096     displayMux.@SCRATCH6
+097     @DIVFF.@SCRATCH6
+097     @DIV1616.@SCRATCH1
+097     displayMux.@SCRATCH7
+098     displayMux.@SCRATCH8
+099-09C @DIVS3232.P1
+099-09C @DIV3232.P2
+099-09C @MUL3232.P3
+099     displayMux.@SCRATCH9
+09A     displayMux.@SCRATCH10
+09B-09E ceil.x
+09D-0A0 @DIVS3232.P1
+09D-0A0 @DIV3232.P2
+09D     @MUL3232.@SCRATCH1
+09E     @MUL3232.@SCRATCH2
+09F-0A2 CEIL_FLOOR.x
+09F     @MUL3232.@SCRATCH3
+0A0     @MUL3232.@SCRATCH4
+0A1     @MUL3232.@SCRATCH5
+0A1     @DIVS3232.@SCRATCH1
+0A1     @DIV3232.@SCRATCH1
+0A2     @MUL3232.@SCRATCH6
+0A2     @DIVS3232.@SCRATCH2
+0A2     @DIV3232.@SCRATCH2
+0A3     CEIL_FLOOR.n
+0A3     @DIVS3232.@SCRATCH3
+0A3     @DIV3232.@SCRATCH3
+0A4-0A7 CEIL_FLOOR.y
+0A4     @DIVS3232.@SCRATCH4
+0A4     @DIV3232.@SCRATCH4
+0A5     @DIVS3232.@SCRATCH5
+0A5     @DIV3232.@SCRATCH5
+0A6     @DIVS3232.@SCRATCH6
+0A8-0AB CEIL_FLOOR.res
+0AC-0AD CEIL_FLOOR.l
+0AE.0   CEIL_FLOOR.s
+0AF-0B2 @FLT.P1
+0AF-0B2 @MULFF.P2
+0AF-0B2 @SFTOI.P3
+0AF     CEIL_FLOOR.@SCRATCH1
+0B0     CEIL_FLOOR.@SCRATCH2
+0B1     CEIL_FLOOR.@SCRATCH3
+0B2     CEIL_FLOOR.@SCRATCH4
+0B3-0B4 @ITOF.P1
+0B3-0B6 @FLT.P2
+0B3-0B6 @ADDFF.P3
+0B3-0B6 @MULFF.P4
+0B7-0BA @ADDFF.P1
+0B7     @FLT.@SCRATCH1
+0B7     @MULFF.@SCRATCH1
+0B8     @FLT.@SCRATCH2
+0B8     @MULFF.@SCRATCH2
+0B9     @MULFF.@SCRATCH3
+0BB     @ADDFF.@SCRATCH1
+0BC     @ADDFF.@SCRATCH2
+0BD     @ADDFF.@SCRATCH3
+0BE     @ADDFF.@SCRATCH4
+0BF     @ADDFF.@SCRATCH5
+0C0     @ADDFF.@SCRATCH6
+0C1     @ADDFF.@SCRATCH7
+0C2     @ADDFF.@SCRATCH8
+F01     CCP_10
+F01     CCP_10_LOW
+F02     CCP_10_HIGH
+F04     CCP_9_LOW
+F04     CCP_9
+F05     CCP_9_HIGH
+F07     CCP_8
+F07     CCP_8_LOW
+F08     CCP_8_HIGH
+F0A     CCP_7_LOW
+F0A     CCP_7
+F0B     CCP_7_HIGH
+F0D     CCP_6
+F0D     CCP_6_LOW
+F0E     CCP_6_HIGH
+F10     CCP_5
+F10     CCP_5_LOW
+F11     CCP_5_HIGH
+F13     CCP_4
+F13     CCP_4_LOW
+F14     CCP_4_HIGH
+F16     CCP_3
+F16     CCP_3_LOW
+F17     CCP_3_HIGH
+F70.0   C1OUT
+F70.1   C2OUT
+F70.2   C3OUT
+F9B.6   PLLEN
+FB5     CCP_2
+FB5     CCP_2_LOW
+FB6     CCP_2_HIGH
+FBB     CCP_1
+FBB     CCP_1_LOW
+FBC     CCP_1_HIGH
+FE1-FE2 @READ_PACKED_MEMORY.P1
+FE1-FE2 @WRITE_PACKED_MEMORY.P2
+FE9-FEA @MEMSET.P1
+FE9-FEA @READ_PROGRAM_MEMORY.P2
+FE9-FEA @READ_PACKED_MEMORY.P3
+FE9-FEA @WRITE_PACKED_MEMORY.P4
+FE9-FEA @WRITE_PROGRAM_MEMORY.P5
+FF6-FF8 @READ_PROGRAM_MEMORY.P1
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+001C00  @delay_ms1
+0010CA  transistorPins
+0010E6  Tabla7seg
+001888  CEIL_FLOOR
+0011EC  @FLT
+001432  @SFTOI
+00115E  @ITOF
+001340  @MULFF
+00161E  @ADDFF
+001BAA  ceil
+00251C  @DIVFF
+001262  @MUL3232
+00153A  @DIVS3232
+0014F8  @DIV1616
+001140  @MUL1616
+002418  interrupcion_RB
+002678  interrupcion_INT0
+00298A  @goto11694
+0029B8  MAIN
+001C28  displayMux
+001104  powersOf10
+001194  @MEMSET
+0011AE  @FTOSD
+0012B6  @SDTOF
+00130C  @DTOF
+00146A  @DIV3232
+001BC2  @WRITEBITA
+0029B8  @cinit
+0136  StrtoulGO
+0136  StrtolGO
+
+
+User Memory space: 
+
+User Memory space: 
+
+Project Directory:
+    C:\Users\Michael Vargas\Documents\MICROS 1\calculadora\
+
+Project Files:
+    calculadora_pic.c                                       [23-Oct.-16 23:23  CRC=ED90B6AB]
+    ..\..\..\..\..\Program Files (x86)\PICC\devices\18F47J53.h [02-Oct.-16 01:28  CRC=CB83A54D]
+    ..\..\..\..\..\Program Files (x86)\PICC\drivers\math.h  [11-Abr.-11 09:02  CRC=A2852B04]
+    ..\..\..\..\..\Program Files (x86)\PICC\drivers\stdlib.h [22-Abr.-10 10:12  CRC=97EC02E8]
+    ..\..\..\..\..\Program Files (x86)\PICC\drivers\stddef.h [16-Jul.-10 09:27  CRC=897CEC6C]
+    ..\..\..\..\..\Program Files (x86)\PICC\drivers\string.h [18-Jun.-08 10:48  CRC=9BE6227E]
+    ..\..\..\..\..\Program Files (x86)\PICC\drivers\ctype.h [03-Ene.-08 13:55  CRC=2D1F019F]
+
+Source signature=73269C0C
+
+Units:
+    C:\Users\Michael Vargas\Documents\MICROS 1\calculadora\calculadora_pic (main)
+
+Compiler Settings:
+    Processor:      PIC18F47J53
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    Errors:      calculadora_pic.err
+    Ext Symbols: calculadora_pic.esym
+    INHX32:      calculadora_pic.hex
+    Symbols:     calculadora_pic.sym
+    List:        calculadora_pic.lst
+    Debug/COFF:  calculadora_pic.cof
+    Project:     calculadora_pic.PJT
+    Call Tree:   calculadora_pic.tre
+    Statistics:  calculadora_pic.STA

@@ -1,0 +1,287 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     @INTERRUPT_AREA
+005     @INTERRUPT_AREA
+006     @INTERRUPT_AREA
+007     @INTERRUPT_AREA
+008     @INTERRUPT_AREA
+009     @INTERRUPT_AREA
+00A     @INTERRUPT_AREA
+00B     @INTERRUPT_AREA
+00C     @INTERRUPT_AREA
+00D     @INTERRUPT_AREA
+00E     @INTERRUPT_AREA
+00F     @INTERRUPT_AREA
+010     @INTERRUPT_AREA
+011     @INTERRUPT_AREA
+012     @INTERRUPT_AREA
+013     @INTERRUPT_AREA
+014     @INTERRUPT_AREA
+015     @INTERRUPT_AREA
+016     @INTERRUPT_AREA
+017     @INTERRUPT_AREA
+018     @INTERRUPT_AREA
+019     @INTERRUPT_AREA
+01A     @INTERRUPT_AREA
+01B-01C strtok.save
+01D-020 _Randseed
+021.0   bits_8_4
+021.1   writeLCD
+021.2   EnterFlag
+021.3   Bandera1
+022     tecla
+023-026 inputTeclado
+027-028 i
+029-02A j
+02B-030 sensorValues
+031-032 lastValueLuz
+033-038 outMax
+039-03E outLimitMax
+03F     duty1
+040     duty2
+041     duty3
+042     menu
+043     edge
+044     bitcount
+045     y
+046     x
+047     z
+048     d
+049     c
+04A-05A mensaje
+05B-06C mensaje2
+06D     dato_rs232
+06E     got_interrupt
+06F     interrupt_count
+070     status_b3
+071     decode.is_up
+072     decode.shift
+073     decode.mode
+074     @delay_us1.P1
+074-075 @PRINTF_LU_509.P2
+074-075 @DIV1616.P3
+074     @PSTRINGCN_509.P4
+074-077 rule3.x
+074-077 atan2.y
+074-075 atol.s
+074     @MEMSET.P1
+074     MAIN.@SCRATCH1
+074     @PSTRINGC_509.@SCRATCH1
+075-076 @MEMSET.P1
+075     MAIN.@SCRATCH2
+075     @PSTRINGC_509.@SCRATCH2
+075     @PSTRINGCN_509.@SCRATCH1
+076-077 atol.result
+076-077 @DIV1616.P1
+076     @PSTRINGC_509.@SCRATCH3
+076     @PSTRINGCN_509.@SCRATCH2
+076     @PRINTF_LU_509.@SCRATCH1
+077     @PSTRINGCN_509.@SCRATCH3
+077     @PRINTF_LU_509.@SCRATCH2
+078     atol.sign
+078-07B rule3.in_min
+078-07B atan2.x
+078     @DIV1616.@SCRATCH1
+078     @PRINTF_LU_509.@SCRATCH3
+079     atol.base
+079     @PRINTF_LU_509.@SCRATCH4
+07A     atol.index
+07A     @PRINTF_LU_509.@SCRATCH5
+07B     atol.c
+07B     @PRINTF_LU_509.@SCRATCH6
+07C-07D @MULS1616.P1
+07C-07F rule3.in_max
+07C-07F atan2.z
+07C     atol.@SCRATCH1
+07C     @PRINTF_LU_509.@SCRATCH7
+07D     lcd_putc_4bits.letra
+07D     atol.@SCRATCH2
+07E     lcd_ubicaxy_4bits.columna
+07E-07F @MULS1616.P1
+07E     atol.@SCRATCH3
+07F     lcd_ubicaxy_4bits.fila
+080.0   atan2.sign
+080     lcd_ubicaxy_4bits.posicion
+080-083 rule3.out_min
+080     @MULS1616.@SCRATCH1
+081     atan2.quad
+081     lcd_envia_byte_4bits.operacion
+081     @MULS1616.@SCRATCH2
+082     lcd_envia_byte_4bits.dato
+083     @delay_ms1.P1
+083     lcd_envia_byte_4bits.@SCRATCH1
+084-087 rule3.out_max
+088     rule3.@SCRATCH1
+089     rule3.@SCRATCH2
+08A     rule3.@SCRATCH3
+08B     rule3.@SCRATCH4
+08C     rule3.@SCRATCH5
+08D     rule3.@SCRATCH6
+08E     rule3.@SCRATCH7
+08F     rule3.@SCRATCH8
+090-093 @DIV3232.P1
+090-093 @MUL3232.P2
+094-097 @MUL3232.P1
+094-097 @DIV3232.P2
+098     @MUL3232.@SCRATCH1
+098     @DIV3232.@SCRATCH1
+099     @MUL3232.@SCRATCH2
+099     @DIV3232.@SCRATCH2
+09A     @MUL3232.@SCRATCH3
+09A     @DIV3232.@SCRATCH3
+09B     @MUL3232.@SCRATCH4
+09B     @DIV3232.@SCRATCH4
+09C     @MUL3232.@SCRATCH5
+09C     @DIV3232.@SCRATCH5
+09D     @MUL3232.@SCRATCH6
+09E     int_ext_isr.data
+09F     decode.sc
+0A0     decode.i
+0A1     decode.@SCRATCH1
+0A2     @PUTCHAR_1_.P1
+0A2     decode.@SCRATCH2
+0A3     decode.@SCRATCH3
+0A4     decode.@SCRATCH4
+F01     CCP_10
+F01     CCP_10_LOW
+F02     CCP_10_HIGH
+F04     CCP_9
+F04     CCP_9_LOW
+F05     CCP_9_HIGH
+F07     CCP_8_LOW
+F07     CCP_8
+F08     CCP_8_HIGH
+F0A     CCP_7
+F0A     CCP_7_LOW
+F0B     CCP_7_HIGH
+F0D     CCP_6_LOW
+F0D     CCP_6
+F0E     CCP_6_HIGH
+F10     CCP_5_LOW
+F10     CCP_5
+F11     CCP_5_HIGH
+F13     CCP_4_LOW
+F13     CCP_4
+F14     CCP_4_HIGH
+F16     CCP_3_LOW
+F16     CCP_3
+F17     CCP_3_HIGH
+F70.0   C1OUT
+F70.1   C2OUT
+F70.2   C3OUT
+F9B.6   PLLEN
+FB5     CCP_2_LOW
+FB5     CCP_2
+FB6     CCP_2_HIGH
+FBB     CCP_1
+FBB     CCP_1_LOW
+FBC     CCP_1_HIGH
+FE1-FE2 @READ_PACKED_MEMORY.P1
+FE1-FE2 @WRITE_PACKED_MEMORY.P2
+FE9-FEA @READ_PROGRAM_MEMORY.P1
+FE9-FEA @WRITE_PROGRAM_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P3
+FE9-FEA @READ_PACKED_MEMORY.P4
+FE9-FEA @MEMSET.P5
+FF1.7   PULL_UP
+FF2.1   INTF_BIT
+FF6-FF8 @READ_PROGRAM_MEMORY.P1
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+0016D4  @delay_ms1
+001BF6  @delay_us1
+0018BC  @MULS1616
+00190E  atol
+001C58  @MUL3232
+001C16  @DIV1616
+0016FC  lcd_envia_byte_4bits
+0017BA  lcd_ubicaxy_4bits
+0017F2  @goto11683
+00181A  lcd_init_4bits
+001BEA  lcdCursorOn
+0018B2  lcdCursorOff
+001854  lcd_putc_4bits
+0011F6  @PUTCHAR_1_
+0010BE  unshifted
+00115A  shifted
+00146C  int_ext_isr
+001F48  MAIN
+0014AC  @const577
+00188A  @PSTRINGC_509
+0014C6  @const579
+0014DE  @const580
+0014FA  @const581
+00151C  @const582
+001540  @const583
+001560  @const584
+00157C  @const585
+001590  @const586
+001AF6  @PSTRINGCN_509
+001B1C  @PRINTF_LU_509
+0015B0  @const591
+0015C0  @const592
+0015DE  @const593
+0015EC  @const594
+00160C  @const595
+00161C  @const596
+001BCE  @MEMSET
+00163E  @const601
+001640  @const602
+00165E  @const603
+00167E  @const604
+00169C  @const605
+0016B6  @const606
+001236  decode
+001E1E  imprimir_sensores
+001D3E  rule3
+001CAE  @DIV3232
+001F48  @cinit
+0136  StrtoulGO
+0136  StrtolGO
+
+
+User Memory space: 
+
+User Memory space: 
+
+Project Directory:
+    C:\Users\Michael Vargas\Documents\PIC\CodigoMicrosII\
+
+Project Files:
+    Proyecto.c                                              [08-Abr.-16 06:43  CRC=3C27B84D]
+    PLANTILLA_18F47J53.h                                    [19-Mar.-16 20:36  CRC=A14B9E14]
+    ..\..\..\..\..\Program Files (x86)\PICC\devices\18F47J53.h [13-Abr.-11 15:02  CRC=1DEA3C7C]
+    ..\..\..\..\..\Program Files (x86)\PICC\drivers\math.h  [11-Abr.-11 09:02  CRC=A2852B04]
+    ..\..\..\..\..\Program Files (x86)\PICC\drivers\stdlib.h [22-Abr.-10 10:12  CRC=97EC02E8]
+    ..\..\..\..\..\Program Files (x86)\PICC\drivers\stddef.h [16-Jul.-10 09:27  CRC=897CEC6C]
+    ..\..\..\..\..\Program Files (x86)\PICC\drivers\string.h [18-Jun.-08 10:48  CRC=9BE6227E]
+    ..\..\..\..\..\Program Files (x86)\PICC\drivers\ctype.h [03-Ene.-08 13:55  CRC=2D1F019F]
+    Configura_LCD_4-8_bits.c                                [16-Mar.-16 16:26  CRC=8E1B7D28]
+
+Source signature=A487CBA2
+
+Units:
+    C:\Users\Michael Vargas\Documents\PIC\CodigoMicrosII\Proyecto (main)
+
+Compiler Settings:
+    Processor:      PIC18F47J53
+    Pointer Size:   16
+    ADC Range:      0-4095
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    Errors:      Proyecto.err
+    Ext Symbols: Proyecto.esym
+    INHX32:      Proyecto.hex
+    Symbols:     Proyecto.sym
+    List:        Proyecto.lst
+    Debug/COFF:  Proyecto.cof
+    Project:     Proyecto.PJT
+    Call Tree:   Proyecto.tre
+    Statistics:  Proyecto.STA

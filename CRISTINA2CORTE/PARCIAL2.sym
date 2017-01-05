@@ -1,0 +1,260 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     @INTERRUPT_AREA
+005     @INTERRUPT_AREA
+006     @INTERRUPT_AREA
+007     @INTERRUPT_AREA
+008     @INTERRUPT_AREA
+009     @INTERRUPT_AREA
+00A     @INTERRUPT_AREA
+00B     @INTERRUPT_AREA
+00B.1   INTF_BIT
+00C     @INTERRUPT_AREA
+00D     @INTERRUPT_AREA
+00E     @INTERRUPT_AREA
+00F     @INTERRUPT_AREA
+010     @INTERRUPT_AREA
+011     @INTERRUPT_AREA
+012     @INTERRUPT_AREA
+013     @INTERRUPT_AREA
+014     @INTERRUPT_AREA
+015     @INTERRUPT_AREA
+016     @INTERRUPT_AREA
+017     @INTERRUPT_AREA
+018     @INTERRUPT_AREA
+019     @INTERRUPT_AREA
+01A     @INTERRUPT_AREA
+01B     @INTERRUPT_AREA
+01C     rs232_errors
+01D.0   bits_8_4
+01D.1   printHour
+01D.2   antiRebote
+01D.3   status_b3
+01D.4   FlagWave
+01E-05D DS1307
+05E-061 Fs
+062-083 wave
+084-087 seno.x
+088     seno.j
+089-08A sawTooth.saw
+08B     sawTooth.j
+08C-08D triangular.trian
+08E     triangular.j
+08F     square.j
+090-091 square.sq
+092-093 strtok.save
+094-097 _Randseed
+098     tecla
+099-09A j
+09B-09C valueTimer0
+09D-09E ouput
+09F-0A2 millis
+0A3-0A6 micros
+0A7-0AA m
+0AB-0AE frequency
+0AF     bitcount
+0B0     i
+0B1     auxTecla
+0B2     exit
+0B3     tipoOnda
+0B4-0BD input
+0BE     barrer_teclado.aux
+0BF     read_ds1307.ds1307_register
+0BF     lcd_ubicaxy_4bits.columna
+0BF-0C2 seno.freq
+0BF-0C2 atan2.y
+0C0     @I2C_WRITEU_1.P1
+0C0     lcd_ubicaxy_4bits.fila
+0C0     read_ds1307.@SCRATCH1
+0C1     lcd_ubicaxy_4bits.posicion
+0C1     read_ds1307.@SCRATCH2
+0C2     lcd_envia_byte_4bits.operacion
+0C2     @I2C_READU_1.P1
+0C3     lcd_envia_byte_4bits.dato
+0C3-0C6 atan2.x
+0C3     seno.@SCRATCH1
+0C4     lcd_envia_byte_4bits.@SCRATCH1
+0C4     seno.@SCRATCH2
+0C5-0C8 sin.x
+0C5     seno.@SCRATCH3
+0C6     seno.@SCRATCH4
+0C7-0CA atan2.z
+0C7-0CA @DIVFF.P1
+0C7     seno.@SCRATCH5
+0C8     seno.@SCRATCH6
+0C9     sin.@SCRATCH1
+0C9     seno.@SCRATCH7
+0CA     sin.@SCRATCH2
+0CA     seno.@SCRATCH8
+0CB-0CE @DIVFF.P1
+0CB.0   atan2.sign
+0CB     sin.@SCRATCH3
+0CC     atan2.quad
+0CC     sin.@SCRATCH4
+0CD-0D0 cos.x
+0CF     @DIVFF.@SCRATCH1
+0D0     @DIVFF.@SCRATCH2
+0D1-0D4 cos.y
+0D1     @DIVFF.@SCRATCH3
+0D2     @DIVFF.@SCRATCH4
+0D3     @DIVFF.@SCRATCH5
+0D4     @DIVFF.@SCRATCH6
+0D5-0D8 cos.t
+0D9-0DC cos.t2
+0DD     cos.quad
+0DE     cos.i
+0DF-0E2 cos.frac
+0E3-0F6 cos.p
+0F7-0FA @SFTOI.P1
+0F7-0FA @FLT.P2
+0F7     cos.@SCRATCH1
+0F8     cos.@SCRATCH2
+0F9     cos.@SCRATCH3
+0FA     cos.@SCRATCH4
+0FB-0FE @MULFF.P1
+0FB-0FE @FLT.P2
+0FB-0FE @ADDFF.P3
+0FB-0FC @ITOF.P4
+0FF-102 @MULFF.P1
+0FF-102 @ADDFF.P2
+0FF     @FLT.@SCRATCH1
+100     @FLT.@SCRATCH2
+103     @MULFF.@SCRATCH1
+103     @ADDFF.@SCRATCH1
+104     @MULFF.@SCRATCH2
+104     @ADDFF.@SCRATCH2
+105     @MULFF.@SCRATCH3
+105     @ADDFF.@SCRATCH3
+106     @ADDFF.@SCRATCH4
+107     @ADDFF.@SCRATCH5
+108     @ADDFF.@SCRATCH6
+109     @ADDFF.@SCRATCH7
+10A     @ADDFF.@SCRATCH8
+110     int_ext_isr.data
+111     decode.sc
+111     @delay_ms1.P1
+111     int_ext_isr.@SCRATCH1
+112     decode.i
+113     decode.@SCRATCH1
+114     decode.@SCRATCH2
+115     decode.@SCRATCH3
+116     decode.@SCRATCH4
+F01     CCP_10
+F01     CCP_10_LOW
+F02     CCP_10_HIGH
+F04     CCP_9
+F04     CCP_9_LOW
+F05     CCP_9_HIGH
+F07     CCP_8
+F07     CCP_8_LOW
+F08     CCP_8_HIGH
+F0A     CCP_7
+F0A     CCP_7_LOW
+F0B     CCP_7_HIGH
+F0D     CCP_6_LOW
+F0D     CCP_6
+F0E     CCP_6_HIGH
+F10     CCP_5
+F10     CCP_5_LOW
+F11     CCP_5_HIGH
+F13     CCP_4_LOW
+F13     CCP_4
+F14     CCP_4_HIGH
+F16     CCP_3_LOW
+F16     CCP_3
+F17     CCP_3_HIGH
+F70.0   C1OUT
+F70.1   C2OUT
+F70.2   C3OUT
+F80     PORTA
+F9B.6   PLLEN
+FB5     CCP_2_LOW
+FB5     CCP_2
+FB6     CCP_2_HIGH
+FBB     CCP_1
+FBB     CCP_1_LOW
+FBC     CCP_1_HIGH
+FE1-FE2 @WRITE_PACKED_MEMORY.P1
+FE1-FE2 @READ_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P1
+FE9-FEA @READ_PACKED_MEMORY.P2
+FE9-FEA @READ_PROGRAM_MEMORY.P3
+FE9-FEA @WRITE_PROGRAM_MEMORY.P4
+FF6-FF8 @READ_PROGRAM_MEMORY.P1
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+0011F8  @delay_ms1
+00144E  @I2C_WRITEU_1
+00146A  @I2C_READU_1
+00127A  lcd_envia_byte_4bits
+001378  lcd_ubicaxy_4bits
+0013B2  @goto10119
+0013DA  lcd_init_4bits
+001486  read_ds1307
+001428  init_dac
+001A4E  @FLT
+0019E0  @SFTOI
+001A18  @ITOF
+0018BC  @MULFF
+001638  @ADDFF
+0014DE  @DIVFF
+001AE0  cos
+001E44  sin
+001E94  seno
+0010CA  unshifted
+001222  int_ext_isr
+00126C  intTimer0
+00214E  MAIN
+00143C  init_kb
+001166  decode
+00214E  @cinit
+0136  StrtoulGO
+0136  StrtolGO
+
+
+User Memory space: 
+
+User Memory space: 
+
+Project Directory:
+    C:\Users\Michael Vargas\Desktop\CRISTINA2CORTE\
+
+Project Files:
+    PARCIAL2.c                                              [01-May.-16 10:04  CRC=C4819B91]
+    ..\..\..\..\Program Files (x86)\PICC\devices\18F47J53.h [13-Abr.-11 15:02  CRC=1DEA3C7C]
+    Configura_LCD_4-8_bits.c                                [17-Mar.-16 14:21  CRC=AB39023B]
+    DS1307_MCP4821.c                                        [01-May.-16 05:54  CRC=09BF9C76]
+    waveGenerator.c                                         [01-May.-16 07:06  CRC=94BB913A]
+    ..\..\..\..\Program Files (x86)\PICC\drivers\math.h     [11-Abr.-11 09:02  CRC=A2852B04]
+    ..\..\..\..\Program Files (x86)\PICC\drivers\stdlib.h   [22-Abr.-10 10:12  CRC=97EC02E8]
+    ..\..\..\..\Program Files (x86)\PICC\drivers\stddef.h   [16-Jul.-10 09:27  CRC=897CEC6C]
+    ..\..\..\..\Program Files (x86)\PICC\drivers\string.h   [18-Jun.-08 10:48  CRC=9BE6227E]
+    ..\..\..\..\Program Files (x86)\PICC\drivers\ctype.h    [03-Ene.-08 13:55  CRC=2D1F019F]
+
+Source signature=E632480C
+
+Units:
+    C:\Users\Michael Vargas\Desktop\CRISTINA2CORTE\PARCIAL2 (main)
+
+Compiler Settings:
+    Processor:      PIC18F47J53
+    Pointer Size:   16
+    ADC Range:      0-4095
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    Errors:      PARCIAL2.err
+    Ext Symbols: PARCIAL2.esym
+    INHX32:      PARCIAL2.hex
+    Symbols:     PARCIAL2.sym
+    List:        PARCIAL2.lst
+    Debug/COFF:  PARCIAL2.cof
+    Project:     PARCIAL2.PJT
+    Call Tree:   PARCIAL2.tre
+    Statistics:  PARCIAL2.STA

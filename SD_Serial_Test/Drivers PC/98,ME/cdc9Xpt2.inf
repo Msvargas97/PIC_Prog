@@ -1,0 +1,43 @@
+; Windows 98 and ME setup File for CCS CDC demo.
+; this is the second file, after you load the first
+; driver windows will ask you for this one.
+; see examples ex_usb_serial.c and ex_usb_serial2.c.
+
+[Version]
+Signature="$CHICAGO$"
+Class=Ports
+ClassGUID = {4D36E978-E325-11CE-BFC1-08002BE10318}
+Provider=%CCS%
+LayoutFile=layout.inf
+DriverVer=04/26/2001
+
+[Manufacturer]
+%CCS% = Models
+
+[Models]
+%CDCUSB% = CDCUSB, USB\USBCDC
+%CDCUSBBOOT% = CDCUSB, USB\USBCDC
+
+; added 4/19/01 for USB support Windows 9x ONLY
+[CDCUSB]
+AddReg = All, USB, EXTERNAL
+
+[All]
+HKR,,FriendlyDriver,0,serialenum.vxd
+HKR,,DevLoader,0,*vcomm
+HKR,,ConfigDialog,0,serialui.dll
+HKR,,EnumPropPages,0,serialui.dll,EnumPropPages
+HKR,,PortSubClass,1,02
+
+[USB]
+HKR,, DeviceType, 1, 01
+HKR,,PortDriver,,wdmmdmld.vxd
+HKR,,Contention,0,
+
+[EXTERNAL]
+HKR,, DeviceType, 1, 01
+
+[Strings]
+CCS       = "CCS"
+CDCUSB       = "USB to RS232"
+CDCUSBBOOT  = "CCS CDC Bootloader"

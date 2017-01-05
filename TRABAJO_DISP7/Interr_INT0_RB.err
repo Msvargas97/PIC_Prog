@@ -1,0 +1,3 @@
+>>> Warning 202 "Interr_INT0_RB.c" Line 60(21,25): Variable never used:   num2
+      Memory usage:   ROM=1%      RAM=1% - 1%
+      0 Errors,  1 Warnings.

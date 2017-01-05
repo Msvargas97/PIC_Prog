@@ -1,0 +1,211 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004.0   bits_8_4
+005-006 strtok.save
+007-00A _Randseed
+00B-00C i
+00D-00E j
+00F-010 dato_analogo
+011-012 temp
+013-014 viento
+015-018 luz
+019     tecla
+01A     dato
+01B-02E inputChar
+02F-030 limite1
+031-032 limite2
+033-034 limite3
+035     barrer_teclado.tecla
+036-039 @FTOSD.P1
+036-037 @ITOF.P2
+036-037 atol.s
+036-039 @PRINTF_L32U_114.P1
+036-037 @PRINTF_LU_114.P2
+036     @PSTRINGCN_114.P3
+036-039 @SFTOI.P4
+036     barrer_teclado.@SCRATCH1
+036     MAIN.@SCRATCH1
+036     @PSTRINGC_114.@SCRATCH1
+037     @WRITEBITA.P1
+037     barrer_teclado.@SCRATCH2
+037     MAIN.@SCRATCH2
+037     @PSTRINGC_114.@SCRATCH2
+037     @PSTRINGCN_114.@SCRATCH1
+038     @WRITEBITA.P1
+038-039 atol.result
+038     MAIN.@SCRATCH3
+038     @PSTRINGC_114.@SCRATCH3
+038     @PSTRINGCN_114.@SCRATCH2
+038     @PRINTF_LU_114.@SCRATCH1
+039-03A @WRITEBITA.P1
+039     MAIN.@SCRATCH4
+039     @PSTRINGCN_114.@SCRATCH3
+039     @PRINTF_LU_114.@SCRATCH2
+03A-03D @DTOF.P1
+03A-03D @MULFF.P2
+03A     atol.sign
+03A     @PRINTF_LU_114.@SCRATCH3
+03A     @FTOSD.@SCRATCH1
+03A     @PRINTF_L32U_114.@SCRATCH1
+03B     atol.base
+03B     @PRINTF_LU_114.@SCRATCH4
+03B     @PRINTF_L32U_114.@SCRATCH2
+03C     atol.index
+03C     @PRINTF_LU_114.@SCRATCH5
+03C     @PRINTF_L32U_114.@SCRATCH3
+03D     atol.c
+03D     @PRINTF_LU_114.@SCRATCH6
+03D     @PRINTF_L32U_114.@SCRATCH4
+03E-03F @MULS1616.P1
+03E-041 @MULFF.P2
+03E     atol.@SCRATCH1
+03E     @PRINTF_LU_114.@SCRATCH7
+03E     @PRINTF_L32U_114.@SCRATCH5
+03F     atol.@SCRATCH2
+03F     @PRINTF_L32U_114.@SCRATCH6
+040-041 @MULS1616.P1
+040     atol.@SCRATCH3
+040     @PRINTF_L32U_114.@SCRATCH7
+041     @PRINTF_L32U_114.@SCRATCH8
+042     lcd_putc_4bits.letra
+042-045 @DIV3232.P1
+042     @MULS1616.@SCRATCH1
+042     @MULFF.@SCRATCH1
+043     lcd_ubicaxy_4bits.columna
+043     @MULS1616.@SCRATCH2
+043     @MULFF.@SCRATCH2
+044     lcd_ubicaxy_4bits.fila
+044     @MULFF.@SCRATCH3
+045     lcd_ubicaxy_4bits.posicion
+046-049 @DIV3232.P1
+046     lcd_envia_byte_4bits.operacion
+047     lcd_envia_byte_4bits.dato
+048     @delay_ms1.P1
+048     lcd_envia_byte_4bits.@SCRATCH1
+04A     @DIV3232.@SCRATCH1
+04B     @DIV3232.@SCRATCH2
+04C     @DIV3232.@SCRATCH3
+04D     @DIV3232.@SCRATCH4
+04E     @DIV3232.@SCRATCH5
+F01     CCP_10
+F01     CCP_10_LOW
+F02     CCP_10_HIGH
+F04     CCP_9_LOW
+F04     CCP_9
+F05     CCP_9_HIGH
+F07     CCP_8
+F07     CCP_8_LOW
+F08     CCP_8_HIGH
+F0A     CCP_7
+F0A     CCP_7_LOW
+F0B     CCP_7_HIGH
+F0D     CCP_6_LOW
+F0D     CCP_6
+F0E     CCP_6_HIGH
+F10     CCP_5_LOW
+F10     CCP_5
+F11     CCP_5_HIGH
+F13     CCP_4_LOW
+F13     CCP_4
+F14     CCP_4_HIGH
+F16     CCP_3_LOW
+F16     CCP_3
+F17     CCP_3_HIGH
+F70.0   C1OUT
+F70.1   C2OUT
+F70.2   C3OUT
+F9B.6   PLLEN
+FB5     CCP_2
+FB5     CCP_2_LOW
+FB6     CCP_2_HIGH
+FBB     CCP_1_LOW
+FBB     CCP_1
+FBC     CCP_1_HIGH
+FE1-FE2 @WRITE_PACKED_MEMORY.P1
+FE1-FE2 @READ_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P1
+FE9-FEA @READ_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PROGRAM_MEMORY.P3
+FE9-FEA @READ_PROGRAM_MEMORY.P4
+FF6-FF8 @READ_PROGRAM_MEMORY.P1
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+0010DA  @delay_ms1
+001102  lcd_envia_byte_4bits
+0011C4  lcd_ubicaxy_4bits
+0011FC  @goto10101
+001224  lcd_init_4bits
+00125E  lcd_putc_4bits
+001462  @MULS1616
+0017AC  @MULFF
+001774  @ITOF
+0014B4  atol
+001008  CaracteresTeclado
+00102C  pinFilas
+0012FA  barrer_teclado
+0012BC  @WRITEBITA
+001A82  MAIN
+001044  @const423
+001294  @PSTRINGC_114
+001056  @const425
+001068  @const426
+001078  @const427
+00108C  @const428
+00169C  @PSTRINGCN_114
+0016C2  @PRINTF_LU_114
+0010AC  @const433
+00189E  @SFTOI
+0018D8  @DTOF
+00190E  @FTOSD
+0010CE  @const440
+0010D4  @const444
+00194E  @DIV3232
+0019DC  @PRINTF_L32U_114
+001A82  @cinit
+0136  StrtoulGO
+0136  StrtolGO
+
+
+User Memory space: 
+
+User Memory space: 
+
+Project Directory:
+    C:\Users\Michael Vargas\Desktop\angelica\
+
+Project Files:
+    PARCIAL3CORTE.c                                         [03-Jun.-16 16:02  CRC=AFE9D1E2]
+    ..\..\..\..\Program Files (x86)\PICC\devices\18F47J53.h [13-Abr.-11 15:02  CRC=1DEA3C7C]
+    Configura_LCD_4-8_bits.c                                [13-Mar.-16 15:09  CRC=4760D468]
+    ..\..\..\..\Program Files (x86)\PICC\drivers\stdlib.h   [22-Abr.-10 10:12  CRC=97EC02E8]
+    ..\..\..\..\Program Files (x86)\PICC\drivers\stddef.h   [16-Jul.-10 09:27  CRC=897CEC6C]
+    ..\..\..\..\Program Files (x86)\PICC\drivers\string.h   [18-Jun.-08 10:48  CRC=9BE6227E]
+    ..\..\..\..\Program Files (x86)\PICC\drivers\ctype.h    [03-Ene.-08 13:55  CRC=2D1F019F]
+
+Source signature=2CC1F7D6
+
+Units:
+    C:\Users\Michael Vargas\Desktop\angelica\PARCIAL3CORTE (main)
+
+Compiler Settings:
+    Processor:      PIC18F47J53
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    Errors:      PARCIAL3CORTE.err
+    Ext Symbols: PARCIAL3CORTE.esym
+    INHX32:      PARCIAL3CORTE.hex
+    Symbols:     PARCIAL3CORTE.sym
+    List:        PARCIAL3CORTE.lst
+    Debug/COFF:  PARCIAL3CORTE.cof
+    Project:     PARCIAL3CORTE.PJT
+    Call Tree:   PARCIAL3CORTE.tre
+    Statistics:  PARCIAL3CORTE.STA

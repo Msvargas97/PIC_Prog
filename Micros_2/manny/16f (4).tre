@@ -1,0 +1,11 @@
+юд16f (4)
+   цдMAIN  0/244  Ram=1
+   Ё  цд??0??
+   Ё  цд@ITOF  0/56  Ram=2
+   Ё  цд@MULFF  0/244  Ram=11
+   Ё  цд@SFTOI  0/58  Ram=4
+   Ё  юд@PRINTF_LU_38400_31766_31767  0/166  Ram=9
+   юдserial_isr  0/108  Ram=0
+      цд@GETCH_BIU_1  0/52  Ram=2
+      Ё  юд@delay_us1  0/34  Ram=1
+      юд@goto10074  0/40  Ram=0

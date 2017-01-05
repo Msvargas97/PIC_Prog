@@ -1,0 +1,453 @@
+ÀÄPlantilla
+   ÃÄmain  0/274  Ram=0
+   ³  ÃÄ@cinit1  (Inline)  Ram=0
+   ³  ÃÄusb_cdc_init  0/138  Ram=4
+   ³  ÃÄusb_init  0/24  Ram=0
+   ³  ³  ÃÄusb_init_cs  0/6  Ram=0
+   ³  ³  ³  ÀÄusb_detach  0/44  Ram=1
+   ³  ³  ³     ÀÄusb_token_reset  0/50  Ram=3
+   ³  ³  ³        ÀÄusb_cdc_init  0/138  Ram=4
+   ³  ³  ÀÄusb_task  0/42  Ram=1
+   ³  ³     ÀÄusb_attach  0/40  Ram=0
+   ³  ³        ÀÄusb_token_reset  0/50  Ram=3
+   ³  ³           ÀÄ*
+   ³  ÃÄusb_enumerated  0/8  Ram=0
+   ³  ÃÄusb_task  0/42  Ram=1
+   ³  ³  ÀÄ*
+   ³  ÃÄfat_init  0/622  Ram=25
+   ³  ³  ÃÄmmcsd_init  0/264  Ram=2
+   ³  ³  ³  ÃÄmmcsd_deselect  0/16  Ram=0
+   ³  ³  ³  ³  ÀÄ@SPI_XFER_1  0/70  Ram=5
+   ³  ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ³  ³  ÃÄmmcsd_select  0/4  Ram=0
+   ³  ³  ³  ÃÄmmcsd_go_idle_state  0/24  Ram=0
+   ³  ³  ³  ³  ÃÄmmcsd_send_cmd  0/152  Ram=11
+   ³  ³  ³  ³  ³  ÃÄmmcsd_crc7  0/84  Ram=8
+   ³  ³  ³  ³  ³  ÃÄ@SPI_XFER_1  0/70  Ram=5
+   ³  ³  ³  ³  ³  ÃÄ@SPI_XFER_1  0/70  Ram=5
+   ³  ³  ³  ³  ³  ÃÄ@SPI_XFER_1  0/70  Ram=5
+   ³  ³  ³  ³  ³  ÃÄ@SPI_XFER_1  0/70  Ram=5
+   ³  ³  ³  ³  ³  ÃÄ@SPI_XFER_1  0/70  Ram=5
+   ³  ³  ³  ³  ³  ÀÄ@SPI_XFER_1  0/70  Ram=5
+   ³  ³  ³  ³  ÀÄmmcsd_get_r1  0/52  Ram=2
+   ³  ³  ³  ³     ÀÄ@SPI_XFER_1  0/70  Ram=5
+   ³  ³  ³  ÃÄmmcsd_deselect  0/16  Ram=0
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄmmcsd_deselect  0/16  Ram=0
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄ@delay_ms1  0/42  Ram=1
+   ³  ³  ³  ÃÄmmcsd_select  0/4  Ram=0
+   ³  ³  ³  ÃÄmmcsd_send_op_cond  0/26  Ram=0
+   ³  ³  ³  ³  ÃÄmmcsd_send_cmd  0/152  Ram=11
+   ³  ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ³  ÀÄmmcsd_get_r1  0/52  Ram=2
+   ³  ³  ³  ³     ÀÄ*
+   ³  ³  ³  ÃÄmmcsd_deselect  0/16  Ram=0
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄmmcsd_deselect  0/16  Ram=0
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄmmcsd_select  0/4  Ram=0
+   ³  ³  ³  ÃÄmmcsd_app_cmd  0/26  Ram=0
+   ³  ³  ³  ³  ÃÄmmcsd_send_cmd  0/152  Ram=11
+   ³  ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ³  ÀÄmmcsd_get_r1  0/52  Ram=2
+   ³  ³  ³  ³     ÀÄ*
+   ³  ³  ³  ÃÄmmcsd_sd_send_op_cond  0/26  Ram=0
+   ³  ³  ³  ³  ÃÄmmcsd_send_cmd  0/152  Ram=11
+   ³  ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ³  ÀÄmmcsd_get_r1  0/52  Ram=2
+   ³  ³  ³  ³     ÀÄ*
+   ³  ³  ³  ÃÄmmcsd_deselect  0/16  Ram=0
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄmmcsd_select  0/4  Ram=0
+   ³  ³  ³  ÃÄmmcsd_set_blocklen  0/34  Ram=4
+   ³  ³  ³  ³  ÃÄmmcsd_send_cmd  0/152  Ram=11
+   ³  ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ³  ÀÄmmcsd_get_r1  0/52  Ram=2
+   ³  ³  ³  ³     ÀÄ*
+   ³  ³  ³  ÃÄmmcsd_deselect  0/16  Ram=0
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄmmcsd_deselect  0/16  Ram=0
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄmmcsd_select  0/4  Ram=0
+   ³  ³  ³  ÃÄmmcsd_crc_on_off  0/46  Ram=1
+   ³  ³  ³  ³  ÃÄmmcsd_send_cmd  0/152  Ram=11
+   ³  ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ³  ÀÄmmcsd_get_r1  0/52  Ram=2
+   ³  ³  ³  ³     ÀÄ*
+   ³  ³  ³  ÃÄmmcsd_deselect  0/16  Ram=0
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄmmcsd_deselect  0/16  Ram=0
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÀÄmmcsd_load_buffer  0/44  Ram=0
+   ³  ³  ³     ÀÄmmcsd_read_block  0/272  Ram=15
+   ³  ³  ³        ÃÄmmcsd_select  0/4  Ram=0
+   ³  ³  ³        ÃÄmmcsd_read_single_block  0/34  Ram=4
+   ³  ³  ³        ³  ÃÄmmcsd_send_cmd  0/152  Ram=11
+   ³  ³  ³        ³  ³  ÀÄ*
+   ³  ³  ³        ³  ÀÄmmcsd_get_r1  0/52  Ram=2
+   ³  ³  ³        ³     ÀÄ*
+   ³  ³  ³        ÃÄmmcsd_deselect  0/16  Ram=0
+   ³  ³  ³        ³  ÀÄ*
+   ³  ³  ³        ÃÄmmcsd_wait_for_token  0/30  Ram=2
+   ³  ³  ³        ³  ÀÄmmcsd_get_r1  0/52  Ram=2
+   ³  ³  ³        ³     ÀÄ*
+   ³  ³  ³        ÃÄmmcsd_deselect  0/16  Ram=0
+   ³  ³  ³        ³  ÀÄ*
+   ³  ³  ³        ÃÄ@SPI_XFER_1  0/70  Ram=5
+   ³  ³  ³        ÃÄ@SPI_XFER_1  0/70  Ram=5
+   ³  ³  ³        ÃÄ@SPI_XFER_1  0/70  Ram=5
+   ³  ³  ³        ÃÄmmcsd_crc16  0/114  Ram=10
+   ³  ³  ³        ÃÄmmcsd_deselect  0/16  Ram=0
+   ³  ³  ³        ³  ÀÄ*
+   ³  ³  ³        ÃÄ@SPI_XFER_1  0/70  Ram=5
+   ³  ³  ³        ÃÄ@SPI_XFER_1  0/70  Ram=5
+   ³  ³  ³        ÀÄmmcsd_deselect  0/16  Ram=0
+   ³  ³  ³           ÀÄ*
+   ³  ³  ÃÄmmcsd_read_data  0/152  Ram=17
+   ³  ³  ³  ÀÄmmcsd_read_byte  0/82  Ram=14
+   ³  ³  ³     ÀÄmmcsd_move_buffer  0/142  Ram=9
+   ³  ³  ³        ÃÄmmcsd_flush_buffer  0/60  Ram=0
+   ³  ³  ³        ³  ÀÄmmcsd_write_block  0/246  Ram=13
+   ³  ³  ³        ³     ÃÄmmcsd_select  0/4  Ram=0
+   ³  ³  ³        ³     ÃÄmmcsd_write_single_block  0/34  Ram=4
+   ³  ³  ³        ³     ³  ÃÄmmcsd_send_cmd  0/152  Ram=11
+   ³  ³  ³        ³     ³  ³  ÀÄ*
+   ³  ³  ³        ³     ³  ÀÄmmcsd_get_r1  0/52  Ram=2
+   ³  ³  ³        ³     ³     ÀÄ*
+   ³  ³  ³        ³     ÃÄmmcsd_deselect  0/16  Ram=0
+   ³  ³  ³        ³     ³  ÀÄ*
+   ³  ³  ³        ³     ÃÄ@SPI_XFER_1  0/70  Ram=5
+   ³  ³  ³        ³     ÃÄ@SPI_XFER_1  0/70  Ram=5
+   ³  ³  ³        ³     ÃÄmmcsd_crc16  0/114  Ram=10
+   ³  ³  ³        ³     ÃÄ@SPI_XFER_1  0/70  Ram=5
+   ³  ³  ³        ³     ÃÄ@SPI_XFER_1  0/70  Ram=5
+   ³  ³  ³        ³     ÃÄ@SPI_XFER_1  0/70  Ram=5
+   ³  ³  ³        ³     ÃÄmmcsd_get_r1  0/52  Ram=2
+   ³  ³  ³        ³     ³  ÀÄ*
+   ³  ³  ³        ³     ÃÄmmcsd_deselect  0/16  Ram=0
+   ³  ³  ³        ³     ³  ÀÄ*
+   ³  ³  ³        ³     ÃÄ@SPI_XFER_1  0/70  Ram=5
+   ³  ³  ³        ³     ÀÄmmcsd_deselect  0/16  Ram=0
+   ³  ³  ³        ³        ÀÄ*
+   ³  ³  ³        ÀÄmmcsd_load_buffer  0/44  Ram=0
+   ³  ³  ³           ÀÄ*
+   ³  ³  ÃÄmmcsd_read_data  0/152  Ram=17
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄmmcsd_read_data  0/152  Ram=17
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄmmcsd_read_data  0/152  Ram=17
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄmmcsd_read_data  0/152  Ram=17
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄmmcsd_read_data  0/152  Ram=17
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄmmcsd_read_data  0/152  Ram=17
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄmmcsd_read_data  0/152  Ram=17
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄmmcsd_read_data  0/152  Ram=17
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@MUL1616  0/34  Ram=5
+   ³  ³  ÃÄ@MUL3232  0/92  Ram=14
+   ³  ³  ÃÄ@MUL1616  0/34  Ram=5
+   ³  ³  ÀÄ@MUL3232  0/92  Ram=14
+   ³  ÃÄ@PSTRINGC_796  0/40  Ram=3
+   ³  ³  ÀÄusb_cdc_putc  0/26  Ram=1
+   ³  ³     ÀÄusb_cdc_putc_fast  0/26  Ram=1
+   ³  ³        ÃÄ_usb_cdc_putc_fast_noflush  0/56  Ram=4
+   ³  ³        ÀÄusb_cdc_flush_tx_buffer  0/46  Ram=0
+   ³  ³           ÀÄusb_put_packet  0/140  Ram=10
+   ³  ³              ÃÄusb_tbe  0/68  Ram=4
+   ³  ³              ÀÄusb_flush_in  0/222  Ram=9
+   ³  ³                 ÀÄusb_tbe  0/68  Ram=4
+   ³  ÀÄMakeFile  0/112  Ram=3
+   ³     ÃÄ@PSTRINGCN_796  0/48  Ram=4
+   ³     ³  ÀÄusb_cdc_putc  0/26  Ram=1
+   ³     ³     ÀÄ*
+   ³     ÃÄ@PSTRINGR_796  0/38  Ram=2
+   ³     ³  ÀÄusb_cdc_putc  0/26  Ram=1
+   ³     ³     ÀÄ*
+   ³     ÃÄ@PSTRINGCN_796  0/48  Ram=4
+   ³     ³  ÀÄ*
+   ³     ÃÄmk_file  0/414  Ram=136
+   ³     ³  ÃÄfatopen  0/648  Ram=102
+   ³     ³  ³  ÃÄset_file  0/1828  Ram=52
+   ³     ³  ³  ³  ÃÄmmcsd_read_data  0/152  Ram=17
+   ³     ³  ³  ³  ³  ÀÄ*
+   ³     ³  ³  ³  ÃÄmmcsd_read_data  0/152  Ram=17
+   ³     ³  ³  ³  ³  ÀÄ*
+   ³     ³  ³  ³  ÃÄget_file_name  0/402  Ram=20
+   ³     ³  ³  ³  ³  ÃÄmmcsd_read_data  0/152  Ram=17
+   ³     ³  ³  ³  ³  ³  ÀÄ*
+   ³     ³  ³  ³  ³  ÃÄget_short_file_name  0/320  Ram=14
+   ³     ³  ³  ³  ³  ³  ÃÄmmcsd_read_data  0/152  Ram=17
+   ³     ³  ³  ³  ³  ³  ³  ÀÄ*
+   ³     ³  ³  ³  ³  ³  ÃÄstrlen  0/58  Ram=5
+   ³     ³  ³  ³  ³  ³  ÀÄstrlen  0/58  Ram=5
+   ³     ³  ³  ³  ³  ÃÄget_prev_entry  0/98  Ram=8
+   ³     ³  ³  ³  ³  ³  ÀÄget_prev_addr  0/484  Ram=16
+   ³     ³  ³  ³  ³  ³     ÃÄ@DIV3232  0/148  Ram=13
+   ³     ³  ³  ³  ³  ³     ÃÄaddr_to_cluster  0/118  Ram=8
+   ³     ³  ³  ³  ³  ³     ³  ÀÄ@DIV3232  0/148  Ram=13
+   ³     ³  ³  ³  ³  ³     ÃÄget_prev_cluster  0/218  Ram=15
+   ³     ³  ³  ³  ³  ³     ³  ÀÄmmcsd_read_data  0/152  Ram=17
+   ³     ³  ³  ³  ³  ³     ³     ÀÄ*
+   ³     ³  ³  ³  ³  ³     ÀÄcluster_to_addr  0/92  Ram=8
+   ³     ³  ³  ³  ³  ³        ÀÄ@MUL3232  0/92  Ram=14
+   ³     ³  ³  ³  ³  ÃÄmmcsd_read_data  0/152  Ram=17
+   ³     ³  ³  ³  ³  ³  ÀÄ*
+   ³     ³  ³  ³  ³  ÀÄmmcsd_read_data  0/152  Ram=17
+   ³     ³  ³  ³  ³     ÀÄ*
+   ³     ³  ³  ³  ÃÄstrcmp  0/120  Ram=5
+   ³     ³  ³  ³  ÃÄmmcsd_read_data  0/152  Ram=17
+   ³     ³  ³  ³  ³  ÀÄ*
+   ³     ³  ³  ³  ÃÄmmcsd_read_data  0/152  Ram=17
+   ³     ³  ³  ³  ³  ÀÄ*
+   ³     ³  ³  ³  ÃÄmmcsd_read_data  0/152  Ram=17
+   ³     ³  ³  ³  ³  ÀÄ*
+   ³     ³  ³  ³  ÃÄcluster_to_addr  0/92  Ram=8
+   ³     ³  ³  ³  ³  ÀÄ*
+   ³     ³  ³  ³  ÃÄaddr_to_cluster  0/118  Ram=8
+   ³     ³  ³  ³  ³  ÀÄ*
+   ³     ³  ³  ³  ÃÄdealloc_clusters  0/170  Ram=13
+   ³     ³  ³  ³  ³  ÃÄget_next_cluster  0/128  Ram=7
+   ³     ³  ³  ³  ³  ³  ÀÄmmcsd_read_data  0/152  Ram=17
+   ³     ³  ³  ³  ³  ³     ÀÄ*
+   ³     ³  ³  ³  ³  ÀÄwrite_fat  0/104  Ram=13
+   ³     ³  ³  ³  ³     ÀÄmmcsd_write_data  0/146  Ram=16
+   ³     ³  ³  ³  ³        ÀÄmmcsd_write_byte  0/78  Ram=12
+   ³     ³  ³  ³  ³           ÀÄmmcsd_move_buffer  0/142  Ram=9
+   ³     ³  ³  ³  ³              ÀÄ*
+   ³     ³  ³  ³  ÃÄfatsetpos  0/1080  Ram=28
+   ³     ³  ³  ³  ³  ÃÄrewind  0/130  Ram=8
+   ³     ³  ³  ³  ³  ÃÄfatputc  0/760  Ram=9
+   ³     ³  ³  ³  ³  ³  ÃÄget_next_free_cluster  0/386  Ram=25
+   ³     ³  ³  ³  ³  ³  ³  ÀÄmmcsd_read_data  0/152  Ram=17
+   ³     ³  ³  ³  ³  ³  ³     ÀÄ*
+   ³     ³  ³  ³  ³  ³  ÃÄwrite_fat  0/104  Ram=13
+   ³     ³  ³  ³  ³  ³  ³  ÀÄ*
+   ³     ³  ³  ³  ³  ³  ÃÄclear_cluster  0/188  Ram=47
+   ³     ³  ³  ³  ³  ³  ³  ÃÄcluster_to_addr  0/92  Ram=8
+   ³     ³  ³  ³  ³  ³  ³  ³  ÀÄ*
+   ³     ³  ³  ³  ³  ³  ³  ÀÄmmcsd_write_data  0/146  Ram=16
+   ³     ³  ³  ³  ³  ³  ³     ÀÄ*
+   ³     ³  ³  ³  ³  ³  ÃÄcluster_to_addr  0/92  Ram=8
+   ³     ³  ³  ³  ³  ³  ³  ÀÄ*
+   ³     ³  ³  ³  ³  ³  ÃÄwrite_buffer  0/342  Ram=9
+   ³     ³  ³  ³  ³  ³  ³  ÀÄmmcsd_write_data  0/146  Ram=16
+   ³     ³  ³  ³  ³  ³  ³     ÀÄ*
+   ³     ³  ³  ³  ³  ³  ÃÄget_next_addr  0/416  Ram=16
+   ³     ³  ³  ³  ³  ³  ³  ÃÄ@DIV3232  0/148  Ram=13
+   ³     ³  ³  ³  ³  ³  ³  ÃÄaddr_to_cluster  0/118  Ram=8
+   ³     ³  ³  ³  ³  ³  ³  ³  ÀÄ*
+   ³     ³  ³  ³  ³  ³  ³  ÃÄget_next_cluster  0/128  Ram=7
+   ³     ³  ³  ³  ³  ³  ³  ³  ÀÄ*
+   ³     ³  ³  ³  ³  ³  ³  ÀÄcluster_to_addr  0/92  Ram=8
+   ³     ³  ³  ³  ³  ³  ³     ÀÄ*
+   ³     ³  ³  ³  ³  ³  ÃÄmmcsd_write_data  0/146  Ram=16
+   ³     ³  ³  ³  ³  ³  ³  ÀÄ*
+   ³     ³  ³  ³  ³  ³  ÃÄaddr_to_cluster  0/118  Ram=8
+   ³     ³  ³  ³  ³  ³  ³  ÀÄ*
+   ³     ³  ³  ³  ³  ³  ÀÄalloc_clusters  0/242  Ram=16
+   ³     ³  ³  ³  ³  ³     ÃÄget_next_free_cluster  0/386  Ram=25
+   ³     ³  ³  ³  ³  ³     ³  ÀÄ*
+   ³     ³  ³  ³  ³  ³     ÃÄwrite_fat  0/104  Ram=13
+   ³     ³  ³  ³  ³  ³     ³  ÀÄ*
+   ³     ³  ³  ³  ³  ³     ÃÄwrite_fat  0/104  Ram=13
+   ³     ³  ³  ³  ³  ³     ³  ÀÄ*
+   ³     ³  ³  ³  ³  ³     ÃÄclear_cluster  0/188  Ram=47
+   ³     ³  ³  ³  ³  ³     ³  ÀÄ*
+   ³     ³  ³  ³  ³  ³     ÀÄcluster_to_addr  0/92  Ram=8
+   ³     ³  ³  ³  ³  ³        ÀÄ*
+   ³     ³  ³  ³  ³  ÃÄ@DIV3232  0/148  Ram=13
+   ³     ³  ³  ³  ³  ÃÄaddr_to_cluster  0/118  Ram=8
+   ³     ³  ³  ³  ³  ³  ÀÄ*
+   ³     ³  ³  ³  ³  ÃÄget_next_cluster  0/128  Ram=7
+   ³     ³  ³  ³  ³  ³  ÀÄ*
+   ³     ³  ³  ³  ³  ÃÄcluster_to_addr  0/92  Ram=8
+   ³     ³  ³  ³  ³  ³  ÀÄ*
+   ³     ³  ³  ³  ³  ÃÄ@DIV3232  0/148  Ram=13
+   ³     ³  ³  ³  ³  ÀÄmmcsd_read_data  0/152  Ram=17
+   ³     ³  ³  ³  ³     ÀÄ*
+   ³     ³  ³  ³  ÃÄmmcsd_read_data  0/152  Ram=17
+   ³     ³  ³  ³  ³  ÀÄ*
+   ³     ³  ³  ³  ÃÄmmcsd_read_data  0/152  Ram=17
+   ³     ³  ³  ³  ³  ÀÄ*
+   ³     ³  ³  ³  ÃÄmmcsd_read_data  0/152  Ram=17
+   ³     ³  ³  ³  ³  ÀÄ*
+   ³     ³  ³  ³  ÀÄget_next_entry  0/98  Ram=8
+   ³     ³  ³  ³     ÀÄget_next_addr  0/416  Ram=16
+   ³     ³  ³  ³        ÀÄ*
+   ³     ³  ³  ÀÄset_file  0/1828  Ram=52
+   ³     ³  ³     ÀÄ*
+   ³     ³  ÃÄstrrchr  0/72  Ram=6
+   ³     ³  ÃÄset_file_name  0/742  Ram=63
+   ³     ³  ³  ÃÄcheck_invalid_char  0/122  Ram=4
+   ³     ³  ³  ÃÄmake_short_file_name  0/1164  Ram=55
+   ³     ³  ³  ³  ÃÄstrchr  0/68  Ram=4
+   ³     ³  ³  ³  ÃÄmmcsd_read_data  0/152  Ram=17
+   ³     ³  ³  ³  ³  ÀÄ*
+   ³     ³  ³  ³  ÃÄmmcsd_read_data  0/152  Ram=17
+   ³     ³  ³  ³  ³  ÀÄ*
+   ³     ³  ³  ³  ÃÄstrcmp  0/120  Ram=5
+   ³     ³  ³  ³  ÃÄ@PRINTF_L32U_2024  0/196  Ram=12
+   ³     ³  ³  ³  ³  ÃÄ@DIV3232  0/148  Ram=13
+   ³     ³  ³  ³  ³  ÃÄ@SPRINTF  0/36  Ram=1
+   ³     ³  ³  ³  ³  ÀÄ@DIV3232  0/148  Ram=13
+   ³     ³  ³  ³  ÃÄstrchr  0/68  Ram=4
+   ³     ³  ³  ³  ÃÄstrlen  0/58  Ram=5
+   ³     ³  ³  ³  ÃÄget_next_entry  0/98  Ram=8
+   ³     ³  ³  ³  ³  ÀÄ*
+   ³     ³  ³  ³  ÃÄaddr_to_cluster  0/118  Ram=8
+   ³     ³  ³  ³  ³  ÀÄ*
+   ³     ³  ³  ³  ÃÄalloc_clusters  0/242  Ram=16
+   ³     ³  ³  ³  ³  ÀÄ*
+   ³     ³  ³  ³  ÀÄmmcsd_read_data  0/152  Ram=17
+   ³     ³  ³  ³     ÀÄ*
+   ³     ³  ³  ÃÄlong_name_chksum  0/70  Ram=5
+   ³     ³  ³  ÃÄget_next_free_entry  0/284  Ram=11
+   ³     ³  ³  ³  ÃÄmmcsd_read_data  0/152  Ram=17
+   ³     ³  ³  ³  ³  ÀÄ*
+   ³     ³  ³  ³  ÃÄget_next_addr  0/416  Ram=16
+   ³     ³  ³  ³  ³  ÀÄ*
+   ³     ³  ³  ³  ÃÄaddr_to_cluster  0/118  Ram=8
+   ³     ³  ³  ³  ³  ÀÄ*
+   ³     ³  ³  ³  ÃÄalloc_clusters  0/242  Ram=16
+   ³     ³  ³  ³  ³  ÀÄ*
+   ³     ³  ³  ³  ÀÄmmcsd_read_data  0/152  Ram=17
+   ³     ³  ³  ³     ÀÄ*
+   ³     ³  ³  ÃÄstrlen  0/58  Ram=5
+   ³     ³  ³  ÃÄ@DIVS88  0/76  Ram=4
+   ³     ³  ³  ÃÄfill_entry  0/170  Ram=7
+   ³     ³  ³  ÃÄstrlen  0/58  Ram=5
+   ³     ³  ³  ÃÄ@DIVS88  0/76  Ram=4
+   ³     ³  ³  ÃÄ@DIVS88  0/76  Ram=4
+   ³     ³  ³  ÃÄ@DIVS88  0/76  Ram=4
+   ³     ³  ³  ÃÄstrlen  0/58  Ram=5
+   ³     ³  ³  ÃÄmmcsd_write_data  0/146  Ram=16
+   ³     ³  ³  ³  ÀÄ*
+   ³     ³  ³  ÃÄget_next_free_entry  0/284  Ram=11
+   ³     ³  ³  ³  ÀÄ*
+   ³     ³  ³  ÃÄfill_entry  0/170  Ram=7
+   ³     ³  ³  ÀÄmmcsd_write_data  0/146  Ram=16
+   ³     ³  ³     ÀÄ*
+   ³     ³  ÃÄmmcsd_read_data  0/152  Ram=17
+   ³     ³  ³  ÀÄ*
+   ³     ³  ÀÄmmcsd_write_data  0/146  Ram=16
+   ³     ³     ÀÄ*
+   ³     ÀÄ@PSTRINGC_796  0/40  Ram=3
+   ³        ÀÄ*
+   ÀÄusb_isr  0/208  Ram=2
+      ÃÄusb_isr_activity  0/20  Ram=0
+      ÃÄusb_isr_stall  0/22  Ram=0
+      ³  ÀÄusb_init_ep0_setup  0/58  Ram=2
+      ÃÄusb_isr_uerr  0/8  Ram=0
+      ÃÄusb_isr_rst  0/58  Ram=0
+      ³  ÃÄusb_disable_endpoints  0/30  Ram=1
+      ³  ³  ÀÄusb_disable_endpoint  0/84  Ram=5
+      ³  ³     ÀÄusb_endpoint_is_valid  0/98  Ram=3
+      ³  ³        ÃÄ@const903  0/36  Ram=0
+      ³  ³        ÀÄ@const906  0/36  Ram=0
+      ³  ÃÄusb_token_reset  0/50  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄusb_clear_trn  0/4  Ram=0
+      ³  ÀÄusb_init_ep0_setup  0/58  Ram=2
+      ÃÄusb_isr_uidle  0/14  Ram=0
+      ÃÄusb_isr_sof  0/6  Ram=0
+      ÃÄusb_clear_trn  0/4  Ram=0
+      ÀÄusb_isr_tok_dne  0/270  Ram=2
+         ÃÄusb_isr_tok_setup_dne  0/44  Ram=0
+         ³  ÃÄusb_isr_tkn_setup_StandardDevice  0/162  Ram=0
+         ³  ³  ÃÄusb_request_send_response  0/6  Ram=1
+         ³  ³  ÃÄusb_request_send_response  0/6  Ram=1
+         ³  ³  ÃÄusb_request_stall  0/8  Ram=0
+         ³  ³  ÃÄusb_request_send_response  0/6  Ram=1
+         ³  ³  ÃÄusb_request_stall  0/8  Ram=0
+         ³  ³  ÃÄusb_request_send_response  0/6  Ram=1
+         ³  ³  ÃÄusb_Get_Descriptor  0/240  Ram=1
+         ³  ³  ³  ÃÄ@const930  0/64  Ram=0
+         ³  ³  ³  ÃÄ@const921  0/28  Ram=0
+         ³  ³  ³  ÃÄ@const915  0/88  Ram=0
+         ³  ³  ³  ÃÄusb_request_stall  0/8  Ram=0
+         ³  ³  ³  ÃÄusb_request_stall  0/8  Ram=0
+         ³  ³  ³  ÀÄusb_copy_desc_seg_to_ep  0/206  Ram=4
+         ³  ³  ³     ÃÄ@const915  0/88  Ram=0
+         ³  ³  ³     ÃÄ@const930  0/64  Ram=0
+         ³  ³  ³     ÃÄ@const926  0/38  Ram=0
+         ³  ³  ³     ÀÄusb_request_send_response  0/6  Ram=1
+         ³  ³  ÃÄusb_request_send_response  0/6  Ram=1
+         ³  ³  ÃÄusb_set_configured  0/486  Ram=12
+         ³  ³  ³  ÃÄusb_disable_endpoints  0/30  Ram=1
+         ³  ³  ³  ³  ÀÄ*
+         ³  ³  ³  ÃÄusb_disable_endpoint  0/84  Ram=5
+         ³  ³  ³  ³  ÀÄ*
+         ³  ³  ³  ÃÄ@const906  0/36  Ram=0
+         ³  ³  ³  ÃÄ@const912  0/52  Ram=0
+         ³  ³  ³  ÃÄ@const912  0/52  Ram=0
+         ³  ³  ³  ÃÄ@const903  0/36  Ram=0
+         ³  ³  ³  ÃÄ@const909  0/52  Ram=0
+         ³  ³  ³  ÀÄ@const903  0/36  Ram=0
+         ³  ³  ÃÄusb_request_send_response  0/6  Ram=1
+         ³  ³  ÀÄusb_request_stall  0/8  Ram=0
+         ³  ÃÄusb_isr_tkn_setup_StandardInterface  0/150  Ram=3
+         ³  ³  ÃÄusb_request_send_response  0/6  Ram=1
+         ³  ³  ÃÄ@const918  0/22  Ram=0
+         ³  ³  ÃÄusb_request_send_response  0/6  Ram=1
+         ³  ³  ÃÄusb_request_stall  0/8  Ram=0
+         ³  ³  ÃÄusb_request_send_response  0/6  Ram=1
+         ³  ³  ÃÄusb_request_stall  0/8  Ram=0
+         ³  ³  ÀÄusb_request_stall  0/8  Ram=0
+         ³  ÃÄusb_isr_tkn_setup_StandardEndpoint  0/94  Ram=0
+         ³  ³  ÃÄusb_endpoint_is_valid  0/98  Ram=3
+         ³  ³  ³  ÀÄ*
+         ³  ³  ÃÄusb_unstall_ep  0/72  Ram=6
+         ³  ³  ÃÄusb_request_send_response  0/6  Ram=1
+         ³  ³  ÃÄusb_stall_ep  0/74  Ram=6
+         ³  ³  ÃÄusb_request_send_response  0/6  Ram=1
+         ³  ³  ÃÄusb_endpoint_stalled  0/90  Ram=5
+         ³  ³  ÃÄusb_request_send_response  0/6  Ram=1
+         ³  ³  ÀÄusb_request_stall  0/8  Ram=0
+         ³  ÃÄusb_isr_tkn_cdc  0/172  Ram=0
+         ³  ³  ÃÄusb_request_get_data  0/10  Ram=0
+         ³  ³  ÃÄusb_request_send_response  0/6  Ram=1
+         ³  ³  ÃÄusb_request_get_data  0/10  Ram=0
+         ³  ³  ÃÄusb_request_send_response  0/6  Ram=1
+         ³  ³  ÃÄusb_request_send_response  0/6  Ram=1
+         ³  ³  ÃÄusb_request_send_response  0/6  Ram=1
+         ³  ³  ÀÄusb_request_stall  0/8  Ram=0
+         ³  ÀÄusb_request_stall  0/8  Ram=0
+         ÃÄusb_flush_out  0/206  Ram=9
+         ³  ÀÄ@const912  0/52  Ram=0
+         ÃÄusb_flush_out  0/206  Ram=9
+         ³  ÀÄ*
+         ÃÄusb_flush_in  0/222  Ram=9
+         ³  ÀÄ*
+         ÃÄusb_isr_tok_out_dne  0/30  Ram=1
+         ³  ÃÄusb_isr_tok_out_cdc_control_dne  0/114  Ram=0
+         ³  ³  ÃÄusb_request_send_response  0/6  Ram=1
+         ³  ³  ÀÄusb_request_send_response  0/6  Ram=1
+         ³  ÀÄusb_isr_tok_out_cdc_data_dne  0/28  Ram=0
+         ³     ÃÄusb_rx_packet_size  0/50  Ram=3
+         ³     ÀÄusb_cdc_get_discard  0/18  Ram=0
+         ³        ÀÄusb_flush_out  0/206  Ram=9
+         ³           ÀÄ*
+         ÃÄusb_flush_out  0/206  Ram=9
+         ³  ÀÄ*
+         ÃÄusb_flush_in  0/222  Ram=9
+         ³  ÀÄ*
+         ÃÄusb_isr_tok_in_dne  0/50  Ram=1
+         ³  ÃÄusb_copy_desc_seg_to_ep  0/206  Ram=4
+         ³  ³  ÀÄ*
+         ³  ÃÄusb_finish_set_address  0/14  Ram=0
+         ³  ³  ÀÄusb_set_address  0/32  Ram=1
+         ³  ÀÄusb_isr_tok_in_cdc_data_dne  0/6  Ram=0
+         ³     ÀÄusb_cdc_flush_tx_buffer  0/46  Ram=0
+         ³        ÀÄ*
+         ÃÄusb_flush_in  0/222  Ram=9
+         ³  ÀÄ*
+         ÃÄusb_isr_tok_out_dne  0/30  Ram=1
+         ³  ÀÄ*
+         ÀÄusb_isr_tok_in_dne  0/50  Ram=1
+            ÀÄ*

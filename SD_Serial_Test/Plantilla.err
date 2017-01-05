@@ -1,0 +1,25 @@
+>>> Warning 203 "C:\Program Files (x86)\PICC\Drivers\pic18_usb.c" Line 643(1,1): Condition always TRUE
+*** Error 12 "C:\Program Files (x86)\PICC\Drivers\mmcsd.c" Line 385(36,37): Undefined identifier   mmcsd_spi
+*** Error 12 "C:\Program Files (x86)\PICC\Drivers\mmcsd.c" Line 390(37,38): Undefined identifier   mmcsd_spi
+*** Error 12 "C:\Program Files (x86)\PICC\Drivers\mmcsd.c" Line 399(27,28): Undefined identifier   mmcsd_spi
+*** Error 12 "C:\Program Files (x86)\PICC\Drivers\mmcsd.c" Line 400(27,28): Undefined identifier   mmcsd_spi
+*** Error 12 "C:\Program Files (x86)\PICC\Drivers\mmcsd.c" Line 437(36,37): Undefined identifier   mmcsd_spi
+*** Error 12 "C:\Program Files (x86)\PICC\Drivers\mmcsd.c" Line 442(29,30): Undefined identifier   mmcsd_spi
+*** Error 12 "C:\Program Files (x86)\PICC\Drivers\mmcsd.c" Line 447(45,46): Undefined identifier   mmcsd_spi
+*** Error 51 "C:\Program Files (x86)\PICC\Drivers\mmcsd.c" Line 448(4,8): A numeric expression must appear here
+*** Error 12 "C:\Program Files (x86)\PICC\Drivers\mmcsd.c" Line 450(27,28): Undefined identifier   mmcsd_spi
+*** Error 12 "C:\Program Files (x86)\PICC\Drivers\mmcsd.c" Line 451(27,28): Undefined identifier   mmcsd_spi
+*** Error 12 "C:\Program Files (x86)\PICC\Drivers\mmcsd.c" Line 463(30,31): Undefined identifier   mmcsd_spi
+*** Error 12 "C:\Program Files (x86)\PICC\Drivers\mmcsd.c" Line 518(36,37): Undefined identifier   mmcsd_spi
+*** Error 12 "C:\Program Files (x86)\PICC\Drivers\mmcsd.c" Line 581(36,37): Undefined identifier   mmcsd_spi
+*** Error 12 "C:\Program Files (x86)\PICC\Drivers\mmcsd.c" Line 608(27,28): Undefined identifier   mmcsd_spi
+*** Error 12 "C:\Program Files (x86)\PICC\Drivers\mmcsd.c" Line 692(29,30): Undefined identifier   mmcsd_spi
+*** Error 12 "C:\Program Files (x86)\PICC\Drivers\mmcsd.c" Line 693(29,30): Undefined identifier   mmcsd_spi
+*** Error 12 "C:\Program Files (x86)\PICC\Drivers\mmcsd.c" Line 694(29,30): Undefined identifier   mmcsd_spi
+*** Error 12 "C:\Program Files (x86)\PICC\Drivers\mmcsd.c" Line 695(29,30): Undefined identifier   mmcsd_spi
+*** Error 12 "C:\Program Files (x86)\PICC\Drivers\mmcsd.c" Line 696(29,30): Undefined identifier   mmcsd_spi
+*** Error 12 "C:\Program Files (x86)\PICC\Drivers\mmcsd.c" Line 697(29,30): Undefined identifier   mmcsd_spi
+*** Error 12 "C:\Program Files (x86)\PICC\Drivers\mmcsd.c" Line 720(38,39): Undefined identifier   mmcsd_spi
+*** Error 12 "C:\Program Files (x86)\PICC\Drivers\mmcsd.c" Line 743(32,33): Undefined identifier   mmcsd_spi
+*** Error 12 "C:\Program Files (x86)\PICC\Drivers\mmcsd.c" Line 762(39,40): Undefined identifier   mmcsd_spi
+*** Error 12 "C:\Program Files (x86)\PICC\Drivers\mmcsd.c" Line 841(24,25): Undefined identifier   mmcsd_spi

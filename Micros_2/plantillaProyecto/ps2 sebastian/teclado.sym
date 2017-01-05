@@ -1,0 +1,263 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     @INTERRUPT_AREA
+005     @INTERRUPT_AREA
+006     @INTERRUPT_AREA
+007     @INTERRUPT_AREA
+008     @INTERRUPT_AREA
+009     @INTERRUPT_AREA
+00A     @INTERRUPT_AREA
+00B     @INTERRUPT_AREA
+00B.1   INTF_BIT
+00C     @INTERRUPT_AREA
+00D     @INTERRUPT_AREA
+00E     @INTERRUPT_AREA
+00F     @INTERRUPT_AREA
+010     @INTERRUPT_AREA
+011     @INTERRUPT_AREA
+012     @INTERRUPT_AREA
+013     @INTERRUPT_AREA
+014     @INTERRUPT_AREA
+015     @INTERRUPT_AREA
+016     @INTERRUPT_AREA
+017     @INTERRUPT_AREA
+018     @INTERRUPT_AREA
+019     @INTERRUPT_AREA
+01A     @INTERRUPT_AREA
+01B.0   bits_8_4
+01C-01E valores
+01F     bitcount
+020     i
+021     x
+022     c
+023     tecla
+024     auxTecla
+025     got_interrupt
+026     interrupt_count
+027     status_b3
+028-029 Temperatura
+02A-02B Humedad
+02C-02D Luz
+02E-02F j
+030-031 atoiTemp
+032-033 atoiHum
+034-035 atoiLuz
+036     pwmTemp
+037     pwmHum
+038     pwmLuz
+039-03A strtok.save
+03B-03E _Randseed
+03F-040 cont
+041     decode.is_up
+042     decode.shift
+043     barrer_teclado.aux
+044     @PSTRINGCN_115.P1
+044-047 regla.x
+044-045 @PRINTF_LU_115.P1
+044-045 atol.s
+044     entrada_teclado.@SCRATCH1
+044     @PSTRINGC_115.@SCRATCH1
+045     entrada_teclado.@SCRATCH2
+045     @PSTRINGC_115.@SCRATCH2
+045     @PSTRINGCN_115.@SCRATCH1
+046-047 atol.result
+046     @PSTRINGC_115.@SCRATCH3
+046     @PSTRINGCN_115.@SCRATCH2
+046     @PRINTF_LU_115.@SCRATCH1
+047     @PSTRINGCN_115.@SCRATCH3
+047     @PRINTF_LU_115.@SCRATCH2
+048-04B regla.in_min
+048     atol.sign
+048     @PRINTF_LU_115.@SCRATCH3
+049     atol.base
+049     @PRINTF_LU_115.@SCRATCH4
+04A     atol.index
+04A     @PRINTF_LU_115.@SCRATCH5
+04B     atol.c
+04B     @PRINTF_LU_115.@SCRATCH6
+04C-04F regla.in_max
+04C-04D @MULS1616.P1
+04C     atol.@SCRATCH1
+04C     @PRINTF_LU_115.@SCRATCH7
+04D     lcd_putc_4bits.letra
+04D     atol.@SCRATCH2
+04E     lcd_ubicaxy_4bits.columna
+04E-04F @MULS1616.P1
+04E     atol.@SCRATCH3
+04F     lcd_ubicaxy_4bits.fila
+050     lcd_ubicaxy_4bits.posicion
+050-053 regla.out_min
+050     @MULS1616.@SCRATCH1
+051     lcd_envia_byte_4bits.operacion
+051     lcd_ubicaxy_4bits.@SCRATCH1
+051     @MULS1616.@SCRATCH2
+052     lcd_envia_byte_4bits.dato
+053     @delay_ms1.P1
+053     lcd_envia_byte_4bits.@SCRATCH1
+054-057 regla.out_max
+058     regla.@SCRATCH1
+059     regla.@SCRATCH2
+05A     regla.@SCRATCH3
+05B     regla.@SCRATCH4
+05C     regla.@SCRATCH5
+05D     regla.@SCRATCH6
+05E     regla.@SCRATCH7
+05F     regla.@SCRATCH8
+060-063 @MUL3232.P1
+060-063 @DIV3232.P2
+064-067 @MUL3232.P1
+064-067 @DIV3232.P2
+068     @MUL3232.@SCRATCH1
+068     @DIV3232.@SCRATCH1
+069     @MUL3232.@SCRATCH2
+069     @DIV3232.@SCRATCH2
+06A     @MUL3232.@SCRATCH3
+06A     @DIV3232.@SCRATCH3
+06B     @MUL3232.@SCRATCH4
+06B     @DIV3232.@SCRATCH4
+06C     @MUL3232.@SCRATCH5
+06C     @DIV3232.@SCRATCH5
+06D     @MUL3232.@SCRATCH6
+06E     int_ext_isr.data
+06F     decode.sc
+070     decode.i
+071     decode.@SCRATCH1
+072     decode.@SCRATCH2
+073     decode.@SCRATCH3
+074     decode.@SCRATCH4
+F01     CCP_10_LOW
+F01     CCP_10
+F02     CCP_10_HIGH
+F04     CCP_9
+F04     CCP_9_LOW
+F05     CCP_9_HIGH
+F07     CCP_8
+F07     CCP_8_LOW
+F08     CCP_8_HIGH
+F0A     CCP_7_LOW
+F0A     CCP_7
+F0B     CCP_7_HIGH
+F0D     CCP_6_LOW
+F0D     CCP_6
+F0E     CCP_6_HIGH
+F10     CCP_5_LOW
+F10     CCP_5
+F11     CCP_5_HIGH
+F13     CCP_4
+F13     CCP_4_LOW
+F14     CCP_4_HIGH
+F16     CCP_3
+F16     CCP_3_LOW
+F17     CCP_3_HIGH
+F70.0   C1OUT
+F70.1   C2OUT
+F70.2   C3OUT
+F9B.6   PLLEN
+FB5     CCP_2_LOW
+FB5     CCP_2
+FB6     CCP_2_HIGH
+FBB     CCP_1_LOW
+FBB     CCP_1
+FBC     CCP_1_HIGH
+FE1-FE2 @WRITE_PACKED_MEMORY.P1
+FE1-FE2 @READ_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P1
+FE9-FEA @READ_PROGRAM_MEMORY.P2
+FE9-FEA @READ_PACKED_MEMORY.P3
+FE9-FEA @WRITE_PROGRAM_MEMORY.P4
+FF1.7   PULL_UP
+FF6-FF8 @READ_PROGRAM_MEMORY.P1
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+001486  @delay_ms1
+0014AE  lcd_envia_byte_4bits
+001570  lcd_ubicaxy_4bits
+0015AC  @goto10101
+0015D4  lcd_init_4bits
+00168A  lcdCursorOn
+0016BC  lcdCursorOff
+00162C  lcd_putc_4bits
+0010BE  unshifted
+00115A  shifted
+0016C6  @MULS1616
+001718  atol
+001B0E  @MUL3232
+001BF4  regla
+001B64  @DIV3232
+001900  entrada_teclado
+0011F6  @const441
+001662  @PSTRINGC_115
+00120A  @const443
+00121A  @const444
+001232  @const445
+001248  @const446
+00125C  @const447
+00126A  @const448
+00127A  @const449
+001286  @const450
+0013BA  int_ext_isr
+001D86  MAIN
+0013FA  @const458
+001AE8  @PSTRINGCN_115
+001412  @const461
+001426  @const462
+001438  @const463
+001CD4  @PRINTF_LU_115
+00144A  @const476
+001454  @const477
+00145E  @const478
+001466  @const479
+00146E  @const480
+001476  @const481
+00147E  @const482
+00160E  init_kb
+00128E  decode
+001694  barrer_teclado
+001D86  @cinit
+0136  StrtoulGO
+0136  StrtolGO
+
+
+User Memory space: 
+
+User Memory space: 
+
+Project Directory:
+    C:\Users\Michael Vargas\Desktop\ps2 sebastian\
+
+Project Files:
+    teclado.c                                               [10-Abr.-16 12:37  CRC=DC0DFE8D]
+    ..\..\..\..\Program Files (x86)\PICC\devices\18F47J53.h [13-Abr.-11 15:02  CRC=1DEA3C7C]
+    Configura_LCD_4-8_bits.c                                [21-Mar.-16 18:33  CRC=8FBF7E75]
+    ..\..\..\..\Program Files (x86)\PICC\drivers\stdlib.h   [22-Abr.-10 10:12  CRC=97EC02E8]
+    ..\..\..\..\Program Files (x86)\PICC\drivers\stddef.h   [16-Jul.-10 09:27  CRC=897CEC6C]
+    ..\..\..\..\Program Files (x86)\PICC\drivers\string.h   [18-Jun.-08 10:48  CRC=9BE6227E]
+    ..\..\..\..\Program Files (x86)\PICC\drivers\ctype.h    [03-Ene.-08 13:55  CRC=2D1F019F]
+
+Source signature=A144CE8E
+
+Units:
+    C:\Users\Michael Vargas\Desktop\ps2 sebastian\teclado (main)
+
+Compiler Settings:
+    Processor:      PIC18F47J53
+    Pointer Size:   16
+    ADC Range:      0-4095
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    Errors:      teclado.err
+    Ext Symbols: teclado.esym
+    INHX32:      teclado.hex
+    Symbols:     teclado.sym
+    List:        teclado.lst
+    Debug/COFF:  teclado.cof
+    Project:     teclado.PJT
+    Call Tree:   teclado.tre
+    Statistics:  teclado.STA

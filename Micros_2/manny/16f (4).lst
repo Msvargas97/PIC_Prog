@@ -1,0 +1,391 @@
+CCS PCH C Compiler, Version 4.120, 26417               01-Jun.-16 00:19
+
+               Filename: C:\Users\Michael Vargas\Desktop\manny\16f (4).lst
+
+               ROM used: 1188 bytes (1%)
+                         Largest free fragment is 65528
+               RAM used: 33 (1%) at main() level
+                         47 (1%) worst case
+               Stack:    4 worst case (1 in main + 3 for interrupts)
+
+*
+01000:  GOTO   13B4
+*
+01008:  MOVWF  04
+0100A:  MOVFF  FD8,05
+0100E:  MOVFF  FE0,06
+01012:  MOVLB  0
+01014:  MOVFF  FE9,0C
+01018:  MOVFF  FEA,07
+0101C:  MOVFF  FE1,08
+01020:  MOVFF  FE2,09
+01024:  MOVFF  FD9,0A
+01028:  MOVFF  FDA,0B
+0102C:  MOVFF  FF3,12
+01030:  MOVFF  FF4,13
+01034:  MOVFF  FFA,14
+01038:  MOVFF  FF5,15
+0103C:  MOVFF  FF6,16
+01040:  MOVFF  FF7,17
+01044:  MOVFF  FF8,18
+01048:  MOVFF  FFB,19
+0104C:  MOVFF  00,0E
+01050:  MOVFF  01,0F
+01054:  MOVFF  02,10
+01058:  MOVFF  03,11
+0105C:  BTFSS  F9D.5
+0105E:  GOTO   1068
+01062:  BTFSC  F9E.5
+01064:  GOTO   1114
+01068:  MOVFF  0E,00
+0106C:  MOVFF  0F,01
+01070:  MOVFF  10,02
+01074:  MOVFF  11,03
+01078:  MOVFF  0C,FE9
+0107C:  MOVFF  07,FEA
+01080:  BSF    07.7
+01082:  MOVFF  08,FE1
+01086:  MOVFF  09,FE2
+0108A:  MOVFF  0A,FD9
+0108E:  MOVFF  0B,FDA
+01092:  MOVFF  12,FF3
+01096:  MOVFF  13,FF4
+0109A:  MOVFF  14,FFA
+0109E:  MOVFF  15,FF5
+010A2:  MOVFF  16,FF6
+010A6:  MOVFF  17,FF7
+010AA:  MOVFF  18,FF8
+010AE:  MOVFF  19,FFB
+010B2:  MOVF   04,W
+010B4:  MOVFF  06,FE0
+010B8:  MOVFF  05,FD8
+010BC:  RETFIE 0
+.................... #include <18F47J53.h> 
+.................... //////// Standard Header file for the PIC18F47J53 device //////////////// 
+.................... #device PIC18F47J53 
+.................... #list 
+....................  
+....................  
+....................  
+....................  
+.................... #device ADC=8 
+....................  
+.................... #FUSES NOWDT         //WDT disabled (enabled by SWDTEN bit)                     
+.................... #FUSES PLL3          //Divide by 3 (12 MHz oscillator input)             
+.................... #FUSES NOPLLEN       //PLL Disabled 
+.................... #FUSES NOSTVREN      //stack overflow/underflow reset enabled                 
+.................... #FUSES NOXINST       //Extended instruction set disabled             
+.................... #FUSES NOCPUDIV      //No CPU system clock divide          
+.................... #FUSES NOPROTECT     //Program memory is not code-protected           
+.................... #FUSES HSPLL         //HS oscillator, PLL enabled, HSPLL used by USB            
+.................... #FUSES SOSC_HIGH     //High Power T1OSC/SOSC circuit selected 
+.................... #FUSES CLOCKOUT      //CLKO output enabled on the RA6 pin  
+.................... #FUSES NOFCMEN       //Fail-Safe Clock Monitor disabled 
+.................... #FUSES NOIESO        //Two-Speed Start-up disabled 
+.................... #FUSES WDT32768      //Watchdog Postscaler 1:32768 
+.................... #FUSES DSWDTOSC_INT  //DSWDT uses INTOSC/INTRC as clock 
+.................... #FUSES RTCOSC_INT    //RTCC uses INTRC as clock 
+.................... #FUSES NODSBOR       //Zero-Power BOR disabled in Deep Sleep 
+.................... #FUSES NODSWDT       //Deep Sleep Watchdog Timer Disabled 
+.................... #FUSES DSWDT8192     //Deep Sleep Watchdog Postscaler: 1:8,192 (8.5 seconds)    
+.................... #FUSES NOIOL1WAY     //IOLOCK bit can be set and cleared 
+.................... #FUSES ADC12         //ADC 10 or 12 Bit Select:12 - Bit ADC Enabed  
+.................... #FUSES MSSPMSK7      //MSSP 7 Bit address masking 
+.................... #FUSES NOWPFP        //Write Protect Program Flash Page 0 
+.................... #FUSES NOWPCFG       //Write/Erase last page protect Disabled 
+.................... #FUSES WPDIS         //WPFP[5:0], WPEND, and WPCFG bits ignored  
+.................... #FUSES WPEND         //Start protection at page 0 
+.................... #FUSES LS48MHZ       //Low Speed USB mode with 48 MHz System clock at 48 MHz USB CLKEN divide-by is set to 8  
+.................... #use delay(clock=48000000) 
+*
+010BE:  MOVLW  01
+010C0:  SUBWF  2E,F
+010C2:  BNC   10DC
+010C4:  CLRF   FEA
+010C6:  MOVLW  2E
+010C8:  MOVWF  FE9
+010CA:  MOVF   FEF,W
+010CC:  BZ    10DC
+010CE:  MOVLW  02
+010D0:  MOVWF  00
+010D2:  DECFSZ 00,F
+010D4:  BRA    10D2
+010D6:  BRA    10D8
+010D8:  DECFSZ FEF,F
+010DA:  BRA    10CE
+010DC:  GOTO   10EE (RETURN)
+....................  
+....................  
+....................  
+....................  
+.................... #define LOADER_END   0xFFF                         
+.................... #build(reset=LOADER_END+1, interrupt=LOADER_END+9)   //Protege posiciones de memoria desde la 0x0000 hasta la 0x1000    
+.................... #org 0, LOADER_END {} 
+....................  
+.................... #bit PLLEN = 0xf9b.6 
+....................  
+.................... #use  rs232(baud=38400,parity=N,UART1,bits=8,timeout=30) 
+010E0:  MOVLW  01
+010E2:  MOVWF  2D
+010E4:  MOVLW  81
+010E6:  MOVWF  2C
+010E8:  MOVLW  4E
+010EA:  MOVWF  2E
+010EC:  BRA    10BE
+010EE:  DECFSZ 2C,F
+010F0:  BRA    10FC
+010F2:  DECFSZ 2D,F
+010F4:  BRA    10FC
+010F6:  CLRF   1B
+010F8:  CLRF   01
+010FA:  BRA    1110
+010FC:  BTFSS  F9E.5
+010FE:  BRA    10E8
+01100:  MOVF   FAC,W
+01102:  MOVWF  1B
+01104:  MOVF   FAF,W
+01106:  MOVWF  01
+01108:  BTFSS  1B.1
+0110A:  BRA    1110
+0110C:  BCF    FAC.4
+0110E:  BSF    FAC.4
+01110:  GOTO   1116 (RETURN)
+....................  
+.................... #use standard_io(d) 
+....................  
+....................  int16 temper; 
+.................... char valor; 
+.................... unsigned int8 pwm; 
+....................  
+....................  
+.................... #int_rda 
+.................... void serial_isr(){ 
+.................... valor=getc();//recibe el dato del pc y lo guarda en valor 
+01114:  BRA    10E0
+01116:  MOVFF  01,1E
+.................... /////////////////////codigo del pc 
+....................  
+.................... if(valor >= 'A'){ 
+0111A:  MOVF   1E,W
+0111C:  SUBLW  40
+0111E:  BC    1168
+.................... switch (valor) 
+....................       { 
+01120:  MOVLW  41
+01122:  SUBWF  1E,W
+01124:  ADDLW  FC
+01126:  BC    1166
+01128:  ADDLW  04
+0112A:  GOTO   1180
+....................       case 'A': 
+....................       Output_low(PIN_D0);   //APAGO LED 
+0112E:  BCF    F95.0
+01130:  BCF    F8C.0
+....................       printf("A"); 
+01132:  MOVLW  41
+01134:  BTFSS  F9E.4
+01136:  BRA    1134
+01138:  MOVWF  FAE
+....................       break; 
+0113A:  BRA    1166
+....................        
+....................       case 'B': 
+....................       Output_high(PIN_D0);   //PRENDO 
+0113C:  BCF    F95.0
+0113E:  BSF    F8C.0
+....................        printf("B"); //saca un letrero en el hiperterminal 
+01140:  MOVLW  42
+01142:  BTFSS  F9E.4
+01144:  BRA    1142
+01146:  MOVWF  FAE
+....................       break; 
+01148:  BRA    1166
+....................        
+....................       case 'C': 
+....................       Output_low(PIN_D1);   //se APAGA LED 
+0114A:  BCF    F95.1
+0114C:  BCF    F8C.1
+....................        printf("1");//saca un letrero en el hiperterminal 
+0114E:  MOVLW  31
+01150:  BTFSS  F9E.4
+01152:  BRA    1150
+01154:  MOVWF  FAE
+....................       break; 
+01156:  BRA    1166
+....................        
+....................       case 'D': 
+....................       Output_high(PIN_D1);    
+01158:  BCF    F95.1
+0115A:  BSF    F8C.1
+....................        printf("2"); //saca un letrero en el hiperterminal 
+0115C:  MOVLW  32
+0115E:  BTFSS  F9E.4
+01160:  BRA    115E
+01162:  MOVWF  FAE
+....................       break; 
+01164:  BRA    1166
+....................      } 
+.................... }else{ 
+01166:  BRA    117A
+....................  pwm = valor - 48; 
+01168:  MOVLW  30
+0116A:  SUBWF  1E,W
+0116C:  MOVWF  1F
+....................  pwm = pwm * 15; 
+0116E:  MOVF   1F,W
+01170:  MULLW  0F
+01172:  MOVFF  FF3,1F
+....................  set_pwm5_duty(pwm);  
+01176:  MOVFF  1F,F10
+.................... } 
+....................  
+.................... } 
+0117A:  BCF    F9E.5
+0117C:  GOTO   1068
+.................... void main() 
+....................  
+.................... { 
+*
+013B4:  CLRF   FF8
+013B6:  BCF    FD0.7
+013B8:  BSF    07.7
+013BA:  CLRF   FEA
+013BC:  CLRF   FE9
+013BE:  CLRF   1B
+013C0:  BCF    F7E.3
+013C2:  MOVLW  4D
+013C4:  MOVWF  FB0
+013C6:  MOVLW  A6
+013C8:  MOVWF  FAD
+013CA:  MOVLW  90
+013CC:  MOVWF  FAC
+013CE:  MOVLB  1
+013D0:  CLRF   x88
+013D2:  MOVLW  FF
+013D4:  MOVLB  F
+013D6:  MOVWF  x48
+013D8:  BCF    FC2.6
+013DA:  BCF    FC2.7
+013DC:  MOVF   x49,W
+013DE:  ANDLW  E0
+013E0:  IORLW  1F
+013E2:  MOVWF  x49
+013E4:  CLRF   x25
+013E6:  CLRF   FD1
+013E8:  CLRF   FD2
+.................... setup_adc (adc_clock_internal);//temperatura 
+013EA:  MOVF   FC1,W
+013EC:  ANDLW  C0
+013EE:  IORLW  03
+013F0:  MOVWF  FC1
+013F2:  BCF    FC1.7
+013F4:  BSF    FC2.0
+013F6:  BSF    FC2.7
+013F8:  BSF    FC2.1
+013FA:  BTFSC  FC2.1
+013FC:  BRA    13FA
+013FE:  BCF    FC2.7
+.................... setup_adc_ports (all_analog);//temperatura 
+01400:  MOVLW  00
+01402:  MOVWF  x48
+01404:  BCF    FC2.6
+01406:  BCF    FC2.7
+01408:  MOVF   x49,W
+0140A:  ANDLW  E0
+0140C:  IORLW  E0
+0140E:  MOVWF  x49
+.................... set_adc_channel (0)  ;             //temperatura 
+01410:  MOVLW  00
+01412:  MOVWF  01
+01414:  MOVF   FC2,W
+01416:  ANDLW  C3
+01418:  IORWF  01,W
+0141A:  MOVWF  FC2
+.................... enable_interrupts(global); 
+0141C:  MOVLW  C0
+0141E:  IORWF  FF2,F
+.................... enable_interrupts(int_rda);//HABILITO LAS INTERRUPCIONES PARA DETECTAR SERIAL 
+01420:  BSF    F9D.5
+.................... Output_low(PIN_D0);  
+01422:  BCF    F95.0
+01424:  BCF    F8C.0
+.................... Output_low(PIN_D1);  
+01426:  BCF    F95.1
+01428:  BCF    F8C.1
+....................    setup_timer_2(T2_DIV_BY_16,74,1);   // 10KHz 
+0142A:  MOVLW  00
+0142C:  IORLW  06
+0142E:  MOVWF  FCA
+01430:  MOVLW  4A
+01432:  MOVWF  FCB
+....................    setup_ccp5(CCP_PWM); //Captura o compara o PWM  PIN B5     
+01434:  BCF    F93.5
+01436:  BCF    F8A.5
+01438:  MOVLW  0C
+0143A:  MOVWF  x0F
+0143C:  BCF    x51.2
+....................    set_pwm5_duty(0);  //Inicia PWM en 0 , PWM 8 bits ( 0 - 255) 
+0143E:  CLRF   x10
+.................... while(true)  
+.................... { 
+....................  
+.................... temper=read_adc () * 1.29; //temperatura 
+01440:  BSF    FC2.1
+01442:  BTFSC  FC2.1
+01444:  BRA    1442
+01446:  MOVF   FC4,W
+01448:  CLRF   22
+0144A:  MOVWF  21
+0144C:  MOVLB  0
+0144E:  BRA    11A8
+01450:  MOVFF  03,24
+01454:  MOVFF  02,23
+01458:  MOVFF  01,22
+0145C:  MOVFF  00,21
+01460:  MOVLW  B8
+01462:  MOVWF  28
+01464:  MOVLW  1E
+01466:  MOVWF  27
+01468:  MOVLW  25
+0146A:  MOVWF  26
+0146C:  MOVLW  7F
+0146E:  MOVWF  25
+01470:  BRA    11E0
+01472:  MOVFF  03,23
+01476:  MOVFF  02,22
+0147A:  MOVFF  01,21
+0147E:  MOVFF  00,20
+01482:  BRA    12D4
+01484:  MOVFF  02,1D
+01488:  MOVFF  01,1C
+....................  
+....................        printf("%Lu\n", temper);//envia temperatura 
+0148C:  MOVLW  10
+0148E:  MOVWF  FE9
+01490:  MOVFF  1D,21
+01494:  MOVFF  1C,20
+01498:  BRA    130E
+0149A:  MOVLW  0A
+0149C:  BTFSS  F9E.4
+0149E:  BRA    149C
+014A0:  MOVWF  FAE
+....................         
+....................            
+....................      } 
+014A2:  MOVLB  F
+014A4:  BRA    1440
+....................       
+....................        
+....................      
+.................... } 
+....................  
+....................  
+....................    
+....................        
+014A6:  SLEEP 
+
+Configuration Fuses:
+   Word  1: F79A   NOWDT PLL3 NOPLLEN NOSTVREN NOXINST NODEBUG NOCPUDIV NOPROTECT
+   Word  2: FF3D   HSPLL SOSC_HIGH CLOCKOUT NOFCMEN NOIESO WDT32768
+   Word  3: F861   DSWDTOSC_INT RTCOSC_INT NODSBOR NODSWDT DSWDT8192 NOIOL1WAY ADC12 MSSPMSK7
+   Word  4: F980   NOWPFP NOWPCFG WPDIS WPEND LS48MHZ

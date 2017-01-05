@@ -1,0 +1,7 @@
+>>> Warning 203 "teclado_display.c" Line 247(1,1): Condition always TRUE
+>>> Warning 205 "teclado_display.c" Line 343(1,1): Unsigned variable is never less than zero
+>>> Warning 204 "teclado_display.c" Line 343(1,1): Condition always FALSE
+>>> Warning 202 "teclado_display.c" Line 92(6,7): Variable never used:   n
+>>> Warning 202 "teclado_display.c" Line 102(16,17): Variable never used:   i
+      Memory usage:   ROM=2%      RAM=2% - 2%
+      0 Errors,  5 Warnings.

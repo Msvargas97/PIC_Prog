@@ -1,0 +1,26 @@
+[PROJECT]
+Target=tft_main.hex
+Processor_Text=PIC18F47J53
+CCSVersion=5.015
+Compiler=PCH
+[Target Data]
+FileList=tft_main.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\Devices\;C:\Program Files (x86)\PICC\Drivers\
+[tft_main.c]
+Type=4
+[mru-list]
+1=tft_main.c
+[Opened Files]
+1=tft_main.c
+2=SPFD5408_Adafruit_GFX.c
+3=
+4=..\..\..\..\Program Files (x86)\PICC\Devices\18F47J53.h
+5=SPFD5408_Adafruit_GFX.c
+6=
+7=..\..\..\..\Program Files (x86)\PICC\Examples\ex_fat.c
+8=..\SD_FAT\SD_FAT.c
+9=
+[Units]
+Count=1
+1=tft_main (main)

@@ -1,0 +1,131 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     rs232_errors
+005.0   bits_8_4
+006     i
+007     n
+008     tecla
+009     bcd_cent
+00A     bcd_dec
+00B     bcd_unid
+00C     bcd_mil
+00D-00E strtok.save
+00F-012 _Randseed
+013     esperar_teclado.tecla
+013     MAIN.@SCRATCH1
+013     @PSTRINGC_118.@SCRATCH1
+014     barrer_teclado.tecla
+014     @PSTRINGC_118.@SCRATCH2
+015     barrer_teclado.@SCRATCH1
+015     @PSTRINGC_118.@SCRATCH3
+016     lcd_putc_4bits.letra
+017     lcd_ubicaxy_4bits.columna
+018     lcd_ubicaxy_4bits.fila
+019     lcd_ubicaxy_4bits.posicion
+01A     lcd_envia_byte_4bits.operacion
+01B     lcd_envia_byte_4bits.dato
+01C     @delay_ms1.P1
+01C     lcd_envia_byte_4bits.@SCRATCH1
+F01     CCP_10_LOW
+F01     CCP_10
+F02     CCP_10_HIGH
+F04     CCP_9_LOW
+F04     CCP_9
+F05     CCP_9_HIGH
+F07     CCP_8_LOW
+F07     CCP_8
+F08     CCP_8_HIGH
+F0A     CCP_7_LOW
+F0A     CCP_7
+F0B     CCP_7_HIGH
+F0D     CCP_6_LOW
+F0D     CCP_6
+F0E     CCP_6_HIGH
+F10     CCP_5
+F10     CCP_5_LOW
+F11     CCP_5_HIGH
+F13     CCP_4_LOW
+F13     CCP_4
+F14     CCP_4_HIGH
+F16     CCP_3_LOW
+F16     CCP_3
+F17     CCP_3_HIGH
+F70.0   C1OUT
+F70.1   C2OUT
+F70.2   C3OUT
+F9B.6   PLLEN
+FB5     CCP_2_LOW
+FB5     CCP_2
+FB6     CCP_2_HIGH
+FBB     CCP_1_LOW
+FBB     CCP_1
+FBC     CCP_1_HIGH
+FE1-FE2 @WRITE_PACKED_MEMORY.P1
+FE1-FE2 @READ_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P1
+FE9-FEA @READ_PROGRAM_MEMORY.P2
+FE9-FEA @WRITE_PROGRAM_MEMORY.P3
+FE9-FEA @READ_PACKED_MEMORY.P4
+FF6-FF8 @READ_PROGRAM_MEMORY.P1
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+001054  @delay_ms1
+00107C  lcd_envia_byte_4bits
+00113E  lcd_ubicaxy_4bits
+001176  @goto10111
+00119E  lcd_init_4bits
+0011D8  lcd_putc_4bits
+001236  barrer_teclado
+001388  esperar_teclado
+0013A2  MAIN
+001008  @const417
+00120E  @PSTRINGC_118
+00102E  @const419
+0013A2  @cinit
+0136  StrtoulGO
+0136  StrtolGO
+
+
+User Memory space: 
+
+User Memory space: 
+
+Project Directory:
+    C:\Users\Michael Vargas\Desktop\Jhon\
+
+Project Files:
+    teclado.c                                               [11-Sept.-16 19:17  CRC=D1A20901]
+    ..\..\..\..\Program Files (x86)\PICC\devices\18F47J53.h [13-Abr.-11 15:02  CRC=1DEA3C7C]
+    Configura_LCD_4-8_bits.c                                [09-Sept.-16 18:18  CRC=ADA99B7E]
+    ..\..\..\..\Program Files (x86)\PICC\drivers\stdlib.h   [22-Abr.-10 10:12  CRC=97EC02E8]
+    ..\..\..\..\Program Files (x86)\PICC\drivers\stddef.h   [16-Jul.-10 09:27  CRC=897CEC6C]
+    ..\..\..\..\Program Files (x86)\PICC\drivers\string.h   [18-Jun.-08 10:48  CRC=9BE6227E]
+    ..\..\..\..\Program Files (x86)\PICC\drivers\ctype.h    [03-Ene.-08 13:55  CRC=2D1F019F]
+
+Source signature=B4C2F60B
+
+Units:
+    C:\Users\Michael Vargas\Desktop\Jhon\teclado (main)
+
+Compiler Settings:
+    Processor:      PIC18F47J53
+    Pointer Size:   16
+    ADC Range:      0-4095
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    Errors:      teclado.err
+    Ext Symbols: teclado.esym
+    INHX32:      teclado.hex
+    Symbols:     teclado.sym
+    List:        teclado.lst
+    Debug/COFF:  teclado.cof
+    Project:     teclado.PJT
+    Call Tree:   teclado.tre
+    Statistics:  teclado.STA

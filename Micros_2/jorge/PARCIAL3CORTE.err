@@ -1,0 +1,5 @@
+>>> Warning 203 "PARCIAL3CORTE.c" Line 162(1,1): Condition always TRUE
+>>> Warning 205 "PARCIAL3CORTE.c" Line 211(1,1): Unsigned variable is never less than zero
+>>> Warning 202 "PARCIAL3CORTE.c" Line 106(16,17): Variable never used:   i
+      Memory usage:   ROM=3%      RAM=1% - 2%
+      0 Errors,  3 Warnings.

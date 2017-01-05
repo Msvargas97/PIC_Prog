@@ -1,0 +1,252 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004-005 strtok.save
+006-009 _Randseed
+00A.0   bits_8_4
+00A.1   limit
+00A.2   flag
+00A.3   Flag1
+00B-00C i
+00D-00E j
+00F-010 dato_analogo
+011-012 temp
+013-014 hum
+015-016 luz
+017     tecla
+018-01B BUFFER
+01C-01D limitTemp
+01E-01F limitHum
+020-021 limitLuz
+022     pwmTemp
+023     pwmHum
+024     pwmLuz
+025     barrer_teclado.tecla
+026     teclaMenu
+027     save
+028     numDigits
+029-02C atan2.y
+029-02C regladeTres.x
+029     @PSTRINGCN_516.P1
+029-02A atol.s
+029     @MEMSET.P1
+029-02A @PRINTF_LU_516.P2
+029-02C @SFTOI.P3
+029-02C @MULFF.P4
+029-02A @ITOF.P5
+029     barrer_teclado.@SCRATCH1
+029     MAIN.@SCRATCH1
+029     @PSTRINGC_516.@SCRATCH1
+029     asignarLimites.@SCRATCH1
+02A-02B @MEMSET.P1
+02A     @WRITEBITA.P2
+02A     barrer_teclado.@SCRATCH2
+02A     @PSTRINGCN_516.@SCRATCH1
+02A     @PSTRINGC_516.@SCRATCH2
+02A     asignarLimites.@SCRATCH2
+02B     @WRITEBITA.P1
+02B-02C atol.result
+02B     @PSTRINGCN_516.@SCRATCH2
+02B     @PSTRINGC_516.@SCRATCH3
+02B     @PRINTF_LU_516.@SCRATCH1
+02C-02D @WRITEBITA.P1
+02C     @PSTRINGCN_516.@SCRATCH3
+02C     @PRINTF_LU_516.@SCRATCH2
+02D     atol.sign
+02D-030 @MULFF.P1
+02D-030 regladeTres.in_min
+02D-030 atan2.x
+02D     @PRINTF_LU_516.@SCRATCH3
+02E     atol.base
+02E     @PRINTF_LU_516.@SCRATCH4
+02F     atol.index
+02F     @PRINTF_LU_516.@SCRATCH5
+030     atol.c
+030     @PRINTF_LU_516.@SCRATCH6
+031-034 regladeTres.in_max
+031-034 atan2.z
+031-032 @MULS1616.P1
+031     @MULFF.@SCRATCH1
+031     atol.@SCRATCH1
+031     @PRINTF_LU_516.@SCRATCH7
+032     lcd_putc_4bits.letra
+032     @MULFF.@SCRATCH2
+032     atol.@SCRATCH2
+033     lcd_ubicaxy_4bits.columna
+033-034 @MULS1616.P1
+033     @MULFF.@SCRATCH3
+033     atol.@SCRATCH3
+034     lcd_ubicaxy_4bits.fila
+035     lcd_ubicaxy_4bits.posicion
+035.0   atan2.sign
+035-038 regladeTres.out_min
+035     @MULS1616.@SCRATCH1
+036     lcd_envia_byte_4bits.operacion
+036     atan2.quad
+036     @MULS1616.@SCRATCH2
+037     lcd_envia_byte_4bits.dato
+038     @delay_ms1.P1
+038     lcd_envia_byte_4bits.@SCRATCH1
+039-03C regladeTres.out_max
+03D     regladeTres.@SCRATCH1
+03E     regladeTres.@SCRATCH2
+03F     regladeTres.@SCRATCH3
+040     regladeTres.@SCRATCH4
+041     regladeTres.@SCRATCH5
+042     regladeTres.@SCRATCH6
+043     regladeTres.@SCRATCH7
+044     regladeTres.@SCRATCH8
+045-048 @DIV3232.P1
+045-048 @MUL3232.P2
+049-04C @MUL3232.P1
+049-04C @DIV3232.P2
+04D     @MUL3232.@SCRATCH1
+04D     @DIV3232.@SCRATCH1
+04E     @MUL3232.@SCRATCH2
+04E     @DIV3232.@SCRATCH2
+04F     @MUL3232.@SCRATCH3
+04F     @DIV3232.@SCRATCH3
+050     @MUL3232.@SCRATCH4
+050     @DIV3232.@SCRATCH4
+051     @MUL3232.@SCRATCH5
+051     @DIV3232.@SCRATCH5
+052     @MUL3232.@SCRATCH6
+F01     CCP_10_LOW
+F01     CCP_10
+F02     CCP_10_HIGH
+F04     CCP_9
+F04     CCP_9_LOW
+F05     CCP_9_HIGH
+F07     CCP_8
+F07     CCP_8_LOW
+F08     CCP_8_HIGH
+F0A     CCP_7_LOW
+F0A     CCP_7
+F0B     CCP_7_HIGH
+F0D     CCP_6
+F0D     CCP_6_LOW
+F0E     CCP_6_HIGH
+F10     CCP_5
+F10     CCP_5_LOW
+F11     CCP_5_HIGH
+F13     CCP_4
+F13     CCP_4_LOW
+F14     CCP_4_HIGH
+F16     CCP_3_LOW
+F16     CCP_3
+F17     CCP_3_HIGH
+F70.0   C1OUT
+F70.1   C2OUT
+F70.2   C3OUT
+F9B.6   PLLEN
+FB5     CCP_2_LOW
+FB5     CCP_2
+FB6     CCP_2_HIGH
+FBB     CCP_1_LOW
+FBB     CCP_1
+FBC     CCP_1_HIGH
+FE1-FE2 @READ_PACKED_MEMORY.P1
+FE1-FE2 @WRITE_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P1
+FE9-FEA @WRITE_PROGRAM_MEMORY.P2
+FE9-FEA @READ_PROGRAM_MEMORY.P3
+FE9-FEA @READ_PACKED_MEMORY.P4
+FE9-FEA @MEMSET.P5
+FF1.7   INTCON2
+FF6-FF8 @READ_PROGRAM_MEMORY.P1
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+0011DE  @delay_ms1
+001C06  @MUL3232
+001C5C  @DIV3232
+001BCE  @SFTOI
+001AA6  @ITOF
+001ADC  @MULFF
+00158C  @MULS1616
+0015DE  atol
+001206  lcd_envia_byte_4bits
+0012C4  lcd_ubicaxy_4bits
+0012FC  @goto11697
+001324  lcd_init_4bits
+001362  lcd_putc_4bits
+001008  keypad
+00102C  pinFilas
+001424  barrer_teclado
+0013E6  @WRITEBITA
+001CEC  regladeTres
+001DCC  MAIN
+001044  @const567
+001398  @PSTRINGCN_516
+001066  @const570
+0013BE  @PSTRINGC_516
+001078  @const572
+001092  @const573
+0010A6  @const574
+0010B8  @const575
+0010DA  @const576
+0010F2  @const577
+00110C  @const578
+001122  @const579
+001144  @const580
+0017C6  @PRINTF_LU_516
+00114A  @const586
+001894  asignarLimites
+001150  @const591
+001160  @const592
+001172  @const593
+001180  @const594
+001192  @const595
+0011A4  @const596
+0011B6  @const597
+0011CA  @const598
+0011DC  @const599
+001878  @MEMSET
+001DCC  @cinit
+0136  StrtoulGO
+0136  StrtolGO
+
+
+User Memory space: 
+
+User Memory space: 
+
+Project Directory:
+    C:\Users\Michael Vargas\Desktop\plantillaProyecto\
+
+Project Files:
+    Parcial1.c                                              [26-Abr.-16 21:14  CRC=3D891A26]
+    Configurar_micro.h                                      [15-Mar.-16 13:07  CRC=593A3FE5]
+    ..\..\..\..\Program Files (x86)\PICC\devices\18F47J53.h [13-Abr.-11 15:02  CRC=1DEA3C7C]
+    ..\..\..\..\Program Files (x86)\PICC\drivers\math.h     [11-Abr.-11 09:02  CRC=A2852B04]
+    ..\..\..\..\Program Files (x86)\PICC\drivers\stdlib.h   [22-Abr.-10 10:12  CRC=97EC02E8]
+    ..\..\..\..\Program Files (x86)\PICC\drivers\stddef.h   [16-Jul.-10 09:27  CRC=897CEC6C]
+    ..\..\..\..\Program Files (x86)\PICC\drivers\string.h   [18-Jun.-08 10:48  CRC=9BE6227E]
+    ..\..\..\..\Program Files (x86)\PICC\drivers\ctype.h    [03-Ene.-08 13:55  CRC=2D1F019F]
+    Configura_LCD_4-8_bits.c                                [17-Mar.-16 14:21  CRC=AB39023B]
+
+Source signature=9812D972
+
+Units:
+    C:\Users\Michael Vargas\Desktop\plantillaProyecto\Parcial1 (main)
+
+Compiler Settings:
+    Processor:      PIC18F47J53
+    Pointer Size:   16
+    ADC Range:      0-4095
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    Errors:      Parcial1.err
+    Ext Symbols: Parcial1.esym
+    INHX32:      Parcial1.hex
+    Symbols:     Parcial1.sym
+    List:        Parcial1.lst
+    Debug/COFF:  Parcial1.cof
+    Project:     Parcial1.PJT
+    Call Tree:   Parcial1.tre
+    Statistics:  Parcial1.STA

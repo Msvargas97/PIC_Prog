@@ -1,0 +1,58 @@
+
+ROM used: 1380 (1%)
+          1384 (1%) including unused fragments
+
+          1 Average locations per line
+          10 Average locations per statement
+
+RAM used: 79 (2%) at main() level
+          88 (2%) worst case
+
+Stack used: 5 worst case (out of 31 total available)
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+  140    36  27  i2c_ds1307.c
+  704     0   0  ..\..\..\..\Program Files (x86)\PICC\devices\18F47J53.h
+  190    96  73  Configura_LCD_4-8_bits.c
+----- -----
+ 1034   132 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     40   1   1             @delay_ms1
+0    102   4   3             @I2C_READ_1
+0    108   4   1             @I2C_WRITE_1
+0    194   7   3  1374  3.4  lcd_envia_byte_4bits
+0     56   2   3   352  5.0  lcd_ubicaxy_4bits
+0     40   1   0             @goto10133
+0     58   2   0   197  1.8  lcd_init_4bits
+0     54   2   1   248  2.3  lcd_putc_4bits
+0    118   4   2   185  3.6  write_ds1307
+0    200   7   3   297  3.7  read_ds1307
+0    288  10   1   679  3.3  MAIN
+0     14   1   0   297  3.7  @const151
+0     42   2   3   679  3.3  @PSTRINGC_122
+0     62   2   2             @PRINTF_X_122
+
+Program metrics:
+    Functions               9
+    Statements              132
+    Comments                203
+    Volume (V)              6519
+    Difficilty (D)          30.6
+    Effort to implement (E) 199227
+    Time to implement (T)   3 hours, 4 minutes
+    Est Delivered Bugs (B)  1
+    Cyclomatic Complexity   20
+    Maintainability (MI)    137
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00FFE     0  4096  
+01000-01006     4  4  
+01008-0FFFE  1376  60056  
+10000-1FFF6     0  65528  
+
+
+

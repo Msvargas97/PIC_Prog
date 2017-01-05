@@ -1,0 +1,76 @@
+
+ROM used: 6796 (5%)
+          6800 (5%) including unused fragments
+
+          1 Average locations per line
+          8 Average locations per statement
+
+RAM used: 79 (2%) at main() level
+          195 (5%) worst case
+
+Stack used: 9 worst case (out of 31 total available)
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+  262   127  15  calculadora_pic.c
+  704     0   0  ..\..\..\..\..\Program Files (x86)\PICC\devices\18F47J53.h
+ 2220   257  30  ..\..\..\..\..\Program Files (x86)\PICC\drivers\math.h
+ 1273   359  42  ..\..\..\..\..\Program Files (x86)\PICC\drivers\stdlib.h
+   32     0   0  ..\..\..\..\..\Program Files (x86)\PICC\drivers\stddef.h
+  409   121  14  ..\..\..\..\..\Program Files (x86)\PICC\drivers\string.h
+   28     0   0  ..\..\..\..\..\Program Files (x86)\PICC\drivers\ctype.h
+----- -----
+ 4928   864 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     40   0   1             @delay_ms1
+0     28   0   0             @const111
+0     30   0   0             @const113
+0    802   6  20  1121 10.1  CEIL_FLOOR
+0    118   1  10   318  6.5  @FLT
+0     56   0   4   272  5.5  @SFTOI
+0     54   0   2   351  7.0  @ITOF
+0    242   2  11   371  8.2  @MULFF
+0    618   5  16   231  6.6  @ADDFF
+0     24   0   4    44  1.9  ceil
+0    348   3  14   266  6.5  @DIVFF
+0     84   1  14   498 10.1  @MUL3232
+0    228   2  14  1146  9.9  @DIVS3232
+0     66   0   5             @DIV1616
+0     30   0   5    78  2.7  @MUL1616
+0    260   2   2   633  5.7  interrupcion_RB
+0    786   6   4  1084  9.1  interrupcion_INT0
+0     46   0   0   190  2.7  @goto11694
+0    216   2   0   190  2.7  MAIN
+0   2032  15  17  4082 15.5  displayMux
+0     60   0   0             @const540
+0     26   0   0             @MEMSET
+0     62   0   5             @FTOSD
+0     86   1   5             @SDTOF
+0     52   0   4             @DTOF
+0    142   1  13             @DIV3232
+0     62   0   6             @WRITEBITA
+
+Program metrics:
+    Functions               16
+    Statements              864
+    Comments                1341
+    Volume (V)              16638
+    Difficilty (D)          110.7
+    Effort to implement (E) 1840994
+    Time to implement (T)   28 hours, 25 minutes
+    Est Delivered Bugs (B)  5
+    Cyclomatic Complexity   59
+    Maintainability (MI)    119
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00FFE     0  4096  
+01000-01006     4  4  
+01008-010C8   194  0  
+010CA-0FFFE  6598  54640  
+10000-1FFF6     0  65528  
+
+
+

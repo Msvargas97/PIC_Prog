@@ -1,0 +1,119 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     i
+005     sw
+006-007 num1
+008-009 num2
+00A-00B suma
+00C-00D umil
+00E-00F cent
+010-011 dec
+012-013 unid
+014-023 display
+024-025 strtok.save
+026-029 _Randseed
+02A-02D conver_bcd.x
+02A-02B barrer_display.k
+02A     MAIN.@SCRATCH1
+02B     MAIN.@SCRATCH2
+02C     barrer_display.i
+02C-02D @MUL1616.P1
+02D     @delay_ms1.P1
+02D     barrer_display.@SCRATCH1
+02E-02F @MUL1616.P1
+030     @MUL1616.@SCRATCH1
+F01     CCP_10
+F01     CCP_10_LOW
+F02     CCP_10_HIGH
+F04     CCP_9
+F04     CCP_9_LOW
+F05     CCP_9_HIGH
+F07     CCP_8_LOW
+F07     CCP_8
+F08     CCP_8_HIGH
+F0A     CCP_7
+F0A     CCP_7_LOW
+F0B     CCP_7_HIGH
+F0D     CCP_6
+F0D     CCP_6_LOW
+F0E     CCP_6_HIGH
+F10     CCP_5_LOW
+F10     CCP_5
+F11     CCP_5_HIGH
+F13     CCP_4
+F13     CCP_4_LOW
+F14     CCP_4_HIGH
+F16     CCP_3
+F16     CCP_3_LOW
+F17     CCP_3_HIGH
+F70.0   C1OUT
+F70.1   C2OUT
+F70.2   C3OUT
+F9B.6   PLLEN
+FB5     CCP_2_LOW
+FB5     CCP_2
+FB6     CCP_2_HIGH
+FBB     CCP_1
+FBB     CCP_1_LOW
+FBC     CCP_1_HIGH
+FE1-FE2 @READ_PACKED_MEMORY.P1
+FE1-FE2 @WRITE_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P1
+FE9-FEA @READ_PROGRAM_MEMORY.P2
+FE9-FEA @WRITE_PROGRAM_MEMORY.P3
+FE9-FEA @READ_PACKED_MEMORY.P4
+FF6-FF8 @READ_PROGRAM_MEMORY.P1
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+001008  @delay_ms1
+0010CA  @MUL1616
+0010E8  conver_bcd
+001030  barrer_display
+00117A  MAIN
+00117A  @cinit
+0136  StrtoulGO
+0136  StrtolGO
+
+
+User Memory space: 
+
+User Memory space: 
+
+Project Directory:
+    C:\Users\Michael Vargas\Documents\MICROS 1\TRABAJO_DISP7\
+
+Project Files:
+    Interr_INT0_RB.c                                        [13-Oct.-16 00:47  CRC=251C59DB]
+    ..\..\..\..\..\Program Files (x86)\PICC\devices\18F47J53.h [02-Oct.-16 01:28  CRC=CB83A54D]
+    ..\..\..\..\..\Program Files (x86)\PICC\drivers\stdlib.h [22-Abr.-10 10:12  CRC=97EC02E8]
+    ..\..\..\..\..\Program Files (x86)\PICC\drivers\stddef.h [16-Jul.-10 09:27  CRC=897CEC6C]
+    ..\..\..\..\..\Program Files (x86)\PICC\drivers\string.h [18-Jun.-08 10:48  CRC=9BE6227E]
+    ..\..\..\..\..\Program Files (x86)\PICC\drivers\ctype.h [03-Ene.-08 13:55  CRC=2D1F019F]
+
+Source signature=082D1438
+
+Units:
+    C:\Users\Michael Vargas\Documents\MICROS 1\TRABAJO_DISP7\Interr_INT0_RB (main)
+
+Compiler Settings:
+    Processor:      PIC18F47J53
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    Errors:      Interr_INT0_RB.err
+    Ext Symbols: Interr_INT0_RB.esym
+    INHX32:      Interr_INT0_RB.hex
+    Symbols:     Interr_INT0_RB.sym
+    List:        Interr_INT0_RB.lst
+    Debug/COFF:  Interr_INT0_RB.cof
+    Project:     Interr_INT0_RB.PJT
+    Call Tree:   Interr_INT0_RB.tre
+    Statistics:  Interr_INT0_RB.STA

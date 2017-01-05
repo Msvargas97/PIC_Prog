@@ -1,0 +1,182 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     @INTERRUPT_AREA
+005     @INTERRUPT_AREA
+006     @INTERRUPT_AREA
+007     @INTERRUPT_AREA
+008     @INTERRUPT_AREA
+009     @INTERRUPT_AREA
+00A     @INTERRUPT_AREA
+00B     @INTERRUPT_AREA
+00C     @INTERRUPT_AREA
+00D     @INTERRUPT_AREA
+00E     @INTERRUPT_AREA
+00F     @INTERRUPT_AREA
+010     @INTERRUPT_AREA
+011     @INTERRUPT_AREA
+012     @INTERRUPT_AREA
+013     @INTERRUPT_AREA
+014     @INTERRUPT_AREA
+015     @INTERRUPT_AREA
+016     @INTERRUPT_AREA
+017     @INTERRUPT_AREA
+018     @INTERRUPT_AREA
+019     @INTERRUPT_AREA
+01A     @INTERRUPT_AREA
+01B     rs232_errors
+01C.0   bits_8_4
+01D-021 values
+022     i
+023     n
+024     tecla
+025     state
+026-027 strtok.save
+028-02B _Randseed
+02C     barrer_teclado.tecla
+02D     barrer_teclado.fila
+02E.0   get_data.chk
+02E     @WRITEBITA.P1
+02E     @PRINTF_U_120.P2
+02E     @PSTRINGCN_120.P3
+02E     DHT11_init.@SCRATCH1
+02E     MAIN.@SCRATCH1
+02E     @PSTRINGC_120.@SCRATCH1
+02F     @PRINTF_U_120.P1
+02F     get_data.s
+02F     @WRITEBITA.P1
+02F     @PSTRINGC_120.@SCRATCH2
+02F     @PSTRINGCN_120.@SCRATCH1
+030     @DIV88.P1
+030-031 @WRITEBITA.P2
+030     get_data.check_sum
+030     @PSTRINGC_120.@SCRATCH3
+030     @PSTRINGCN_120.@SCRATCH2
+031     @DIV88.P1
+031     @delay_us1.P2
+031     get_data.@SCRATCH1
+031     @PSTRINGCN_120.@SCRATCH3
+032     lcd_putc_4bits.letra
+032     get_data.@SCRATCH2
+032     @DIV88.@SCRATCH1
+033     get_byte.s
+033     lcd_ubicaxy_4bits.columna
+034     get_byte.value
+034     lcd_ubicaxy_4bits.fila
+035     lcd_ubicaxy_4bits.posicion
+036     lcd_envia_byte_4bits.operacion
+037     lcd_envia_byte_4bits.dato
+038     @delay_ms1.P1
+038     lcd_envia_byte_4bits.@SCRATCH1
+F01     CCP_10
+F01     CCP_10_LOW
+F02     CCP_10_HIGH
+F04     CCP_9_LOW
+F04     CCP_9
+F05     CCP_9_HIGH
+F07     CCP_8_LOW
+F07     CCP_8
+F08     CCP_8_HIGH
+F0A     CCP_7_LOW
+F0A     CCP_7
+F0B     CCP_7_HIGH
+F0D     CCP_6_LOW
+F0D     CCP_6
+F0E     CCP_6_HIGH
+F10     CCP_5_LOW
+F10     CCP_5
+F11     CCP_5_HIGH
+F13     CCP_4_LOW
+F13     CCP_4
+F14     CCP_4_HIGH
+F16     CCP_3
+F16     CCP_3_LOW
+F17     CCP_3_HIGH
+F70.0   C1OUT
+F70.1   C2OUT
+F70.2   C3OUT
+F9B.6   PLLEN
+FB5     CCP_2_LOW
+FB5     CCP_2
+FB6     CCP_2_HIGH
+FBB     CCP_1
+FBB     CCP_1_LOW
+FBC     CCP_1_HIGH
+FE1-FE2 @WRITE_PACKED_MEMORY.P1
+FE1-FE2 @READ_PACKED_MEMORY.P2
+FE9-FEA @READ_PROGRAM_MEMORY.P1
+FE9-FEA @WRITE_PACKED_MEMORY.P2
+FE9-FEA @READ_PACKED_MEMORY.P3
+FE9-FEA @WRITE_PROGRAM_MEMORY.P4
+FF6-FF8 @READ_PROGRAM_MEMORY.P1
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+00114C  @delay_ms1
+001342  @delay_us1
+001174  lcd_envia_byte_4bits
+001236  lcd_ubicaxy_4bits
+00126E  @goto10111
+001296  lcd_init_4bits
+0012D0  lcd_putc_4bits
+00132E  DHT11_init
+001362  get_byte
+00139E  get_data
+0010BE  TIMER0_isr
+001510  MAIN
+0010D0  @const433
+001306  @PSTRINGC_120
+0010F6  @const436
+001106  @const437
+001126  @const438
+00145C  @PSTRINGCN_120
+001482  @DIV88
+0014AA  @PRINTF_U_120
+00113A  @const447
+001510  @cinit
+0136  StrtoulGO
+0136  StrtolGO
+
+
+User Memory space: 
+
+User Memory space: 
+
+Project Directory:
+    C:\Users\Michael Vargas\Documents\PIC\TECLADO\
+
+Project Files:
+    teclado.c                                               [13-Mar.-16 16:07  CRC=DB08BFEB]
+    ..\..\..\..\..\Program Files (x86)\PICC\devices\18F47J53.h [13-Abr.-11 15:02  CRC=1DEA3C7C]
+    Configura_LCD_4-8_bits.c                                [13-Mar.-16 15:09  CRC=4760D468]
+    DHT11.c                                                 [13-Mar.-16 15:57  CRC=791D430D]
+    ..\..\..\..\..\Program Files (x86)\PICC\drivers\stdlib.h [22-Abr.-10 10:12  CRC=97EC02E8]
+    ..\..\..\..\..\Program Files (x86)\PICC\drivers\stddef.h [16-Jul.-10 09:27  CRC=897CEC6C]
+    ..\..\..\..\..\Program Files (x86)\PICC\drivers\string.h [18-Jun.-08 10:48  CRC=9BE6227E]
+    ..\..\..\..\..\Program Files (x86)\PICC\drivers\ctype.h [03-Ene.-08 13:55  CRC=2D1F019F]
+
+Source signature=D0FE28EC
+
+Units:
+    C:\Users\Michael Vargas\Documents\PIC\TECLADO\teclado (main)
+
+Compiler Settings:
+    Processor:      PIC18F47J53
+    Pointer Size:   16
+    ADC Range:      0-4095
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    Errors:      teclado.err
+    Ext Symbols: teclado.esym
+    INHX32:      teclado.hex
+    Symbols:     teclado.sym
+    List:        teclado.lst
+    Debug/COFF:  teclado.cof
+    Project:     teclado.PJT
+    Call Tree:   teclado.tre
+    Statistics:  teclado.STA

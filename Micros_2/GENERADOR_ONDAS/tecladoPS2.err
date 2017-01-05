@@ -1,0 +1,13 @@
+>>> Warning 203 "tecladoPS2.c" Line 135(1,1): Condition always TRUE
+>>> Warning 216 "tecladoPS2.c" Line 282(0,1): Interrupts disabled during call to prevent re-entrancy:  (@delay_ms1)
+>>> Warning 216 "tecladoPS2.c" Line 282(0,1): Interrupts disabled during call to prevent re-entrancy:  (lcd_envia_byte_4bits)
+>>> Warning 216 "tecladoPS2.c" Line 282(0,1): Interrupts disabled during call to prevent re-entrancy:  (lcd_ubicaxy_4bits)
+>>> Warning 216 "tecladoPS2.c" Line 282(0,1): Interrupts disabled during call to prevent re-entrancy:  (lcd_putc_4bits)
+>>> Warning 202 "tecladoPS2.c" Line 31(5,8): Variable never used:   rs232_errors
+>>> Warning 202 "tecladoPS2.c" Line 39(15,19): Variable never used:   edge
+>>> Warning 202 "tecladoPS2.c" Line 40(6,19): Variable never used:   got_interrupt
+>>> Warning 202 "tecladoPS2.c" Line 41(6,21): Variable never used:   interrupt_count
+>>> Warning 202 "tecladoPS2.c" Line 45(6,13): Variable never used:   bandera
+>>> Warning 202 "tecladoPS2.c" Line 171(50,54): Variable never used:   mode
+      Memory usage:   ROM=1%      RAM=1% - 2%
+      0 Errors,  11 Warnings.

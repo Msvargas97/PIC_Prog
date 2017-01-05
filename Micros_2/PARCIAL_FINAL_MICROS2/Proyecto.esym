@@ -1,0 +1,7 @@
+D G "__PCH__" 0 0 ""4.120""
+D G "__DEVICE__" 0 0 ""
+D G "__DATE__" 0 0 ""09-Sept.-16""
+D G "__TIME__" 0 0 ""18:09:34"" "(C) Copyright 1996,2007 Custom Computer Services           ////"
+D G "_STDLIB" 1 12 ""
+D G "RAND_MAX" 1 19 "32767" "The value of which is the maximum value"
+D G "LONG_POINTERS" 1 27 "0"

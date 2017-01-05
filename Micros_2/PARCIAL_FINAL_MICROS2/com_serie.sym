@@ -1,0 +1,214 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     @INTERRUPT_AREA
+005     @INTERRUPT_AREA
+006     @INTERRUPT_AREA
+007     @INTERRUPT_AREA
+008     @INTERRUPT_AREA
+009     @INTERRUPT_AREA
+00A     @INTERRUPT_AREA
+00B     @INTERRUPT_AREA
+00C     @INTERRUPT_AREA
+00D     @INTERRUPT_AREA
+00E     @INTERRUPT_AREA
+00F     @INTERRUPT_AREA
+010     @INTERRUPT_AREA
+011     @INTERRUPT_AREA
+012     @INTERRUPT_AREA
+013     @INTERRUPT_AREA
+014     @INTERRUPT_AREA
+015     @INTERRUPT_AREA
+016     @INTERRUPT_AREA
+017     @INTERRUPT_AREA
+018     @INTERRUPT_AREA
+019     @INTERRUPT_AREA
+01A     @INTERRUPT_AREA
+01B-01C i
+01D-01E j
+01F-033 receivedChars
+034-048 buffer
+049-070 values
+071-072 totalValues
+073-076 checksum
+077.0   newData
+077.1   noNumber
+077.2   recvWithStartEndMarkers.recvInProgress
+078-07E cmd1
+07F-085 cmd2
+086     duty1
+087     duty2
+088     duty3
+089     temp
+08A-08B luz
+08C-08D strtok.save
+08E-091 _Randseed
+092     recvWithStartEndMarkers.ndx
+093     recvWithStartEndMarkers.ndx2
+094     recvWithStartEndMarkers.idx
+095     recvWithStartEndMarkers.startMarker
+096     recvWithStartEndMarkers.endMarker
+097     recvWithStartEndMarkers.mediumMarker
+098-09B processCommand.VerifyChecksum
+09C-09D check
+09E     @PRINTF_U_9600_31766_31767.P1
+09E-0A1 @SFTOI.P2
+09E-09F @PRINTF_LU_9600_31766_31767.P3
+09E     @delay_us1.P4
+09E     @PSTRINGC_9600_31766_31767.@SCRATCH1
+09E     MAIN.@SCRATCH1
+09F     @PRINTF_U_9600_31766_31767.P1
+09F     @delay_ms1.P2
+09F     @PSTRINGC_9600_31766_31767.@SCRATCH2
+09F     MAIN.@SCRATCH2
+0A0-0A3 @MULFF.P1
+0A0     @DIV88.P2
+0A0-0A1 @ITOF.P3
+0A0     @PRINTF_LU_9600_31766_31767.@SCRATCH1
+0A0     @PSTRINGC_9600_31766_31767.@SCRATCH3
+0A1     @DIV88.P1
+0A1     @PRINTF_LU_9600_31766_31767.@SCRATCH2
+0A2     @PRINTF_LU_9600_31766_31767.@SCRATCH3
+0A2     @DIV88.@SCRATCH1
+0A3     @PRINTF_LU_9600_31766_31767.@SCRATCH4
+0A4-0A7 @MULFF.P1
+0A4     @PRINTF_LU_9600_31766_31767.@SCRATCH5
+0A5     @PRINTF_LU_9600_31766_31767.@SCRATCH6
+0A6     @PRINTF_LU_9600_31766_31767.@SCRATCH7
+0A8     @MULFF.@SCRATCH1
+0A9     @MULFF.@SCRATCH2
+0AA     @MULFF.@SCRATCH3
+0AB     rc
+0AB-0AC strcmp.s1
+0AB     processCommand.@SCRATCH1
+0AC     recvWithStartEndMarkers.@SCRATCH1
+0AD-0AE strcmp.s2
+0AD     recvWithStartEndMarkers.@SCRATCH2
+0AE-0AF atol.s
+0AE     recvWithStartEndMarkers.@SCRATCH3
+0AF     strcmp.@SCRATCH1
+0AF     recvWithStartEndMarkers.@SCRATCH4
+0B0-0B1 atol.result
+0B2     atol.sign
+0B3     atol.base
+0B4     atol.index
+0B5     atol.c
+0B6-0B7 @MULS1616.P1
+0B6     atol.@SCRATCH1
+0B7     atol.@SCRATCH2
+0B8-0B9 @MULS1616.P1
+0B8     atol.@SCRATCH3
+0BA     @MULS1616.@SCRATCH1
+0BB     @MULS1616.@SCRATCH2
+F01     CCP_10
+F01     CCP_10_LOW
+F02     CCP_10_HIGH
+F04     CCP_9_LOW
+F04     CCP_9
+F05     CCP_9_HIGH
+F07     CCP_8_LOW
+F07     CCP_8
+F08     CCP_8_HIGH
+F0A     CCP_7_LOW
+F0A     CCP_7
+F0B     CCP_7_HIGH
+F0D     CCP_6
+F0D     CCP_6_LOW
+F0E     CCP_6_HIGH
+F10     CCP_5_LOW
+F10     CCP_5
+F11     CCP_5_HIGH
+F13     CCP_4
+F13     CCP_4_LOW
+F14     CCP_4_HIGH
+F16     CCP_3
+F16     CCP_3_LOW
+F17     CCP_3_HIGH
+F70.0   C1OUT
+F70.1   C2OUT
+F70.2   C3OUT
+F9B.6   PLLEN
+FB5     CCP_2
+FB5     CCP_2_LOW
+FB6     CCP_2_HIGH
+FBB     CCP_1_LOW
+FBB     CCP_1
+FBC     CCP_1_HIGH
+FE1-FE2 @READ_PACKED_MEMORY.P1
+FE1-FE2 @WRITE_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P1
+FE9-FEA @READ_PROGRAM_MEMORY.P2
+FE9-FEA @WRITE_PROGRAM_MEMORY.P3
+FE9-FEA @READ_PACKED_MEMORY.P4
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P1
+FF6-FF8 @READ_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+001664  @delay_ms1
+00168C  @delay_us1
+0014D4  strcmp
+001142  @MULS1616
+0016E4  @MULFF
+0016AE  @ITOF
+001194  atol
+00137C  recvWithStartEndMarkers
+001548  processCommand
+0010F4  @const405
+00110A  @const409
+0018A4  @PRINTF_LU_9600_31766_31767
+001118  @const412
+001638  @PSTRINGC_9600_31766_31767
+00112C  @const414
+00161A  intTimer0
+001948  MAIN
+001630  @const418
+0010BE  @const419
+0010DA  @const420
+0017D6  @SFTOI
+00180E  @DIV88
+001836  @PRINTF_U_9600_31766_31767
+001948  @cinit
+0136  StrtoulGO
+0136  StrtolGO
+
+
+User Memory space: 
+
+User Memory space: 
+
+Project Directory:
+    C:\Users\Michael Vargas\Desktop\PARCIAL_FINAL_MICROS2\
+
+Project Files:
+    com_serie.c                                             [30-May.-16 08:43  CRC=06C2EF88]
+    ..\..\..\..\Program Files (x86)\PICC\devices\18F47J53.h [13-Abr.-11 15:02  CRC=1DEA3C7C]
+    ..\..\..\..\Program Files (x86)\PICC\drivers\stdlib.h   [22-Abr.-10 10:12  CRC=97EC02E8]
+    ..\..\..\..\Program Files (x86)\PICC\drivers\stddef.h   [16-Jul.-10 09:27  CRC=897CEC6C]
+    ..\..\..\..\Program Files (x86)\PICC\drivers\string.h   [18-Jun.-08 10:48  CRC=9BE6227E]
+    ..\..\..\..\Program Files (x86)\PICC\drivers\ctype.h    [03-Ene.-08 13:55  CRC=2D1F019F]
+
+Source signature=3C3A4114
+
+Units:
+    C:\Users\Michael Vargas\Desktop\PARCIAL_FINAL_MICROS2\com_serie (main)
+
+Compiler Settings:
+    Processor:      PIC18F47J53
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    Errors:      com_serie.err
+    Ext Symbols: com_serie.esym
+    INHX32:      com_serie.hex
+    Symbols:     com_serie.sym
+    List:        com_serie.lst
+    Debug/COFF:  com_serie.cof
+    Project:     com_serie.PJT
+    Call Tree:   com_serie.tre
+    Statistics:  com_serie.STA

@@ -1,0 +1,11 @@
+>>> Warning 204 "Proyecto.c" Line 106(1,1): Condition always FALSE
+>>> Warning 202 "Proyecto.c" Line 23(15,19): Variable never used:   edge
+>>> Warning 202 "Proyecto.c" Line 23(30,31): Variable never used:   y
+>>> Warning 202 "Proyecto.c" Line 23(38,39): Variable never used:   z
+>>> Warning 202 "Proyecto.c" Line 23(42,43): Variable never used:   d
+>>> Warning 202 "Proyecto.c" Line 23(46,47): Variable never used:   c
+>>> Warning 202 "Proyecto.c" Line 25(10,18): Variable never used:   mensaje2
+>>> Warning 202 "Proyecto.c" Line 26(15,25): Variable never used:   dato_rs232
+>>> Warning 202 "Proyecto.c" Line 370(50,54): Variable never used:   mode
+      Memory usage:   ROM=5%      RAM=3% - 4%
+      0 Errors,  9 Warnings.

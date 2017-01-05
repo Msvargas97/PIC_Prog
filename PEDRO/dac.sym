@@ -1,0 +1,207 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     rs232_errors
+005.0   bits_8_4
+006-007 i
+008-009 j
+00A-00D Fs
+00E-011 frequency
+012-0D9 PORTD
+0DA-0DB period
+0DC-0DF senox.x
+0E0-0E1 sawTooth.saw
+0E2-0E3 triangular.trian
+0E4-0E5 square.sq
+0E6-0E9 @FLT.P1
+0E6     @PSTRINGCN_255.P2
+0E6-0E7 @PRINTF_LU_255.P3
+0E6-0E9 @PRINTF_L32D_255FPFPF.P4
+0E6-0E9 atan2.y
+0E6-0E9 triangular.freq
+0E6     MAIN.@SCRATCH1
+0E7     @delay_us1.P1
+0E7     MAIN.@SCRATCH2
+0E7     @PSTRINGCN_255.@SCRATCH1
+0E8-0E9 write_dac.data
+0E8     MAIN.@SCRATCH3
+0E8     @PSTRINGCN_255.@SCRATCH2
+0E8     @PRINTF_LU_255.@SCRATCH1
+0E9     MAIN.@SCRATCH4
+0E9     @PSTRINGCN_255.@SCRATCH3
+0E9     @PRINTF_LU_255.@SCRATCH2
+0EA-0ED @FLT.P1
+0EA     @PRINTF_L32D_255FPFPF.P2
+0EA-0ED @ADDFF.P3
+0EA-0ED @DIVFF.P4
+0EA-0EC write_dac.cmd
+0EA-0ED atan2.x
+0EA     triangular.@SCRATCH1
+0EA     @PRINTF_LU_255.@SCRATCH3
+0EB     triangular.@SCRATCH2
+0EB     @PRINTF_L32D_255FPFPF.@SCRATCH1
+0EB     @PRINTF_LU_255.@SCRATCH4
+0EC-0ED @ITOF.P1
+0EC-0EF @SFTOI.P2
+0EC     @PRINTF_L32D_255FPFPF.@SCRATCH2
+0EC     @PRINTF_LU_255.@SCRATCH5
+0ED     write_dac.i
+0ED     @PRINTF_L32D_255FPFPF.@SCRATCH3
+0ED     @PRINTF_LU_255.@SCRATCH6
+0EE-0F1 @ADDFF.P1
+0EE-0F1 atan2.z
+0EE-0F1 @DIVFF.P1
+0EE     @FLT.@SCRATCH1
+0EE     @PRINTF_L32D_255FPFPF.@SCRATCH4
+0EE     @PRINTF_LU_255.@SCRATCH7
+0EF     @FLT.@SCRATCH2
+0EF     @PRINTF_L32D_255FPFPF.@SCRATCH5
+0F0     @PRINTF_L32D_255FPFPF.@SCRATCH6
+0F1     @PRINTF_L32D_255FPFPF.@SCRATCH7
+0F2.0   atan2.sign
+0F2     @ADDFF.@SCRATCH1
+0F2     @DIVFF.@SCRATCH1
+0F2     @PRINTF_L32D_255FPFPF.@SCRATCH8
+0F3-0F6 @DIV3232.P1
+0F3-0F6 @MULFF.P2
+0F3     atan2.quad
+0F3-0F6 @FTOSD.P1
+0F3     lcd_putc_4bits.letra
+0F3     @ADDFF.@SCRATCH2
+0F3     @DIVFF.@SCRATCH2
+0F4     lcd_ubicaxy_4bits.columna
+0F4     @ADDFF.@SCRATCH3
+0F4     @DIVFF.@SCRATCH3
+0F5     lcd_ubicaxy_4bits.fila
+0F5     @ADDFF.@SCRATCH4
+0F5     @DIVFF.@SCRATCH4
+0F6     lcd_ubicaxy_4bits.posicion
+0F6     @ADDFF.@SCRATCH5
+0F6     @DIVFF.@SCRATCH5
+0F7-0FA @DIV3232.P1
+0F7     lcd_envia_byte_4bits.operacion
+0F7-0FA @MULFF.P1
+0F7     @ADDFF.@SCRATCH6
+0F7     @DIVFF.@SCRATCH6
+0F7     @FTOSD.@SCRATCH1
+0F8     lcd_envia_byte_4bits.dato
+0F8     @ADDFF.@SCRATCH7
+0F9     @delay_ms1.P1
+0F9     @ADDFF.@SCRATCH8
+0F9     lcd_envia_byte_4bits.@SCRATCH1
+0FB     @MULFF.@SCRATCH1
+0FB     @DIV3232.@SCRATCH1
+0FC     @MULFF.@SCRATCH2
+0FC     @DIV3232.@SCRATCH2
+0FD     @MULFF.@SCRATCH3
+0FD     @DIV3232.@SCRATCH3
+0FE     @DIV3232.@SCRATCH4
+0FF     @DIV3232.@SCRATCH5
+F01     CCP_10
+F01     CCP_10_LOW
+F02     CCP_10_HIGH
+F04     CCP_9
+F04     CCP_9_LOW
+F05     CCP_9_HIGH
+F07     CCP_8_LOW
+F07     CCP_8
+F08     CCP_8_HIGH
+F0A     CCP_7_LOW
+F0A     CCP_7
+F0B     CCP_7_HIGH
+F0D     CCP_6_LOW
+F0D     CCP_6
+F0E     CCP_6_HIGH
+F10     CCP_5
+F10     CCP_5_LOW
+F11     CCP_5_HIGH
+F13     CCP_4_LOW
+F13     CCP_4
+F14     CCP_4_HIGH
+F16     CCP_3
+F16     CCP_3_LOW
+F17     CCP_3_HIGH
+F70.0   C1OUT
+F70.1   C2OUT
+F70.2   C3OUT
+F9B.6   PLLEN
+FB5     CCP_2
+FB5     CCP_2_LOW
+FB6     CCP_2_HIGH
+FBB     CCP_1_LOW
+FBB     CCP_1
+FBC     CCP_1_HIGH
+FE1-FE2 @READ_PACKED_MEMORY.P1
+FE1-FE2 @WRITE_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P1
+FE9-FEA @WRITE_PROGRAM_MEMORY.P2
+FE9-FEA @READ_PACKED_MEMORY.P3
+FE9-FEA @READ_PROGRAM_MEMORY.P4
+FF6-FF8 @READ_PROGRAM_MEMORY.P1
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+001016  @FLT
+00141E  @SFTOI
+0012F6  @ITOF
+00132C  @MULFF
+00108C  @ADDFF
+0016E4  @DIVFF
+001560  @delay_ms1
+001C02  @delay_us1
+001588  lcd_envia_byte_4bits
+001646  lcd_ubicaxy_4bits
+00167E  @goto10590
+0016A6  lcd_init_4bits
+00183E  lcd_putc_4bits
+001456  triangular
+00154C  init_dac
+001B98  write_dac
+001C22  MAIN
+001008  @const294
+001874  @PSTRINGCN_255
+00189C  @FTOSD
+0018DC  @DIV3232
+00196A  @PRINTF_L32D_255FPFPF
+001AE4  @PRINTF_LU_255
+001C22  @cinit
+
+
+User Memory space: 
+
+User Memory space: 
+
+Project Directory:
+    C:\Users\Michael Vargas\Desktop\PEDRO\
+
+Project Files:
+    dac.c                                                   [28-Abr.-16 20:32  CRC=E88F2BBE]
+    ..\..\..\..\Program Files (x86)\PICC\devices\18F47J53.h [13-Abr.-11 15:02  CRC=1DEA3C7C]
+    ..\..\..\..\Program Files (x86)\PICC\drivers\math.h     [11-Abr.-11 09:02  CRC=A2852B04]
+    Configura_LCD_4-8_bits.c                                [17-Mar.-16 14:21  CRC=AB39023B]
+
+Source signature=FF7097B4
+
+Units:
+    C:\Users\Michael Vargas\Desktop\PEDRO\dac (main)
+
+Compiler Settings:
+    Processor:      PIC18F47J53
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    Errors:      dac.err
+    Ext Symbols: dac.esym
+    INHX32:      dac.hex
+    Symbols:     dac.sym
+    List:        dac.lst
+    Debug/COFF:  dac.cof
+    Project:     dac.PJT
+    Call Tree:   dac.tre
+    Statistics:  dac.STA

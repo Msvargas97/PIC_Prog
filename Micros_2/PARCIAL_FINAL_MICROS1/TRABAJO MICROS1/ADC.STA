@@ -1,0 +1,55 @@
+
+ROM used: 1482 (1%)
+          1486 (1%) including unused fragments
+
+          1 Average locations per line
+          3 Average locations per statement
+
+RAM used: 49 (1%) at main() level
+          60 (2%) worst case
+
+Stack used: 1 worst case (out of 31 total available)
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+  200    72  13  ADC.c
+  704     0   0  ..\..\..\..\Program Files (x86)\PICC\devices\18F47J53.h
+ 1273   359  65  ..\..\..\..\Program Files (x86)\PICC\drivers\stdlib.h
+   32     0   0  ..\..\..\..\Program Files (x86)\PICC\drivers\stddef.h
+  409   121  22  ..\..\..\..\Program Files (x86)\PICC\drivers\string.h
+   28     0   0  ..\..\..\..\Program Files (x86)\PICC\drivers\ctype.h
+----- -----
+ 2646   552 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     32   1   1             @delay_us1
+0    242   8  11  2279 12.7  @MULFF
+0     54   2   2             @ITOF
+0     88   3   2   377  4.2  conver_bcd
+0    888  30   1  1936 10.2  MAIN
+0     56   2   4   652  3.8  @SFTOI
+0     54   2   4             @DTOF
+0     64   2   5             @FTOSD
+
+Program metrics:
+    Functions               4
+    Statements              552
+    Comments                1088
+    Volume (V)              6615
+    Difficilty (D)          30.7
+    Effort to implement (E) 203262
+    Time to implement (T)   3 hours, 8 minutes
+    Est Delivered Bugs (B)  1
+    Cyclomatic Complexity   23
+    Maintainability (MI)    72
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00FFE     0  4096  
+01000-01006     4  4  
+01008-0FFFE  1478  59954  
+10000-1FFF6     0  65528  
+
+
+

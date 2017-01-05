@@ -1,0 +1,4 @@
+>>> Warning 203 "dac.c" Line 113(1,1): Condition always TRUE
+>>> Warning 202 "dac.c" Line 56(16,25): Variable never used:   frequency
+      Memory usage:   ROM=3%      RAM=2% - 4%
+      0 Errors,  2 Warnings.

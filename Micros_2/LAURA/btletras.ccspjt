@@ -1,0 +1,21 @@
+[PROJECT]
+Target=btletras.hex
+Processor_Text=PIC18F47J53
+CCSVersion=5.015
+Compiler=PCH
+[Target Data]
+FileList=btletras.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\Devices\;C:\Program Files (x86)\PICC\Drivers\
+[btletras.c]
+Type=4
+[mru-list]
+1=btletras.c
+[Opened Files]
+1=btletras.c
+2=
+3=EMm47J53_StackConfig.h
+4=
+[Units]
+Count=1
+1=btletras (main)

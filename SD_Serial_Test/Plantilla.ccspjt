@@ -1,0 +1,52 @@
+[PROJECT]
+Target=Plantilla.hex
+Development_Mode=2
+Processor=0xE750
+Processor_Text=PIC18F47J53
+ToolSuite=CCS
+CCSVersion=5.015
+Compiler=PCH
+
+[Directories]
+Include=C:\Program Files (x86)\PICC\Devices\;C:\Program Files (x86)\PICC\Drivers\
+Library=
+LinkerScript=
+
+[Target Data]
+FileList=Plantilla.c
+BuildTool=C-COMPILER
+OptionString=+FH
+AdditionalOptionString=
+BuildRequired=1
+
+[Plantilla.c]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+
+[mru-list]
+1=Plantilla.c
+
+[Windows]
+0=0000 PLANTI~1.C 0 0 796 451 3 0
+
+[Opened Files]
+1=Plantilla.c
+2=ex_mmcsd.c
+3=C:\Program Files (x86)\PICC\Drivers\mmcsd.c
+4=input.c
+5=EMm47J53_StackConfig.h
+6=C:\Program Files (x86)\PICC\Drivers\input.c
+7=C:\Program Files (x86)\PICC\Examples\ex_fat.c
+8=fat.c
+9=
+10=C:\Program Files\PICC\drivers\pic18_usb.c
+11=C:\Program Files\PICC\drivers\ctype.h
+12=C:\Program Files\PICC\Examples\ex_usb_serial2.c
+13=
+[Units]
+Count=1
+1=Plantilla (main)

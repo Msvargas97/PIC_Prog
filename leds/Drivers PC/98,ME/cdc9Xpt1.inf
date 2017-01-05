@@ -1,0 +1,51 @@
+; Windows 98 and ME setup File for CCS CDC demo.
+; this is the first file, after you load this driver
+; you will then need to load cdc9Xpt2.inf.
+; see examples ex_usb_serial.c and ex_usb_serial2.c.
+
+[Version]
+Signature=$CHICAGO$
+Class=USB
+Provider=%CCS%
+LayoutFile=layout.inf,layout1.inf,layout2.inf
+
+[DestinationDirs]
+DefaultDestDir=10
+USB.Drvrs=10,SYSTEM32\DRIVERS
+USB.VxD=11
+
+[Manufacturer]
+%CCS%=CCS
+
+[CCS]
+%USBCDC% = USBCDC, USB\VID_0461&PID_0033
+%USBCDCBOOT% = USBCDC, USB\VID_0461&PID_0034
+
+[USBCDC]
+CopyFiles=USB.Drvrs,USB.VxD
+AddReg=USBCDC.AddReg
+
+[USB.Drvrs]
+usbser.sys
+ccport.sys
+
+[USB.VxD]
+wdmmdmld.vxd
+
+[USBCDC.AddReg]
+HKR,,DevLoader,0,*ntkern
+HKR,,NTMPDriver,,"usbser.sys,ccport.sys"
+
+[USBCDC.HW]
+AddReg=USBCDCAddReg.HW
+
+[USBCDCAddReg.HW]
+HKR,,ChildID,2,"USB\USBCDC"
+
+[PreCopySection]
+HKR,,NoSetupUI,,1
+
+[Strings]
+CCS = "CCS"
+USBCDC  = "USB to RS232" 
+USBCDCBOOT  = "CCS CDC Bootloader"

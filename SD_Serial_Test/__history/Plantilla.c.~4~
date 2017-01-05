@@ -1,0 +1,68 @@
+#include "EMm47J53_StackConfig.h"
+
+#define DEC 0x00
+#define HEX 0x01
+/********************************************************/
+/*------- Espacio para declaracion de constantes  ------*/
+/********************************************************/
+
+
+/********************************************************/
+/*--- Espacio para declaracion de variables globales  --*/
+/********************************************************/
+
+/********************************************************/
+/********************************************************/
+/*-------------- Espacio para funciones  ---------------*/
+/********************************************************/
+#include <usb_cdc.h>
+#include <math.h>
+#include <stdlib.h>
+//meda library, a compatable media library is required for FAT.
+#use fast_io(c)
+#define MMCSD_PIN_SCL     PIN_B3 //o
+#define MMCSD_PIN_SDI     PIN_B4 //i
+#define MMCSD_PIN_SDO     PIN_B5 //o
+#define MMCSD_PIN_SELECT  PIN_B2 //o
+#include <mmcsd.c>
+
+#include <input.c>
+
+/******************************************************************************/
+/******************************************************************************/
+/*--------------------- Espacio de codigo principal --------------------------*/
+/******************************************************************************/ 
+#zero_ram
+void main(){
+mcu_init();                                // Inicializa microcontrolador
+usb_cdc_init();                            // Inicializa servicios USB clase CDC
+usb_init();    // Inicializa modulo USB
+BYTE value, cmd;
+ int32 address;
+if (usb_enumerated()) {              // Espera que PUERTO COM sea abierto
+        usb_task();                       // Actualiza FSM USB-CDC
+    printf("\r\n\nex_mmcsd.c\r\n\n");
+   
+   if (mmcsd_init())
+   {
+      printf("Could not init the MMC/SD!!!!");
+      while(TRUE);
+   }
+
+     }
+             
+}
+void println(int32 x,unsigned int8 system=0){
+if(!system){
+ printf(usb_cdc_putc," %ld \n\r", x);}
+else{
+if(x<=255){
+ printf(usb_cdc_putc," %X \n\r", x);}else if(x<=65536){
+  printf(usb_cdc_putc," %4X \n\r", x);
+ }else{
+ printf(usb_cdc_putc," %lX \n\r", x);
+ }
+}
+}
+
+

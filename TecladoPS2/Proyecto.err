@@ -1,0 +1,13 @@
+>>> Warning 204 "Proyecto.c" Line 93(1,1): Condition always FALSE
+>>> Warning 203 "Proyecto.c" Line 135(1,1): Condition always TRUE
+>>> Warning 207 "Proyecto.c" Line 152(1,1): Code has no effect
+>>> Warning 201 "Proyecto.c" Line 157(1,1): Assignment inside relational expression
+>>> Warning 207 "Proyecto.c" Line 158(1,1): Code has no effect
+>>> Warning 216 "Proyecto.c" Line 331(0,1): Interrupts disabled during call to prevent re-entrancy:  (@delay_ms1)
+>>> Warning 216 "Proyecto.c" Line 331(0,1): Interrupts disabled during call to prevent re-entrancy:  (lcd_envia_byte_4bits)
+>>> Warning 216 "Proyecto.c" Line 331(0,1): Interrupts disabled during call to prevent re-entrancy:  (lcd_ubicaxy_4bits)
+>>> Warning 216 "Proyecto.c" Line 331(0,1): Interrupts disabled during call to prevent re-entrancy:  (lcd_putc_4bits)
+>>> Warning 202 "Proyecto.c" Line 3(15,19): Variable never used:   edge
+>>> Warning 202 "Proyecto.c" Line 215(50,54): Variable never used:   mode
+      Memory usage:   ROM=2%      RAM=2% - 3%
+      0 Errors,  11 Warnings.
